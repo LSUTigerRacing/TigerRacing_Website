@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "EKk2DxwsMhM=",
+  "success": true,
+  "projectFilePath": "/Users/rickyliang/Documents/GitHub/TigerRacing_Website/backend/src/TigerRacing.Api/TigerRacing.Api.csproj",
+  "expectedPackageFiles": [
+    "/Users/rickyliang/.nuget/packages/microsoft.aspnetcore.openapi/9.0.3/microsoft.aspnetcore.openapi.9.0.3.nupkg.sha512",
+    "/Users/rickyliang/.nuget/packages/microsoft.openapi/1.6.17/microsoft.openapi.1.6.17.nupkg.sha512"
+  ],
+  "logs": []
+}
