@@ -20,4 +20,13 @@ export default tseslint.config([
       globals: globals.browser,
     },
   },
+  module.exports = {
+    settings: {
+      'import/resolver': {
+        typescript: {
+          project: '../tsconfig.json',
+        }
+      }
+    }
+  }
 ])

@@ -4,9 +4,9 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build",
-    "lint": "eslint .",
+    "dev": "vite --config ./config/vite.config.js",
+    "build": "tsc --project ./config/tsconfig.json && vite build --config ./config/vite.config.js",
+    "lint": "eslint --ext .js,.jsx,.ts,.tsx --config ./config/.eslintrc.js src",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -15,6 +15,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.30.1",
+    "@types/node": "^24.0.15",
     "@types/react": "^19.1.8",
     "@types/react-dom": "^19.1.6",
     "@vitejs/plugin-react": "^4.6.0",
