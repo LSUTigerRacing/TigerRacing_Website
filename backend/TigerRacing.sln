@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TigerRacing.Api.Tests", "te
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TigerRacing.Core.Tests", "tests\TigerRacing.Core.Tests\TigerRacing.Core.Tests.csproj", "{7414E6F8-D82B-4123-9D37-1DBEAD6B9463}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TigerRacing.Data", "src\TigerRacing.Data\TigerRacing.Data.csproj", "{0B0624CA-8410-4115-9DF5-F2CE75DEB412}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -73,6 +75,18 @@ Global
 		{7414E6F8-D82B-4123-9D37-1DBEAD6B9463}.Release|x64.Build.0 = Release|Any CPU
 		{7414E6F8-D82B-4123-9D37-1DBEAD6B9463}.Release|x86.ActiveCfg = Release|Any CPU
 		{7414E6F8-D82B-4123-9D37-1DBEAD6B9463}.Release|x86.Build.0 = Release|Any CPU
+		{0B0624CA-8410-4115-9DF5-F2CE75DEB412}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B0624CA-8410-4115-9DF5-F2CE75DEB412}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B0624CA-8410-4115-9DF5-F2CE75DEB412}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{0B0624CA-8410-4115-9DF5-F2CE75DEB412}.Debug|x64.Build.0 = Debug|Any CPU
+		{0B0624CA-8410-4115-9DF5-F2CE75DEB412}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{0B0624CA-8410-4115-9DF5-F2CE75DEB412}.Debug|x86.Build.0 = Debug|Any CPU
+		{0B0624CA-8410-4115-9DF5-F2CE75DEB412}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B0624CA-8410-4115-9DF5-F2CE75DEB412}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B0624CA-8410-4115-9DF5-F2CE75DEB412}.Release|x64.ActiveCfg = Release|Any CPU
+		{0B0624CA-8410-4115-9DF5-F2CE75DEB412}.Release|x64.Build.0 = Release|Any CPU
+		{0B0624CA-8410-4115-9DF5-F2CE75DEB412}.Release|x86.ActiveCfg = Release|Any CPU
+		{0B0624CA-8410-4115-9DF5-F2CE75DEB412}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -82,5 +96,6 @@ Global
 		{7C907E5D-2428-454C-9192-05F8C639551D} = {827E0CD3-B72D-47B6-A68D-7590B98EB39B}
 		{AF2F9FB9-DFEB-413D-B73B-2625DF33771B} = {0AB3BF05-4346-4AA6-1389-037BE0695223}
 		{7414E6F8-D82B-4123-9D37-1DBEAD6B9463} = {0AB3BF05-4346-4AA6-1389-037BE0695223}
+		{0B0624CA-8410-4115-9DF5-F2CE75DEB412} = {827E0CD3-B72D-47B6-A68D-7590B98EB39B}
 	EndGlobalSection
 EndGlobal

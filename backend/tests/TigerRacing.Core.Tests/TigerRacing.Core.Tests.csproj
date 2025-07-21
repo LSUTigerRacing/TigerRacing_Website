@@ -20,6 +20,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\src\TigerRacing.Core\TigerRacing.Core.csproj" />
+    <ProjectReference Include="..\..\src\TigerRacing.Data\TigerRacing.Data.csproj" />
   </ItemGroup>
 
 </Project>
