@@ -3,7 +3,7 @@ const About = () => {
     <div>
       <h1>About Page</h1>
       <p>If you see this, you are on the About Page</p>
-      {/* Content will go here */}
+      <a className="flex flex-row min-h-screen justify-center items-center" href="/">Button</a>
     </div>
   );
 };
