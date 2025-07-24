@@ -4,6 +4,7 @@ import { motion } from "motion/react"
 import loading from "../assets/animations/Loading.webm";
 import loading_last_frame from "../assets/animations/Loading_last_frame.png";
 import purple_logo from "../assets/images/Logo_Purple.png";
+
 const Exit = () => {
 
 }
@@ -12,6 +13,7 @@ export const Loading = () => {
     const location = useLocation();
     const [mediaToShow, setMediaToShow] = useState<'video' | 'image'> ('video');
     const [imageToShow, setImageToShow] = useState<'white' | 'purple'> ('white');
+    const [loadingFinished, setLoadingFinished] = useState(false);
     const [animate, setAnimate] = useState(false);
 
     const videoLength = 1200;
@@ -33,6 +35,8 @@ export const Loading = () => {
         };
     }, [location.key]);
 
+    if (loadingFinished) return null;
+
     return (
         <div className="w-screen h-screen fixed overflow-hidden">
         {/* purple background */}
@@ -44,7 +48,7 @@ export const Loading = () => {
         </motion.div>
 
         <motion.div>
-        <div className="w-screen h-screen absolute flex justify-center items-center">
+        <div className="w-screen h-screen absolute flex justify-center items-center z-[100]">
             { mediaToShow === 'video' ? (
                 <video
                     autoPlay
@@ -58,17 +62,17 @@ export const Loading = () => {
                     animate={animate ? 
                         {
                             y: "-45vh",
-                            width: "15vw"
+                            width: "20vw"
                         } 
                         : 
                         {y: 0}}
                     transition={{ duration: 0.75, ease: "easeInOut" }}
+                    onAnimationComplete={() => {setLoadingFinished(true)}}
                 >
                     {imageToShow === 'white' ? (
                         <img
                             src={loading_last_frame}
                             className="w-[50vw]"
-
                         />
                     ) : (
                         <img
