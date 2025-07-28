@@ -1,8 +1,6 @@
 import { motion } from "motion/react"
-import React, { 
+import { 
     useState,
-    useRef,
-    useImperativeHandle,
     forwardRef,
     useEffect
  } from "react";
@@ -35,7 +33,7 @@ export const CollageItem = forwardRef<ChildMethods, CollageItemProps>(({
     useEffect(() => {
         const collage_timer = setTimeout(() => {
             setAnimate(true);
-        }, 1000 +  order * 500);
+        },  +  order * 500);
         
         return () => clearTimeout(collage_timer);
     }, [order])
@@ -55,6 +53,7 @@ export const CollageItem = forwardRef<ChildMethods, CollageItemProps>(({
                         height: height,
                         top: yPos,
                         left: xPos,
+                        opacity: 0
                     }}
                     className="absolute object-cover"
                 />

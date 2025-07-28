@@ -12,10 +12,12 @@
   "dependencies": {
     "@fontsource/manrope": "^5.2.6",
     "@fontsource/sora": "^5.2.6",
+    "@lottiefiles/react-lottie-player": "^3.6.0",
     "motion": "^12.23.6",
     "mui": "^0.0.1",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
+    "react-lottie-player": "^2.1.0",
     "react-router-dom": "^7.7.0"
   },
   "devDependencies": {

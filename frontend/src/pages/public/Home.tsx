@@ -14,8 +14,8 @@ import Collage9 from "../../assets/images/Home/Photo_Collage/Collage_9.png";
 const Home = () => {
   return (
     <div className="w-screen h-screen bg-[#F5F0F6]">
-      <h1 className="text-[#FFD500] text-[300px]">WELCOME TO TIGER RACING.</h1>
-      <a  href="./about">Button</a>
+      {/* <h1 className="text-[#FFD500] text-[300px]">WELCOME TO TIGER RACING.</h1>
+      <a  href="./about">Button</a> */}
 
       <CollageItem
         imgPath={Collage1}
