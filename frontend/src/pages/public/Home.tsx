@@ -9,13 +9,20 @@ import Collage6 from "../../assets/images/Home/Photo_Collage/Collage_6.png";
 import Collage7 from "../../assets/images/Home/Photo_Collage/Collage_7.png";
 import Collage8 from "../../assets/images/Home/Photo_Collage/Collage_8.png";
 import Collage9 from "../../assets/images/Home/Photo_Collage/Collage_9.png";
+import Collage10 from "../../assets/images/Home/Photo_Collage/David_Car.png";
 
 
 const Home = () => {
   return (
     <div className="w-screen h-screen bg-[#F5F0F6]">
-      {/* <h1 className="text-[#FFD500] text-[300px]">WELCOME TO TIGER RACING.</h1>
-      <a  href="./about">Button</a> */}
+      <div className="w-[99.5vw] absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 text-[10.4vw] leading-[8vw] drop-shadow-xl z-10">
+        <h1 
+          className="text-[#FFD500] text-center"
+          style={{textShadow: '0px 4px 4px rgba(0, 0, 0, 0.8)'}}
+        >
+          WELCOME <br/> TO TIGER RACING.
+        </h1>
+      </div>
 
       <CollageItem
         imgPath={Collage1}
@@ -23,7 +30,7 @@ const Home = () => {
         height="60vh"
         xPos="22.5vw"
         yPos="20vh"
-        zIndex={0}
+        zIndex={1}
         order={0}
       />
       <CollageItem
@@ -32,7 +39,7 @@ const Home = () => {
         height="31vh"
         xPos="70.5vw"
         yPos="7.3vh"
-        zIndex={1}
+        zIndex={2}
         order={1}
       />
       <CollageItem
@@ -50,7 +57,7 @@ const Home = () => {
         height="28.3vh"
         xPos="63.8vw"
         yPos="49.5vh"
-        zIndex={3}
+        zIndex={7}
         order={3}
       />
       <CollageItem
@@ -68,7 +75,7 @@ const Home = () => {
         height="49.3vh"
         xPos="35.9vw"
         yPos="18.4vh"
-        zIndex={0}
+        zIndex={5}
         order={5}
       />
       <CollageItem
@@ -77,7 +84,7 @@ const Home = () => {
         height="30.4vh"
         xPos="7.7vw"
         yPos="61.2vh"
-        zIndex={0}
+        zIndex={8}
         order={6}
       />
       <CollageItem
@@ -86,7 +93,7 @@ const Home = () => {
         height="31.7vh"
         xPos="77vw"
         yPos="70vh"
-        zIndex={0}
+        zIndex={7}
         order={7}
       />
       <CollageItem
@@ -95,8 +102,17 @@ const Home = () => {
         height="27.8vh"
         xPos="39.3vw"
         yPos="7.3vh"
-        zIndex={0}
+        zIndex={8}
         order={8}
+      />
+      <CollageItem
+        imgPath={Collage10}
+        width="33.4vw"
+        height="43.6vh"
+        xPos="61.9vw"
+        yPos="21.6vh"
+        zIndex={6}
+        order={9}
       />
 
     </div>

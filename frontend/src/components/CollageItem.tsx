@@ -38,26 +38,38 @@ export const CollageItem = forwardRef<ChildMethods, CollageItemProps>(({
         return () => clearTimeout(collage_timer);
     }, [order])
     return (
-        <motion.div
-            animate={animate ? 
-                {opacity: 100, zIndex: Number(zIndex)} :
-                {opacity: 0, zIndex: 0}
+        <img
+            src={imgPath}
+            style={{
+                width: width,
+                height: height,
+                top: yPos,
+                left: xPos,
+                zIndex: zIndex,
+                opacity: 100
+            }}
+            className="absolute object-cover"
+        />
+        // <motion.div
+        //     animate={animate ? 
+        //         {opacity: 100, zIndex: Number(zIndex)} :
+        //         {opacity: 0, zIndex: 0}
 
-            }
-            transition={{ duration: 1.1, ease: "easeInOut" }}
-        >
-                <img
-                    src={imgPath}
-                    style={{
-                        width: width,
-                        height: height,
-                        top: yPos,
-                        left: xPos,
-                        opacity: 0
-                    }}
-                    className="absolute object-cover"
-                />
-        </motion.div>
+        //     }
+        //     transition={{ duration: 1.1, ease: "easeInOut" }}
+        // >
+        //         <img
+        //             src={imgPath}
+        //             style={{
+        //                 width: width,
+        //                 height: height,
+        //                 top: yPos,
+        //                 left: xPos,
+        //                 opacity: 0
+        //             }}
+        //             className="absolute object-cover"
+        //         />
+        // </motion.div>
 
     )
 })
