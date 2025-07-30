@@ -71,29 +71,29 @@ const About = () => {
             src={images[imageIndex]}
           />
         </div>
-        <div className={ (fixedPos ? 'fixed top-[83.5vh] left-1/2 transform -translate-x-1/2' :
-                                    `absolute bottom-[13vh] left-1/2 transform -translate-x-1/2`)}
-        >
-          <p className='text-center'>
+        <div className={ 
+                        (fixedPos ? 'fixed top-[83.5vh] left-1/2 transform -translate-x-1/2' :
+                                    `absolute bottom-[13vh] left-1/2 transform -translate-x-1/2`)}        >
+          <h1 className='text-center'>
             {mottos[mottoIndex][0]}
-          </p>
-          <p className='text-center'> 
+          </h1>
+          <h1 className='text-center font-[Joan]'> 
             {mottos[mottoIndex][1]}
-          </p>
+          </h1>
         </div>
       </div>
 
       <div className='h-screen w-[50.9vw] relative text-center flex-col left-1/2  transform -translate-x-1/2'>
         <p className='text-4xl'>
-          TigerRacing began in 1983 as a senior design project, where a handful of LSU engineers built their first Formula SAE car. In 2012, it grew into something bigger: a club for a dedicated team of students pushing boundaries, passing down knowledge, and turning raw ideas into high-performance machines.
+          TigerRacing started in 1983 as a senior design project and evolved into LSU's premier Formula SAE team. We're a dedicated group of engineers turning classroom theory into championship-winning racecars, placing 2nd in Skidpad and 7th overall in 2022 before making our bold transition to electric vehicles.        
         </p>
         <br/>
         <p className='text-4xl'>
-          Our 2022 season marked a milestone: 2nd in Skidpad, 7th overall, and the spark that drove our leap into electric vehicles. Now, we're tackling the challenges of EV design, from high-voltage systems to cutting-edge battery tech, all while keeping the competitive fire alive.
+          Today, we're pioneering the future of motorsport with cutting-edge EV technology, from high-voltage systems to advanced battery design. Our team is where ambitious students gain real-world engineering experience, compete at the highest level, and build the innovations that drive tomorrow's automotive industry.
         </p>
         <br/>
         <p className='text-4xl'>
-          From a capstone project to a top-tier team, TigerRacing is where theory meets the track. Whether you’re here to engineer, compete, or just make something incredible, welcome to the team.
+  Whether you're a student ready to push boundaries or a sponsor looking to support the next generation of automotive pioneers, TigerRacing is where serious engineering meets serious results.
         </p>
       </div>
 
