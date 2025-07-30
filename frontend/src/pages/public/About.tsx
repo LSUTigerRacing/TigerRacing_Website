@@ -9,9 +9,9 @@ import HeroImage6 from "../../assets/images/About/2021.JPG";
 
 
 const About = () => {
-  const [scrollInfo, setScrollInfo] = useState(0);
   const [imageIndex, setImageIndex] = useState(0);
   const [mottoIndex, setMottoIndex] = useState(0);
+  const [fixedPos, setFixedPos] = useState(true);
 
   const images = [
     HeroImage1,
@@ -38,16 +38,19 @@ const About = () => {
 
       const scrollVh = (scrollPosition / windowHeight) * 100;
 
-      setScrollInfo(scrollVh);
-
       let imgInd; 
       let mottoInd;
       let vhSwitch = 75;
 
-      imgInd = Math.floor(scrollVh / vhSwitch);
-      mottoInd = Math.floor(scrollVh / (vhSwitch * 2));
+      imgInd = Math.min(Math.floor(scrollVh / vhSwitch), images.length - 1);
+      mottoInd = Math.min(Math.floor(scrollVh / (vhSwitch * 2)), mottos.length - 1);
       setImageIndex(Math.max(0, imgInd)); // set to max 0 because user can scroll up for negative ind
       setMottoIndex(Math.max(0, mottoInd));
+      if (scrollVh >= (vhSwitch * (images.length - 1)) + 20) {
+        setFixedPos(false);
+      } else {
+        setFixedPos(true);
+      }
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -57,25 +60,44 @@ const About = () => {
   })
 
   return (
-    <div className='h-[500vh]'>
-      <h1 className="text-5xl">About Page</h1>
-      <div
-          className=' w-[55vw] h-[60vh] fixed top-1/2 left-1/2 transform -translate-y-[35vh] -translate-x-1/2 flex items-center'
-      >
-        <img
-          src={images[imageIndex]}
-        />
+    <div className='h-fit'>
+      <div className={`h-[500vh] relative`}>
+        <div
+            className={fixedPos ? `w-[58vw] h-[60vh] fixed top-1/2 left-1/2 transform -translate-y-[34vh] -translate-x-1/2 flex items-center` : 
+                        `w-[58vw] h-[60vh] absolute bottom-0 left-1/2 transform -translate-y-[34vh] -translate-x-1/2` 
+            }
+        >
+          <img
+            src={images[imageIndex]}
+          />
+        </div>
+        <div className={ (fixedPos ? 'fixed top-[83.5vh] left-1/2 transform -translate-x-1/2' :
+                                    `absolute bottom-[13vh] left-1/2 transform -translate-x-1/2`)}
+        >
+          <p className='text-center'>
+            {mottos[mottoIndex][0]}
+          </p>
+          <p className='text-center'> 
+            {mottos[mottoIndex][1]}
+          </p>
+        </div>
       </div>
 
-      <p className='fixed top-4/5 left-1/2 transform -translate-x-1/2'>
-        {mottos[mottoIndex][0]}
-      </p>
-      <p className='fixed top-[82.5vh] left-1/2 transform -translate-x-1/2'> 
-        {mottos[mottoIndex][1]}
-      </p>
-
-      <a className="flex flex-row min-h-screen justify-center items-center" href="/">Button</a>
+      <div className='h-screen w-[72.9vw] relative text-center flex-col left-1/2  transform -translate-x-1/2'>
+        <p className='text-3xl'>
+          TigerRacing began in 1983 as a senior design project, where a handful of LSU engineers built their first Formula SAE car. In 2012, it grew into something bigger: a club for a dedicated team of students pushing boundaries, passing down knowledge, and turning raw ideas into high-performance machines.
+        </p>
+        <br/>
+        <p className='text-3xl'>
+          Our 2022 season marked a milestone: 2nd in Skidpad, 7th overall, and the spark that drove our leap into electric vehicles. Now, we're tackling the challenges of EV design, from high-voltage systems to cutting-edge battery tech, all while keeping the competitive fire alive. Every bolt tightened, every line of code written, and every late-night test session proves one thing: engineering isn’t just learned in classrooms. It’s built here.
+        </p>
+        <br/>
+        <p className='text-3xl'>
+          From a capstone project to a top-tier team, TigerRacing is where theory meets the track. Whether you’re here to engineer, compete, or just make something incredible, welcome to the team.
+        </p>
+      </div>
     </div>
+
   );
 };
 
