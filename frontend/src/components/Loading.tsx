@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react"
 import { useLocation, useNavigation, useNavigationType } from "react-router-dom";
 import { motion } from "motion/react";
+import ScrollToTop from "../hooks/ScrollToTop";
 import Lottie from "react-lottie-player";
 import loading from "../assets/animations/Loading_Video.json";
 import loading_last_frame from "../assets/animations/Loading_last_frame.png";
@@ -40,7 +41,7 @@ export const Loading = () => {
 
     return (
         <div className="w-screen h-screen fixed overflow-hidden z-60">
-            
+            <ScrollToTop/>
             {/* Purple Background of Loading */}
             <motion.div 
                 animate={animate ? {y: 1080} : {y: 0}}

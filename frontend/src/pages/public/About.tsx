@@ -60,7 +60,7 @@ const About = () => {
   })
 
   return (
-    <div className='h-fit'>
+    <div className='h-fit bg-[#FFFDF0]'>
       <div className={`h-[500vh] relative`}>
         <div
             className={fixedPos ? `w-[58vw] h-[60vh] fixed top-1/2 left-1/2 transform -translate-y-[34vh] -translate-x-1/2 flex items-center` : 
@@ -83,19 +83,21 @@ const About = () => {
         </div>
       </div>
 
-      <div className='h-screen w-[72.9vw] relative text-center flex-col left-1/2  transform -translate-x-1/2'>
-        <p className='text-3xl'>
+      <div className='h-screen w-[50.9vw] relative text-center flex-col left-1/2  transform -translate-x-1/2'>
+        <p className='text-4xl'>
           TigerRacing began in 1983 as a senior design project, where a handful of LSU engineers built their first Formula SAE car. In 2012, it grew into something bigger: a club for a dedicated team of students pushing boundaries, passing down knowledge, and turning raw ideas into high-performance machines.
         </p>
         <br/>
-        <p className='text-3xl'>
-          Our 2022 season marked a milestone: 2nd in Skidpad, 7th overall, and the spark that drove our leap into electric vehicles. Now, we're tackling the challenges of EV design, from high-voltage systems to cutting-edge battery tech, all while keeping the competitive fire alive. Every bolt tightened, every line of code written, and every late-night test session proves one thing: engineering isn’t just learned in classrooms. It’s built here.
+        <p className='text-4xl'>
+          Our 2022 season marked a milestone: 2nd in Skidpad, 7th overall, and the spark that drove our leap into electric vehicles. Now, we're tackling the challenges of EV design, from high-voltage systems to cutting-edge battery tech, all while keeping the competitive fire alive.
         </p>
         <br/>
-        <p className='text-3xl'>
+        <p className='text-4xl'>
           From a capstone project to a top-tier team, TigerRacing is where theory meets the track. Whether you’re here to engineer, compete, or just make something incredible, welcome to the team.
         </p>
       </div>
+
+
     </div>
 
   );
