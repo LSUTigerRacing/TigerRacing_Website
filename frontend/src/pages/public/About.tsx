@@ -72,8 +72,9 @@ const About = () => {
           />
         </div>
         <div className={ 
-                        (fixedPos ? 'fixed top-[83.5vh] left-1/2 transform -translate-x-1/2' :
-                                    `absolute bottom-[13vh] left-1/2 transform -translate-x-1/2`)}        >
+            (fixedPos ? 'fixed top-[83.5vh] left-1/2 transform -translate-x-1/2' :
+            `absolute bottom-[13vh] left-1/2 transform -translate-x-1/2`)}       
+        >
           <h1 className='text-center'>
             {mottos[mottoIndex][0]}
           </h1>

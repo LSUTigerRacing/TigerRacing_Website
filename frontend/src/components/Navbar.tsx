@@ -1,20 +1,32 @@
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import purple_logo from "../assets/images/Logo_Purple.png";
 import { motion } from "motion/react"
 import Account_Icon from "../assets/images/account_circle.png"
 
 export const Navbar = () => {
+const [animate, setAnimate] = useState(false)
+    
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setAnimate(true);
+        }, 1925);
+        
+        return () => clearTimeout(timer);
+    })
     return (
         <nav
-            className="fixed h-20 w-full flex z-50 items-center justify-center gap-[30vw]"
+            className="fixed h-[10vh] w-full flex z-50 items-center justify-center gap-[30vw]"
         >
-            <div className="w-[10vw]">
-                <div className="w-[16.4vh] h-[5.4vh] bg-[rgb(81,0,135)] flex items-center justify-center rounded-3xl text-xl">
+            {/*  transition-transform duration-1000 ease-in
+                                ${animate ? 'translate-y-0' : '-translate-y-[10vh]'} */}
+            <div className={`w-[10vw]`}>
+                <div className={`w-[16.4vh] h-[5.4vh] bg-[rgb(81,0,135)] flex items-center justify-center rounded-3xl text-xl`}>
                     <h2 className="text-[#F5F0F6] font-semibold">Contact</h2>
                 </div>
             </div>
 
-            <div className="w-1/6">
+            <div className={`w-1/6 ${animate ? 'opacity-100' : 'opacity-0'}`}>
                 <Link to="/">
                     <img
                         src={purple_logo}

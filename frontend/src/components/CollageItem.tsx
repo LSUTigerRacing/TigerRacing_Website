@@ -1,4 +1,4 @@
-import { motion } from "motion/react"
+import { motion, number } from "motion/react"
 import { 
     useState,
     forwardRef,
@@ -33,43 +33,45 @@ export const CollageItem = forwardRef<ChildMethods, CollageItemProps>(({
     useEffect(() => {
         const collage_timer = setTimeout(() => {
             setAnimate(true);
-        },  +  order * 500);
+        }, 1500 +  order * 150);
         
         return () => clearTimeout(collage_timer);
     }, [order])
     return (
-        <img
-            src={imgPath}
-            style={{
-                width: width,
-                height: height,
-                top: yPos,
-                left: xPos,
-                zIndex: zIndex,
-                opacity: 100
-            }}
-            className="absolute object-cover"
-        />
-        // <motion.div
-        //     animate={animate ? 
-        //         {opacity: 100, zIndex: Number(zIndex)} :
-        //         {opacity: 0, zIndex: 0}
+        // <img
+        //     src={imgPath}
+        //     style={{
+        //         width: width,
+        //         height: height,
+        //         top: yPos,
+        //         left: xPos,
+        //         zIndex: zIndex,
+        //         opacity: 100
+        //     }}
+        //     className="absolute object-cover"
+        // />
+        <div style={{zIndex: zIndex}}>
+            <motion.div
+                animate={animate ? 
+                    {opacity: 100} :
+                    {opacity: 0}
 
-        //     }
-        //     transition={{ duration: 1.1, ease: "easeInOut" }}
-        // >
-        //         <img
-        //             src={imgPath}
-        //             style={{
-        //                 width: width,
-        //                 height: height,
-        //                 top: yPos,
-        //                 left: xPos,
-        //                 opacity: 0
-        //             }}
-        //             className="absolute object-cover"
-        //         />
-        // </motion.div>
+                }
+                transition={{ duration: 0.3, ease: "easeIn"}}
+            >
+                    <img
+                        src={imgPath}
+                        style={{
+                            width: width,
+                            height: height,
+                            top: yPos,
+                            left: xPos,
+                        }}
+                        className="absolute object-cover"
+                    />
+            </motion.div>
+        </div>
+
 
     )
 })
