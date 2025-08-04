@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react";
 import { CollageSlide } from "../../components/CollageItem.tsx";
 import { motion } from "motion/react";
-import DriveVideo from "../../assets/images/Home/drive.webm"
+import DriveVideo from "../../assets/images/Home/drive.webm";
+import DriveFaster from "../../assets/images/Home/Photo_Collage/Collage1";
+
 
 const createSvgBackground = (svgContent: string): string => {
   const encodedSvg = encodeURIComponent(svgContent);
@@ -26,7 +28,7 @@ const Home = () => {
     })
   return (
     <div className="w-screen h-fit bg-[#F5F0F6]">
-      <div className="w-screen h-screen"> {/* photo collage */}
+      <div className="w-screen h-screen">
           <div className="w-[99.5vw] overflow-hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 text-[10.4vw] leading-[8vw] z-10">
             <h1 
               className={`text-[#FFD500] text-center transition-transform duration-900 ease-in-out ${animate ? 'translate-y-0' : 'translate-y-full'}`} //+ (animate ? 'translate-y-0' : 'translate-y-full')
@@ -42,7 +44,7 @@ const Home = () => {
             >
                 <source src={DriveVideo} type="video/webm"/>
             </video>
-            <div className="absolute inset-0 bg-[#510087] opacity-35 pointer-events-none"></div>
+            <div className="absolute inset-0 bg-[#510087] opacity-40 pointer-events-none"></div>
           </div>
 
       </div>
@@ -89,7 +91,7 @@ const Home = () => {
 
       </div>
       <div>
-        {/* <CollageSlide imgSrc={Collage1} tagline="GEAUX FASTER."/> */}
+        <CollageSlide imgSrc={DriveFaster} tagline="GEAUX FASTER."/>
       </div>
     </div>
   );
