@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { CollageSlide } from "../../components/CollageItem.tsx";
 import { motion } from "motion/react";
 import DriveVideo from "../../assets/images/Home/drive.webm";
-import DriveFaster from "../../assets/images/Home/Photo_Collage/Collage1";
+import DriveFaster from "../../assets/images/Home/Slides/DriveFaster.png";
 
 
 const createSvgBackground = (svgContent: string): string => {
@@ -29,28 +29,32 @@ const Home = () => {
   return (
     <div className="w-screen h-fit bg-[#F5F0F6]">
       <div className="w-screen h-screen">
-          <div className="w-[99.5vw] overflow-hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 text-[10.4vw] leading-[8vw] z-10">
+        {/* Video */}
+        <div className="w-[95vw] h-[87vh] absolute top-1/2 left-1/2 transform -translate-y-6/13 -translate-x-1/2 overflow-hidden">
+          <video 
+            className="min-w-full min-h-full w-auto h-auto object-cover"              
+            autoPlay
+            loop
+          >
+              <source src={DriveVideo} type="video/webm"/>
+          </video>
+          <div className="absolute inset-0 bg-[#510087] opacity-40 pointer-events-none"></div>
+        </div>
+
+        {/* text and sumn */}
+        <div className="w-screen h-fit absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2">
+          <div className="w-full min-h-fit overflow-hidden text-[10.4vw] leading-[8vw] z-10">
             <h1 
               className={`text-[#FFD500] text-center transition-transform duration-900 ease-in-out ${animate ? 'translate-y-0' : 'translate-y-full'}`} //+ (animate ? 'translate-y-0' : 'translate-y-full')
             >
               WELCOME <br/> TO TIGER RACING.
             </h1>
           </div>
-          <div className="w-[95vw] h-[87vh] absolute top-1/2 left-1/2 transform -translate-y-6/13 -translate-x-1/2 overflow-hidden">
-            <video 
-              className="min-w-full min-h-full w-auto h-auto object-cover"              
-              autoPlay
-              loop
-            >
-                <source src={DriveVideo} type="video/webm"/>
-            </video>
-            <div className="absolute inset-0 bg-[#510087] opacity-40 pointer-events-none"></div>
-          </div>
-
+        </div>
       </div>
 
       <div 
-        className="w-screen h-[175vh] overflow-hidden"
+        className="w-screen h-[174vh] overflow-hidden"
         style={{
           backgroundImage: createSvgBackground(blurb),
           backgroundRepeat: `repeat`,
@@ -59,11 +63,11 @@ const Home = () => {
       >
         <div className="transform translate-y-[35vh]">
           <div className="translate-x-[8vw]">
-                        <div className="text-8xl">
+            <div className="text-[7vw]">
               <h1 className="text-[#FFD500]">LSU's Formula SAE</h1>
             </div>
             <br/>
-            <div className="w-[40vw] text-2xl">
+            <div className="w-[40vw] text-[1.7vw]">
               <p className="text-[#F5F0F6]">
                 Starting in 1985 as an ME capstone project, LSU TigerRacing has become a proving ground where theory meets the test of competition. 
               </p>
@@ -90,8 +94,14 @@ const Home = () => {
 
 
       </div>
-      <div>
-        <CollageSlide imgSrc={DriveFaster} tagline="GEAUX FASTER."/>
+      <div className="w-screen h-screen">
+        <CollageSlide 
+          imgSrc={DriveFaster} 
+          tagline="GEAUX FASTER."
+          description="Designs continue to improve every year, every car. See our predecessors and how they performed."
+          buttonName="Our Cars"
+          target="/cars"
+        />
       </div>
     </div>
   );
