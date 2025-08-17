@@ -20,6 +20,7 @@ export const Loading = () => {
 
     const videoLength = 1200;
     const logoTransitionLength = videoLength + 320;
+    const logoFinalHeight = 2;
 
     useEffect(() => {
         const timer = setTimeout(() => {
@@ -61,25 +62,29 @@ export const Loading = () => {
                     />
                 ) : (
                     <motion.div 
+                        initial={{height: "auto"}}
                         animate={animate ? 
                             {
                                 y: "-45vh",
-                                width: "16.6vw"
+                                height: "0.1vh"
                             } 
                             : 
-                            {y: 0}}
+                            {
+                                y: 0,
+                                height: "auto"
+                            }}
                         transition={{ duration: 0.75, ease: "easeInOut" }}
                         onAnimationComplete={() => {setLoadingFinished(true)}}
                     >
                         {imageToShow === 'white' ? (
                             <img
                                 src={loading_last_frame}
-                                className="w-[50vw]"
+                                className="w-[50vw] h-full object-cover"
                             />
                         ) : (
                             <img
                                 src={purple_logo}
-                                className="w-[50vw]"
+                                className="w-[50vw] h-full object-cover"
                             />
                         )}
                     </motion.div>
