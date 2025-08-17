@@ -16,6 +16,21 @@
     --standard-white: #F5F0F6;
 
 }
+html {
+    font-size:1.3vw
+}
+@media (min-width: 600px) {
+    html {
+        font-size:min(1.2vw, 1vh * 2.3)
+    }
+}
+
+@media (min-width: 1025px) {
+    html {
+        font-size:min(.8333333333vw, .8333333333vh * 2.3)
+    }
+}
+
 @layer base {
 
     *, *::before, *::after {
@@ -37,11 +52,12 @@
     h1, h2, h3, h4, h5, h6 {
         font-family: var(--font-heading);
         font-weight: 600;
+        font-size: 100%;
     }
     p, a {
         font-family: var(--font-body);
     }
     h1 {
-        font-size: xx-large;
+        font-size: 3rem;
     }
 }

@@ -10,10 +10,10 @@ const createSvgBackground = (svgContent: string): string => {
   return `url("data:image/svg+xml,${encodedSvg}")`;
 };
 
-const blurb =`        
-  <svg width="100%" height="120vh" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-    <ellipse cx="50" cy="30" rx="95" ry="20" fill="#510087" />
-    <rect width="100vw" height="120vh" x="-50" y="30" fill="#510087"/>
+const blurb =`  
+  <svg width="100%" height="120vh" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+    <ellipse cx="50" cy="15" rx="5vh" ry="10" fill="#510087" />
+    <rect x="0" y="15" width="100" height="109" fill="#510087"/>
   </svg>`;
 
 const Home = () => {
@@ -43,7 +43,7 @@ const Home = () => {
 
         {/* text and sumn */}
         <div className="w-screen h-fit absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2">
-          <div className="w-full min-h-fit overflow-hidden text-[10.4vw] leading-[8vw] z-10">
+          <div className="w-full min-h-fit overflow-hidden text-[13rem] leading-40 z-10">
             <h1 
               className={`text-[#FFD500] text-center transition-transform duration-900 ease-in-out ${animate ? 'translate-y-0' : 'translate-y-full'}`} //+ (animate ? 'translate-y-0' : 'translate-y-full')
             >
@@ -54,20 +54,20 @@ const Home = () => {
       </div>
 
       <div 
-        className="w-screen h-[174vh] overflow-hidden"
+        className="w-screen h-[100vw] overflow-hidden"
         style={{
           backgroundImage: createSvgBackground(blurb),
           backgroundRepeat: `repeat`,
           backgroundSize: "100vw 175vh"
         }}  
       >
-        <div className="transform translate-y-[35vh]">
-          <div className="translate-x-[8vw]">
-            <div className="text-[7vw]">
+        <div className="transform translate-y-[18rem]">
+          <div className="translate-x-[5vw]">
+            <div className="text-9xl">
               <h1 className="text-[#FFD500]">LSU's Formula SAE</h1>
             </div>
             <br/>
-            <div className="w-[40vw] text-[1.7vw]">
+            <div className="w-[40vw] text-2xl">
               <p className="text-[#F5F0F6]">
                 Starting in 1985 as an ME capstone project, LSU TigerRacing has become a proving ground where theory meets the test of competition. 
               </p>
