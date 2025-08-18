@@ -63,8 +63,8 @@ export const Navbar = () => {
 
 export const NavMenu = () => {
     return (
-        <div className="fixed right-8 top-30 w-fit pr-30 z-40 bg-[#510087]">
-            <div className="w-full h-fit flex flex-col">
+        <div className="w-[25vw] fixed right-8 top-30 z-40 bg-[#510087] rounded-4xl">
+            <div className="w-full h-[50vh] flex flex-col justify-between items-center">
                 <NavPage 
                     pageTitle="Home"
                     pageURL="/"
@@ -111,8 +111,9 @@ const NavPage = (props) => {
     }, [location]);
 
     return (
-        <Link to={pageURL}
-            className="w-full flex justify-between select-none cursor-pointer"
+        <Link 
+            to={pageURL}
+                className="w-[90%] flex justify-between select-none cursor-pointer text-[3vw]"
         >
             <h2 className="text-[#F5F0F6]">{pageTitle}</h2>
             <h2 className={`${currentPage ? "opacity-100" : "opacity-0" } text-[#F5F0F6]`}>•</h2>
