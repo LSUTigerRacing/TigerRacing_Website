@@ -28,25 +28,25 @@ export const Navbar = () => {
             >
                 {/*  transition-transform duration-1000 ease-in
                                     ${animate ? 'translate-y-0' : '-translate-y-[10vh]'} */}
-                <div className={`w-[10vw]`}>
-                    <div className={`p-20 bg-[rgb(81,0,135)] flex items-center justify-center rounded-4xl text-3xl`}>
+                <div className={`w-[11rem]`}>
+                    <div className={`h-[5.4vh] bg-[rgb(81,0,135)] flex items-center justify-center rounded-4xl text-3xl`}>
                         <h2 className="text-[#F5F0F6]">Contact</h2>
                     </div>
                 </div>
 
-                <div className={`w-1/6 ${animate ? 'opacity-100' : 'opacity-0'}`}>
+                <div className={`w-[20rem] ${animate ? 'opacity-100' : 'opacity-0'}`}>
                     <Link to="/">
                         <img
                             src={purple_logo}
                             alt="Home Button"
-                            className="object-cover"
+                            className="h-full object-cover"
                         />
                     </Link>
                 </div>
                 
-                <div className="w-[10vw]">
+                <div className="w-[11rem]">
                     <div
-                        className="w-[10.8vh] h-[5.4vh] bg-[rgb(81,0,135)] cursor-pointer flex items-center justify-center rounded-4xl text-3xl float-right"
+                        className="w-full h-[5.4vh] bg-[rgb(81,0,135)] cursor-pointer flex items-center justify-center rounded-4xl text-3xl float-right"
                         onClick={() => setNavMenuOpen(!navMenuOpen)}
                     >
                         <h2 className="text-[#F5F0F6] select-none">Menu</h2>

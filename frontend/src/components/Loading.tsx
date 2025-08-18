@@ -66,12 +66,11 @@ export const Loading = () => {
                         animate={animate ? 
                             {
                                 y: "-45vh",
-                                height: "0.1vh"
+                                width: "20rem"
                             } 
                             : 
                             {
                                 y: 0,
-                                height: "auto"
                             }}
                         transition={{ duration: 0.75, ease: "easeInOut" }}
                         onAnimationComplete={() => {setLoadingFinished(true)}}
