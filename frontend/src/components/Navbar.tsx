@@ -57,8 +57,8 @@ export const Navbar = () => {
                     </div>
                 </nav>
             </span>
-            <div className={`h-0 absolute right-12 overflow-hidden transition-all duration-1000 ease-in-out
-                ${navMenuOpen ? 'h-screen' : 'h-0 pointer-events-none'}`}>
+            <div className={`h-0 absolute right-12 overflow-hidden transition-all duration-600 ease-out
+                ${navMenuOpen ? 'h-[85vh]' : 'h-0 pointer-events-none'}`}>
                 <div className="w-fit h-full flex flex-col">
                     <div className="w-full h-fit bg-[#510087] rounded-4xl !p-10 !pl-15 !pr-15">
                         <div className="flex flex-col justify-between items-center">
@@ -89,9 +89,9 @@ export const Navbar = () => {
                         </div>
                     </div>
 
-                    {/* <div className="w-full h-fit bg-[#FFD500] rounded-4xl !p-10 !mt-[3vh] flex justify-center text-[6vh]">
+                    <div className="w-full h-fit bg-[#FFD500] rounded-4xl !p-10 !mt-[3vh] flex justify-center text-[6vh]">
                         <h1 className="text-[#FFFFFFF]">Member Portal →</h1>
-                    </div> */}
+                    </div>
                 </div>            
             </div>
 
