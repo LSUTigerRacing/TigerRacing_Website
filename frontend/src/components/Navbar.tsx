@@ -53,7 +53,7 @@ export const Navbar = () => {
                     </div>
                 </div>
             </nav>
-            <div className={`${navMenuOpen ? 'opacity-100' : 'opacity-0'}`}>
+            <div className={`${navMenuOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
                 <NavMenu/>
             </div>
 
