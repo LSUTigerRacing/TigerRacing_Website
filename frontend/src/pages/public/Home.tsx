@@ -2,7 +2,9 @@ import { useState, useEffect } from "react";
 import { CollageSlide } from "../../components/CollageItem.tsx";
 import { motion } from "motion/react";
 import DriveVideo from "../../assets/images/Home/drive.webm";
-import DriveFaster from "../../assets/images/Home/Slides/DriveFaster.png";
+import GeauxFaster from "../../assets/images/Home/Slides/GeauxFaster.png";
+import GeauxFurther from "../../assets/images/Home/Slides/GeauxFurther.png";
+import GeauxTogether from "../../assets/images/Home/Slides/GeauxTogether.png";
 
 
 const createSvgBackground = (svgContent: string): string => {
@@ -26,6 +28,7 @@ const Home = () => {
         
         return () => clearTimeout(title_timer);
     })
+
   return (
     <div className="w-screen h-fit bg-[#F5F0F6]">
       <div className="w-screen h-screen">
@@ -54,22 +57,21 @@ const Home = () => {
       </div>
 
       <div 
-        className="w-screen h-[100vw] overflow-hidden"
+        className="w-screen h-fit overflow-hidden"
         style={{
           backgroundImage: createSvgBackground(blurb),
           backgroundRepeat: `repeat`,
           backgroundSize: "100vw 175vh"
         }}  
       >
-        <div className="transform translate-y-[18rem]">
-          <div className="translate-x-[5vw]">
+        <div className="!mt-[18rem]">
+          <div className="!ml-30">
             <div className="text-9xl">
               <h1 className="text-[#FFD500]">LSU's Formula SAE</h1>
             </div>
-            <br/>
-            <div className="w-[40vw] text-2xl">
+            <div className="w-[40vw] text-2xl !mt-[2vh]">
               <p className="text-[#F5F0F6]">
-                Starting in 1985 as an ME capstone project, LSU TigerRacing has become a proving ground where theory meets the test of competition. 
+                Starting in 1983 as an ME capstone project, LSU TigerRacing has become a proving ground where theory meets the test of competition. 
               </p>
               <br/>
               <p className="text-[#F5F0F6]">
@@ -86,21 +88,33 @@ const Home = () => {
             </div>
           </div>
 
-          <div className="w-screen absolute text-8xl text-center transform translate-y-18">
+          <div className="w-screen text-8xl text-center !mt-[8vh]">
             <h1 className="text-[#FFD500]">Powering TigerRacing</h1>
           </div>
 
         </div>
-
-
       </div>
       <div className="w-screen h-screen">
         <CollageSlide 
-          imgSrc={DriveFaster} 
+          imgSrc={GeauxFaster} 
           tagline="GEAUX FASTER."
           description="Designs continue to improve every year, every car. See our predecessors and how they performed."
           buttonName="Our Cars"
           target="/cars"
+        />
+        <CollageSlide 
+          imgSrc={GeauxFurther} 
+          tagline="GEAUX FURTHER."
+          description="We started as a curriculum-integrated program. Now, we grow as our own independent team. Learn more about our history behind TigerRacing."
+          buttonName="Our Story"
+          target="/about"
+        />
+        <CollageSlide 
+          imgSrc={GeauxTogether} 
+          tagline="GEAUX TOGETHER."
+          description="We stress data-based engineering, documentation, and determination. Find out who is behind the design and build of our race cars."
+          buttonName="Our Story"
+          target="/about"
         />
       </div>
     </div>
