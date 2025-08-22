@@ -1,7 +1,7 @@
 import { lazy, Suspense } from "react"
 import { Routes, Route, Navigate } from "react-router-dom"
 import { motion, AnimatePresence } from "motion/react"
-import { Loading } from "./components/Loading"
+import { LoadingComponent } from "./components/Loading"
 import { Navbar } from "./components/Navbar"
 // Public pages
 const Home = lazy(() => import('./pages/public/Home'))
@@ -18,7 +18,7 @@ export const AppRoutes = () => {
     return (
         <>
             <Navbar />
-            <Loading/>
+            <LoadingComponent/>
             <Suspense fallback={null}>
                 <Routes>
                     {/* public pages */}

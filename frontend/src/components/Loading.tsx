@@ -1,14 +1,31 @@
 import { useState, useEffect, useRef } from "react"
 import { useLocation, useNavigation, useNavigationType } from "react-router-dom";
 import { motion } from "motion/react";
+import { Link, useNavigate } from "react-router-dom";
+
 import ScrollToTop from "../hooks/ScrollToTop";
 import Lottie from "react-lottie-player";
 import loading from "../assets/animations/Loading_Video.json";
 import loading_last_frame from "../assets/animations/Loading_last_frame.png";
 import purple_logo from "../assets/images/Logo_Purple.png";
 
-const Exit = () => {
+export const DelayedLink = (props) => {
+    const {
+        to
+    } = props;
 
+    const navigate = useNavigate();
+    const [isNavigating, setIsNavigating] = useState(false);
+
+    const handleClick = (e) => {
+        e.preventDefault();
+        setIsNavigating(true);
+    }
+
+    return (
+        <Link to={to}>
+        </Link>
+    )
 }
 
 export const Loading = () => {
@@ -20,7 +37,6 @@ export const Loading = () => {
 
     const videoLength = 1200;
     const logoTransitionLength = videoLength + 320;
-    const logoFinalHeight = 2;
 
     useEffect(() => {
         const timer = setTimeout(() => {
@@ -96,18 +112,18 @@ export const Loading = () => {
     );
 }
 
-const Enter = () => {
-    
-}
 
 export const LoadingComponent = () => {
-    const navigationType = useNavigationType();
+    const location = useLocation();
+    const state = location.state;
+    const isFreshLoad = state?.navigatedFromApp === false;
 
-    useEffect(() => {
-        if (navigationType === 'POP') { // fresh load
-            
-        } else if (navigationType === 'PUSH' || navigationType === 'REPLACE') {
-
-        }
-    }, [navigationType])
+    if (isFreshLoad) {
+        return (
+            <Loading/>
+        )
+    }
+    return (
+        <Loading/>
+    )
 }
