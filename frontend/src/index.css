@@ -45,7 +45,4 @@ html {
     p, a {
         font-family: var(--font-body);
     }
-    h1 {
-        font-size: 3rem;
-    }
 }
