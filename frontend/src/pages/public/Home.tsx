@@ -3,9 +3,10 @@ import { CollageSlide } from "../../components/CollageItem.tsx";
 import { motion } from "motion/react";
 
 import DriveVideo from "../../assets/images/Home/drive.webm";
-import GeauxFaster from "../../assets/images/Home/Slides/GeauxFaster.png";
-import GeauxFurther from "../../assets/images/Home/Slides/GeauxFurther.png";
-import GeauxTogether from "../../assets/images/Home/Slides/GeauxTogether.png";
+
+import OldAssPic from "../../assets/images/Home/OldAssPic.jpeg";
+import FirstClub from "../../assets/images/Home/2013-car.png";
+import ModernDay from "../../assets/images/Home/ModernDay.png";
 
 import BASF from "../../assets/images/Home/Sponsor_Logos/BASF.png"
 import Exxon from "../../assets/images/Home/Sponsor_Logos/Exxon.png"
@@ -15,6 +16,10 @@ import Kenesto from "../../assets/images/Home/Sponsor_Logos/Kenesto.png"
 import LSUCOE from "../../assets/images/Home/Sponsor_Logos/LSUCOE.png"
 import Siemens from "../../assets/images/Home/Sponsor_Logos/Siemens.png"
 import SolidWorks from "../../assets/images/Home/Sponsor_Logos/SolidWorks.png"
+
+import GeauxFaster from "../../assets/images/Home/Slides/GeauxFaster.png";
+import GeauxFurther from "../../assets/images/Home/Slides/GeauxFurther.png";
+import GeauxTogether from "../../assets/images/Home/Slides/GeauxTogether.png";
 
 const createSvgBackground = (svgContent: string): string => {
   const encodedSvg = encodeURIComponent(svgContent);
@@ -140,31 +145,41 @@ const Home = () => {
           backgroundSize: "100vw 175vh"
         }}  
       >
-        <div className="!mt-[18rem]">
-          <div className="!ml-30">
-            <div className="text-9xl">
-              <h1 className="text-[#FFD500]">LSU's Formula SAE</h1>
+        <div className="w-screen flex flex-col items-center !mt-[18rem]">
+          <div className="w-[85%]">
+            <div className="text-9xl text-[#FFD500]">
+              <h1>LSU's Formula SAE</h1>
             </div>
-            <div className="w-[40vw] text-2xl !mt-[2vh]">
-              <p className="text-[#F5F0F6]">
-                Starting in 1983 as an ME capstone project, LSU TigerRacing has become a proving ground where theory meets the test of competition. 
-              </p>
-              <br/>
-              <p className="text-[#F5F0F6]">
-                Here, hands-on experience fuels innovation as we design, build, and race cutting-edge formula vehicles.
-              </p>
-              <br/>
-              <p className="text-[#F5F0F6]">
-                Our shift to electric racing in 2023 reflects both our commitment to progress and our dedication to preparing the next generation of engineers. 
-              </p>
-              <br/>
-              <p className="text-[#F5F0F6]">
-                Every season brings new challenges, new solutions, and new opportunities to push further—on the track and beyond it.
-              </p>
+
+            <div className="flex justify-between items-center !mt-[3vh]">
+              <div className="w-[40%] h-fit flex-none text-2xl text-[#F5F0F6]">
+                <p>
+                  Starting in 1983 as an ME capstone project, LSU TigerRacing has become a proving ground where theory meets the test of competition. 
+                </p>
+                <br/>
+                <p>
+                  Here, hands-on experience fuels innovation as we design, build, and race cutting-edge formula vehicles.
+                </p>
+                <br/>
+                <p>
+                  Our shift to electric racing in 2023 reflects both our commitment to progress and our dedication to preparing the next generation of engineers. 
+                </p>
+                <br/>
+                <p>
+                  Every season brings new challenges, new solutions, and new opportunities to push further—on the track and beyond it.
+                </p>
+              </div>
+              <div className="max-w-[55%]">
+                <img
+                  src={ModernDay}
+                  alt="2025 Team"
+                  className="h-full w-full object-cov"
+                />
+              </div>
             </div>
           </div>
 
-          <div className="w-screen text-8xl text-center !mt-[8vh]">
+          <div className="text-8xl text-center !mt-[8vh]">
             <h1 className="text-[#FFD500]">Powering TigerRacing</h1>
             <SponsorsBar/>
           </div>
