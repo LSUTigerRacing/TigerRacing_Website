@@ -1,11 +1,20 @@
 import { useState, useEffect } from "react";
 import { CollageSlide } from "../../components/CollageItem.tsx";
 import { motion } from "motion/react";
+
 import DriveVideo from "../../assets/images/Home/drive.webm";
 import GeauxFaster from "../../assets/images/Home/Slides/GeauxFaster.png";
 import GeauxFurther from "../../assets/images/Home/Slides/GeauxFurther.png";
 import GeauxTogether from "../../assets/images/Home/Slides/GeauxTogether.png";
 
+import BASF from "../../assets/images/Home/Sponsor_Logos/BASF.png"
+import Exxon from "../../assets/images/Home/Sponsor_Logos/Exxon.png"
+import Haas from "../../assets/images/Home/Sponsor_Logos/Haas.png"
+import Hoosier from "../../assets/images/Home/Sponsor_Logos/Hoosier.png"
+import Kenesto from "../../assets/images/Home/Sponsor_Logos/Kenesto.png"
+import LSUCOE from "../../assets/images/Home/Sponsor_Logos/LSUCOE.png"
+import Siemens from "../../assets/images/Home/Sponsor_Logos/Siemens.png"
+import SolidWorks from "../../assets/images/Home/Sponsor_Logos/SolidWorks.png"
 
 const createSvgBackground = (svgContent: string): string => {
   const encodedSvg = encodeURIComponent(svgContent);
@@ -17,6 +26,73 @@ const blurb =`
     <ellipse cx="50" cy="15" rx="5vh" ry="10" fill="#510087" />
     <rect x="0" y="15" width="100" height="109" fill="#510087"/>
   </svg>`;
+
+interface ImageData {
+  id: number;
+  src: string;
+  alt: string;
+}
+
+const SponsorsBar = () => {
+  const images: ImageData[] = [
+    { id: 1, src: BASF, alt: 'BASF'},
+    { id: 2, src: Exxon, alt: 'Exxon'},
+    { id: 3, src: Haas, alt: 'Haas Foundation'},
+    { id: 4, src: Hoosier, alt: 'Hoosier'},
+    { id: 5, src: SolidWorks, alt: 'SolidWorks'},
+    { id: 6, src: Kenesto, alt: 'Kenesto'},
+    { id: 7, src: LSUCOE, alt: 'LSU College of Engineering'},
+    { id: 8, src: Siemens, alt: 'Siemens'},
+  ];
+
+  return (
+    <div className="relative h-fit overflow-hidden !my-[5vh]">
+      <div className="w-fit flex gap-[5rem] animate-scroll whitespace-nowrap">
+        {images.map((image) => (
+          <div
+            key={`first-${image.id}`}
+            className="inline-block shrink-0"
+          >
+            <img
+              src={image.src}
+              alt={image.alt}
+              className="!h-[15rem] !max-w-[40vw] w-auto object-contain"
+            />
+          </div>
+        ))}
+        {/* duped image set for looping */}
+        {images.map((image) => (
+          <div
+            key={`first-${image.id}`}
+            className="inline-block shrink-0"
+          >
+            <img
+              src={image.src}
+              alt={image.alt}
+              className="!h-[15rem] !max-w-[40vw] w-auto object-contain"
+            />
+          </div>
+        ))}
+      </div>
+      {/* Custom CSS for animation (this is gpt'd) */}
+      <style>{`
+        @keyframes scroll {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-50%);
+          }
+        }
+        
+        .animate-scroll {
+          animation: scroll 45s linear infinite;
+        }
+      `}</style>
+    </div>
+
+  )
+}
 
 const Home = () => {
     const [animate, setAnimate] = useState(false)
@@ -90,6 +166,7 @@ const Home = () => {
 
           <div className="w-screen text-8xl text-center !mt-[8vh]">
             <h1 className="text-[#FFD500]">Powering TigerRacing</h1>
+            <SponsorsBar/>
           </div>
 
         </div>

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TigerRacing.Data")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+02c5c994a5924c2fee858236718e159acc7e726e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2ac93987a358029b5bc6bc39871aedbf2b657f16")]
 [assembly: System.Reflection.AssemblyProductAttribute("TigerRacing.Data")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TigerRacing.Data")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
