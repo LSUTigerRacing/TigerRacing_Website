@@ -51,7 +51,7 @@ const SponsorsBar = () => {
   ];
 
   return (
-    <div className="relative h-fit overflow-hidden !my-[5vh]">
+    <div className="relative w-fit h-fit !my-[5vh]">
       <div className="w-fit flex gap-[5rem] animate-scroll whitespace-nowrap">
         {images.map((image) => (
           <div
@@ -91,7 +91,7 @@ const SponsorsBar = () => {
         }
         
         .animate-scroll {
-          animation: scroll 45s linear infinite;
+          animation: scroll 40s linear infinite;
         }
       `}</style>
     </div>
@@ -145,44 +145,46 @@ const Home = () => {
           backgroundSize: "100vw 175vh"
         }}  
       >
-        <div className="w-screen flex flex-col items-center !mt-[18rem]">
-          <div className="w-[85%]">
-            <div className="text-9xl text-[#FFD500]">
-              <h1>LSU's Formula SAE</h1>
-            </div>
-
-            <div className="flex justify-between items-center !mt-[3vh]">
-              <div className="w-[40%] h-fit flex-none text-2xl text-[#F5F0F6]">
-                <p>
-                  Starting in 1983 as an ME capstone project, LSU TigerRacing has become a proving ground where theory meets the test of competition. 
-                </p>
-                <br/>
-                <p>
-                  Here, hands-on experience fuels innovation as we design, build, and race cutting-edge formula vehicles.
-                </p>
-                <br/>
-                <p>
-                  Our shift to electric racing in 2023 reflects both our commitment to progress and our dedication to preparing the next generation of engineers. 
-                </p>
-                <br/>
-                <p>
-                  Every season brings new challenges, new solutions, and new opportunities to push further—on the track and beyond it.
-                </p>
+        <div className="!mt-[18rem]">
+          <div className="w-screen flex flex-col items-center">
+            <div className="w-[85%]">
+              <div className="text-9xl text-[#FFD500]">
+                <h1>LSU's Formula SAE</h1>
               </div>
-              <div className="max-w-[55%]">
-                <img
-                  src={ModernDay}
-                  alt="2025 Team"
-                  className="h-full w-full object-cov"
-                />
+
+              <div className="flex justify-between items-center !mt-[3vh]">
+                <div className="w-[40%] h-fit flex-none text-2xl text-[#F5F0F6]">
+                  <p>
+                    Starting in 1983 as an ME capstone project, LSU TigerRacing has become a proving ground where theory meets the test of competition. 
+                  </p>
+                  <br/>
+                  <p>
+                    Here, hands-on experience fuels innovation as we design, build, and race cutting-edge formula vehicles.
+                  </p>
+                  <br/>
+                  <p>
+                    Our shift to electric racing in 2023 reflects both our commitment to progress and our dedication to preparing the next generation of engineers. 
+                  </p>
+                  <br/>
+                  <p>
+                    Every season brings new challenges, new solutions, and new opportunities to push further—on the track and beyond it.
+                  </p>
+                </div>
+                <div className="max-w-[55%]">
+                  <img
+                    src={ModernDay}
+                    alt="2025 Team"
+                    className="h-full w-full object-cov"
+                  />
+                </div>
               </div>
             </div>
           </div>
 
           <div className="text-8xl text-center !mt-[8vh]">
             <h1 className="text-[#FFD500]">Powering TigerRacing</h1>
-            <SponsorsBar/>
           </div>
+          <SponsorsBar/>
 
         </div>
       </div>
