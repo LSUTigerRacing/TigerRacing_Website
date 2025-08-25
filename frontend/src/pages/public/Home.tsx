@@ -21,6 +21,9 @@ import GeauxFaster from "../../assets/images/Home/Slides/GeauxFaster.png";
 import GeauxFurther from "../../assets/images/Home/Slides/GeauxFurther.png";
 import GeauxTogether from "../../assets/images/Home/Slides/GeauxTogether.png";
 
+import LeftArrow from "../../assets/images/General/arrow-left-white.png"
+import RightArrow from "../../assets/images/General/arrow-right-white.png"
+
 const createSvgBackground = (svgContent: string): string => {
   const encodedSvg = encodeURIComponent(svgContent);
   return `url("data:image/svg+xml,${encodedSvg}")`;
@@ -96,6 +99,76 @@ const SponsorsBar = () => {
       `}</style>
     </div>
 
+  )
+}
+
+const PageCarousel = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const slides = [
+        <CollageSlide 
+          imgSrc={GeauxFaster} 
+          tagline="GEAUX FASTER."
+          description="Designs continue to improve every year, every car. See our predecessors and how they performed."
+          buttonName="Our Cars"
+          target="/cars"
+        />,
+        <CollageSlide 
+          imgSrc={GeauxFurther} 
+          tagline="GEAUX FURTHER."
+          description="We started as a curriculum-integrated program. Now, we grow as our own independent team. Learn more about our history behind TigerRacing."
+          buttonName="Our Story"
+          target="/about"
+        />,
+        <CollageSlide 
+          imgSrc={GeauxTogether} 
+          tagline="GEAUX TOGETHER."
+          description="We stress data-based engineering, documentation, and determination. Find out who is behind the design and build of our race cars."
+          buttonName="Our Story"
+          target="/about"
+        />
+  ]
+  const previous = () => {
+    setCurrentIndex(currentIndex === 0 ? slides.length - 1: currentIndex - 1)
+  }
+
+  const next = () => {
+    setCurrentIndex(currentIndex === slides.length - 1 ? 0: currentIndex + 1)
+  }
+
+  return (
+      <div className="relative w-screen">
+          <div className="overflow-hidden">
+            <div 
+              className="flex transition-transform duration-300"
+              style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+            >
+              {slides.map((slide, index) => (
+                <div key={index} className="w-full flex-shrink-0">
+                  {slide}
+                </div>
+              ))}
+            </div>
+          </div>
+          <button
+            onClick={previous}
+            className="absolute top-1/2 left-4 -translate-y-1/2 bg-white p-2 rounded-full shadow-lg"
+          >
+            <img 
+              src={LeftArrow}
+              className="w-[7rem] h-[7rem]" 
+            />
+          </button>
+  
+          <button
+            onClick={next}
+            className="absolute top-1/2 right-4 -translate-y-1/2 bg-white p-2 rounded-full shadow-lg"
+          >
+            <img 
+              src={RightArrow}
+              className="w-[7rem] h-[7rem]" 
+            />        
+          </button>
+      </div>
   )
 }
 
@@ -188,34 +261,8 @@ const Home = () => {
 
         </div>
       </div>
-      <div className="w-screen h-screen flex overflow-hidden whitespace-nowrap">
-        <CollageSlide 
-          imgSrc={GeauxFaster} 
-          tagline="GEAUX FASTER."
-          description="Designs continue to improve every year, every car. See our predecessors and how they performed."
-          buttonName="Our Cars"
-          target="/cars"
-          className="w-screen"
-        />
-        <CollageSlide 
-          imgSrc={GeauxFurther} 
-          tagline="GEAUX FURTHER."
-          description="We started as a curriculum-integrated program. Now, we grow as our own independent team. Learn more about our history behind TigerRacing."
-          buttonName="Our Story"
-          target="/about"
-          className="w-screen"
-        />
-        <CollageSlide 
-          imgSrc={GeauxTogether} 
-          tagline="GEAUX TOGETHER."
-          description="We stress data-based engineering, documentation, and determination. Find out who is behind the design and build of our race cars."
-          buttonName="Our Story"
-          target="/about"
-          className="w-screen"
-        />
-      </div>
-
-      <div className="w-[93%] h-screen flex flex-col justify-between !mx-auto !pb-[10vh]">
+      <PageCarousel/>
+      <div className="w-[93%] h-[95vh] flex flex-col justify-between !mx-auto !pb-[10vh]">
         <div/> {/* empty div to shove the second div down*/}
         <div className="h-[60%] flex justify-between">
           <div className="w-[55%] bg-[#FFD500]">

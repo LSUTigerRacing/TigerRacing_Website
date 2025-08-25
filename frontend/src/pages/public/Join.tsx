@@ -13,8 +13,8 @@ import Community1 from "../../assets/images/Join/community-1.png"
 import Community2 from "../../assets/images/Join/community-2.png"
 import Community3 from "../../assets/images/Join/community-3.png"
 
-import LeftArrow from "../../assets/images/Join/arrow-left.png"
-import RightArrow from "../../assets/images/Join/arrow-right.png"
+import LeftArrow from "../../assets/images/General/arrow-left.png"
+import RightArrow from "../../assets/images/General/arrow-right.png"
 
 const JoinReasons = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -218,7 +218,7 @@ const JoinReasons = () => {
             className="w-[3rem] h-[3rem]" 
           />        
         </button>
-    </div>
+      </div>
     </div>
    
   )
@@ -280,8 +280,7 @@ const Join = () => {
 
       {/* why join */}
       <JoinReasons/>
-
-
+      
       {/* Systems */}
       <div>
         <div className="w-screen flex justify-center">
