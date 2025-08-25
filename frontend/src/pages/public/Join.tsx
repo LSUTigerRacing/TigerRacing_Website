@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 import ChassisPic from "../../assets/images/Join/chassis.jpg"
@@ -7,13 +8,22 @@ import BuisnessPic from "../../assets/images/Join/business.jpg"
 import CareerPic from "../../assets/images/Join/career.png"
 import CompetitionWin from "../../assets/images/Join/competition-win.png"
 import CompetitionWinMeme from "../../assets/images/Join/competition-win-meme.png"
+import CommunityHeader from "../../assets/images/Join/community-header.jpg"
+import Community1 from "../../assets/images/Join/community-1.png"
+import Community2 from "../../assets/images/Join/community-2.png"
+import Community3 from "../../assets/images/Join/community-3.png"
+
+import LeftArrow from "../../assets/images/Join/arrow-left.png"
+import RightArrow from "../../assets/images/Join/arrow-right.png"
 
 const JoinReasons = () => {
-  return (
-    <div className="w-screen h-screen flex flex-col justify-center items-center !mt-[10vh]">
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const slides = [
+    <div className="w-screen h-screen flex flex-col justify-center">
           {/* Career */}
-          <div className="w-[93%] relative flex flex-col justify-between !pb-[10vh]">
-              <div className="w-full min-h-[30%] bg-[#510087] flex justify-between !p-[3vh] !pl-[5vh]">
+          <div className="w-[93%] h-full relative flex flex-col justify-between !pb-[10vh]">
+              <div className="w-full min-h-[60%] h-fit bg-[#510087] flex justify-between !p-[3vh] !pl-[5vh]">
                 <div className="w-[50%] text-[#F5F0F6]">
                   <h1 className="!text-[8rem]">Career</h1>
                   <p className="!text-[1.8rem]">
@@ -30,8 +40,8 @@ const JoinReasons = () => {
                 />
               </div>
               {/* stats */}
-              <div className="w-full flex flex-row justify-between gap-[2vh] !mt-[2vh]">
-                <div className="w-full bg-[#510087] text-center text-[#F5F0F6] !pt-[3%] !pb-[3%]">
+              <div className="w-full h-[35%] flex flex-row justify-between gap-[2%]">
+                <div className="w-full bg-[#510087] flex flex-col justify-center text-center text-[#F5F0F6]">
                   <h1 className="!text-[8rem] leading-[9rem]">40%</h1>
                   <p className="text-[2rem]">
                     of members interned in tech/engineering in 2025
@@ -62,7 +72,155 @@ const JoinReasons = () => {
                 </div>
               </div>
           </div>
-      </div>
+    </div>,
+    <div className="w-screen h-screen flex flex-col justify-center">
+          {/* Competition */}
+          <div className="w-[93%] h-full relative flex flex-col justify-between !pb-[10vh]">
+              <div className="w-full min-h-[60%] h-fit bg-[#510087] flex justify-between !p-[3vh] !pl-[5vh]">
+                <div className="w-[50%] text-[#F5F0F6]">
+                  <h1 className="!text-[8rem]">Competition</h1>
+                  <p className="!text-[1.8rem]">
+                  Design and construct a complete race car that will compete at 60+ mph against teams from MIT, Stanford, and other top engineering schools!
+                  <br/>
+                  <br/>
+                  Experience the adrenaline rush of watching your design decisions perform under real competitive conditions, where your calculations directly impact vehicle performance at high speeds on an actual racetrack.                
+                  </p>
+                </div>
+
+                <div className="w-[45%] object-cover relative overflow-hidden shadow-lg group">
+                  <img
+                    src={CompetitionWin}
+                    alt="Car with trophy on it"
+                    className="absolute inset-0 w-full h-full object-cover transition-opacity duration-0 ease-in-out group-hover:opacity-0"
+                  />
+                  <img
+                    src={CompetitionWinMeme}
+                    alt="Car with trophy on it with red circle thumbnail meme"
+                    className="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-0 ease-in-out group-hover:opacity-100"
+                  />
+                </div>
+              </div>
+              {/* stats */}
+              <div className="w-full h-[35%] flex flex-row justify-between gap-[2vh] !mt-[2vh]">
+                <div className="w-full bg-[#510087] text-center text-[#F5F0F6] !pt-[3%] !pb-[3%]">
+                  <h1 className="!text-[8rem] leading-[9rem]">7th/89</h1>
+                  <p className="text-[2rem]">
+                    Peak overall placement at FSAE Michigan
+                  </p>
+                </div>
+                <div className="w-full bg-[#510087] text-[#F5F0F6] flex flex-col justify-center items-center">
+                  <div className="w-[93%]">
+                    <h2 className="!text-[2.1rem]">Where our members and alum are working:</h2>
+                    <div className="flex justify-around text-[2rem]">
+                      <ul>
+                        <li><p>• Tesla</p></li>
+                        <li><p>• SpaceX</p></li>
+                        <li><p>• NASA</p></li>
+                        <li><p>• GM</p></li>
+                      </ul>
+                      <ul>
+                        <li><p>• NOC</p></li>
+                        <li><p>• Chevron</p></li>
+                        <li><p>• Exxon</p></li>
+                        <li><p>• Mosaic</p></li>
+                      </ul>
+                    </div>
+                  </div>
+
+                </div>
+                <div className="w-full bg-[#510087] text-[#F5F0F6] flex flex-col justify-center items-center ">
+
+                </div>
+              </div>
+          </div>
+    </div>,
+    <div className="w-screen h-[95vh] flex flex-col justify-center">
+        {/* Community */}
+        <div className="w-[93%] h-full relative flex flex-col justify-between">
+            <div className="w-full min-h-[60%] h-fit bg-[#510087] flex justify-between !p-[3vh] !pl-[5vh]">
+              <div className="w-[50%] text-[#F5F0F6]">
+                <h1 className="!text-[8rem]">Community</h1>
+                <p className="!text-[1.8rem]">
+                  Meet friendly, approachable students who love talking about technical challenges and are excited to share their knowledge and passion for engineering with newcomers at any experience level!
+                <br/>
+                <br/>
+                  Join a team that values every member's contributions, welcomes all backgrounds, and creates an environment where everyone feels welcome to learn, grow, and belong.                  
+                </p>
+              </div>
+
+              <img
+                src={CommunityHeader}
+                alt="2021 Team"
+                className="w-[45%] h-fit object-cover"
+              />
+            </div>
+            {/* pics */}
+            <div className="w-full max-h-[35%] h-fit flex flex-row justify-between !mb-[2vh]">
+                  <img
+                    src={Community1}
+                    alt="Guy in a car"
+                    className="w-[32%] h-full object-cover"
+                  />
+                  <img
+                    src={Community2}
+                    alt="three guys"
+                    className="w-[32%] h-full object-cover"
+                  />
+                  <img
+                    src={Community3}
+                    alt="Team BBQ"
+                    className="w-[32%] h-full object-cover"
+                  />
+            </div>
+        </div>
+    </div>
+  ]
+
+  const previous = () => {
+    setCurrentIndex(currentIndex === 0 ? slides.length - 1: currentIndex - 1)
+  }
+
+  const next = () => {
+    setCurrentIndex(currentIndex === slides.length - 1 ? 0: currentIndex + 1)
+  }
+
+  return (
+    <div className="relative w-screen !mt-[10vh]">
+      <div className="w-[93%] !mx-auto">
+        <div className="overflow-hidden">
+          <div 
+            className="flex transition-transform duration-300"
+            style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+          >
+            {slides.map((slide, index) => (
+              <div key={index} className="w-full flex-shrink-0">
+                {slide}
+              </div>
+            ))}
+          </div>
+        </div>
+        <button
+          onClick={previous}
+          className="absolute top-1/2 left-4 -translate-y-1/2 bg-white p-2 rounded-full shadow-md"
+        >
+          <img 
+            src={LeftArrow}
+            className="w-[3rem] h-[3rem]" 
+          />
+        </button>
+
+        <button
+          onClick={next}
+          className="absolute top-1/2 right-4 -translate-y-1/2 bg-white p-2 rounded-full shadow-md"
+        >
+          <img 
+            src={RightArrow}
+            className="w-[3rem] h-[3rem]" 
+          />        
+        </button>
+    </div>
+    </div>
+   
   )
 }
 
@@ -123,18 +281,6 @@ const Join = () => {
       {/* why join */}
       <JoinReasons/>
 
-      {/* <div className="relative w-[30vw] h-[20vw] overflow-hidden shadow-lg group">
-        <img
-          src={CompetitionWin}
-          alt="Car with trophy on it"
-          className="absolute inset-0 w-full h-full object-cover transition-opacity duration-0 ease-in-out group-hover:opacity-0"
-        />
-        <img
-          src={CompetitionWinMeme}
-          alt="Car with trophy on it with red circle thumbnail meme"
-          className="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-0 ease-in-out group-hover:opacity-100"
-        />
-      </div> */}
 
       {/* Systems */}
       <div>
