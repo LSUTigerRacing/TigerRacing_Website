@@ -276,6 +276,7 @@ const Join = () => {
           </div>
         </span>
       </div>
+      
     </div>
   );
 };

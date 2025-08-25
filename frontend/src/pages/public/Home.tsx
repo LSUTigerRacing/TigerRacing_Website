@@ -188,13 +188,14 @@ const Home = () => {
 
         </div>
       </div>
-      <div className="w-screen h-screen">
+      <div className="w-screen h-screen flex overflow-hidden whitespace-nowrap">
         <CollageSlide 
           imgSrc={GeauxFaster} 
           tagline="GEAUX FASTER."
           description="Designs continue to improve every year, every car. See our predecessors and how they performed."
           buttonName="Our Cars"
           target="/cars"
+          className="w-screen"
         />
         <CollageSlide 
           imgSrc={GeauxFurther} 
@@ -202,6 +203,7 @@ const Home = () => {
           description="We started as a curriculum-integrated program. Now, we grow as our own independent team. Learn more about our history behind TigerRacing."
           buttonName="Our Story"
           target="/about"
+          className="w-screen"
         />
         <CollageSlide 
           imgSrc={GeauxTogether} 
@@ -209,7 +211,40 @@ const Home = () => {
           description="We stress data-based engineering, documentation, and determination. Find out who is behind the design and build of our race cars."
           buttonName="Our Story"
           target="/about"
+          className="w-screen"
         />
+      </div>
+
+      <div className="w-[93%] h-screen flex flex-col justify-between !mx-auto !pb-[10vh]">
+        <div/> {/* empty div to shove the second div down*/}
+        <div className="h-[60%] flex justify-between">
+          <div className="w-[55%] bg-[#FFD500]">
+            <div className="w-[90%] min-h-[85%] flex flex-col justify-between !mx-[6%] !my-[5%]">
+              <div className="text-2xl">
+                <h2>Want to keep our wheels spinning?</h2>
+                <p>Let's talk!</p>
+              </div>
+
+              <span className="text-8xl">
+                <h1>Sponsors</h1>
+              </span>
+            </div>
+          </div>
+         
+          <div className="w-[40%]  bg-[#510087]">
+            <div className="w-[90%] min-h-[85%] flex flex-col justify-between text-[#F5F0F6] !mx-[6%] !my-[5%]">
+              <div className="text-2xl">
+                <h2>No backseat engineers here.</h2>
+                <p>Grab the wheel!</p>
+              </div>
+
+              <span className="text-8xl">
+                <h1>Join us</h1>
+              </span>    
+            </div>
+      
+          </div>
+        </div>
       </div>
     </div>
   );
