@@ -68,7 +68,7 @@ const JoinReasons = () => {
 
 const Join = () => {
   return (
-    <div className="w-screen h-fit bg-[#F5F0F6] !pb-[10vh]">
+    <div className="w-screen h-fit bg-[#F5F0F6]">
       <span className="w-screen text-center text-[#510087] inline-block !mt-[12vh] !mb-[4vh]">
         <span className="text-[10rem] leading-50">
           <h1 >Want to Join?</h1>
@@ -277,6 +277,15 @@ const Join = () => {
         </span>
       </div>
       
+      {/* how join */}
+      <div className="w-screen h-fit min-h-screen bg-[#510087] text-[#F5F0F6]">
+        <div className="text-center text-[10rem] !pt-[8vh]">
+          <h1>How do I join?</h1>
+        </div>
+        <h2>Come to our General Body Meetings!</h2>
+        <p>When:</p>
+        <p>Where:</p>
+      </div>
     </div>
   );
 };
