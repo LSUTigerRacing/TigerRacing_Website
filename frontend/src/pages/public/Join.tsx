@@ -68,7 +68,7 @@ const JoinReasons = () => {
 
                 </div>
                 <div className="w-full bg-[#510087] text-[#F5F0F6] flex flex-col justify-center items-center ">
-                  
+
                 </div>
               </div>
           </div>
@@ -201,21 +201,21 @@ const JoinReasons = () => {
         </div>
         <button
           onClick={previous}
-          className="absolute top-1/2 left-4 -translate-y-1/2 bg-white p-2 rounded-full shadow-md"
+          className="absolute top-1/2 left-[-1vw] -translate-y-1/2 bg-white p-2 rounded-full shadow-md"
         >
           <img 
             src={LeftArrow}
-            className="w-[3rem] h-[3rem]" 
+            className="w-[6rem] h-[6rem]" 
           />
         </button>
 
         <button
           onClick={next}
-          className="absolute top-1/2 right-4 -translate-y-1/2 bg-white p-2 rounded-full shadow-md"
+          className="absolute top-1/2 right-[-1vw] -translate-y-1/2 bg-white p-2 rounded-full shadow-md"
         >
           <img 
             src={RightArrow}
-            className="w-[3rem] h-[3rem]" 
+            className="w-[6rem] h-[6rem]" 
           />        
         </button>
       </div>
