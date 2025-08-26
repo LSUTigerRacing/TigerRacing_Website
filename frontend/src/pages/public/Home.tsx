@@ -123,7 +123,7 @@ const PageCarousel = () => {
           imgSrc={GeauxTogether} 
           tagline="GEAUX TOGETHER."
           description="We stress data-based engineering, documentation, and determination. Find out who is behind the design and build of our race cars."
-          buttonName="Our Story"
+          buttonName="Our Team"
           target="/about"
         />
   ]
@@ -266,7 +266,7 @@ const Home = () => {
         <div/> {/* empty div to shove the second div down*/}
         <div className="h-[60%] flex justify-between">
           <div className="w-[55%] bg-[#FFD500]">
-            <div className="w-[90%] min-h-[85%] flex flex-col justify-between !mx-[6%] !my-[5%]">
+            <div className="w-[90%] min-h-[85%] flex flex-col justify-between !mx-[2vw] !mt-[3%] !mb-[6%]">
               <div className="text-2xl">
                 <h2>Want to keep our wheels spinning?</h2>
                 <p>Let's talk!</p>
@@ -279,7 +279,7 @@ const Home = () => {
           </div>
          
           <div className="w-[40%]  bg-[#510087]">
-            <div className="w-[90%] min-h-[85%] flex flex-col justify-between text-[#F5F0F6] !mx-[6%] !my-[5%]">
+            <div className="w-[90%] min-h-[85%] flex flex-col justify-between text-[#F5F0F6] !mx-[2vw] !mt-[3%] !mb-[6%]">
               <div className="text-2xl">
                 <h2>No backseat engineers here.</h2>
                 <p>Grab the wheel!</p>

@@ -68,7 +68,7 @@ const JoinReasons = () => {
 
                 </div>
                 <div className="w-full bg-[#510087] text-[#F5F0F6] flex flex-col justify-center items-center ">
-
+                  
                 </div>
               </div>
           </div>
@@ -280,7 +280,7 @@ const Join = () => {
 
       {/* why join */}
       <JoinReasons/>
-      
+
       {/* Systems */}
       <div>
         <div className="w-screen flex justify-center">
