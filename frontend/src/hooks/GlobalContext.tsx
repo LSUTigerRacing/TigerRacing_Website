@@ -44,7 +44,7 @@ export const LoadingProvider: React.FC<LoadingProviderProps> = ({ children }) =>
     }
 
     return (
-        <LoadingContext.Provider value={{loadingState, startLoading, finishLoading }}>
+        <LoadingContext.Provider value={{ loadingState, startLoading, finishLoading }}>
         {children}
         </LoadingContext.Provider>
     );
@@ -54,7 +54,7 @@ export const LoadingProvider: React.FC<LoadingProviderProps> = ({ children }) =>
 export const useLoading = (): LoadingContextType => {
   const context = useContext(LoadingContext);
   if (context === undefined) {
-    throw new Error('useGlobal must be used within a GlobalProvider');
+    throw new Error('useLoading must be used within a LoadingProvider');
   }
   return context;
 };

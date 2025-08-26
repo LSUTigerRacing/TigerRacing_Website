@@ -8,6 +8,7 @@ import Lottie from "react-lottie-player";
 import loading from "../assets/animations/Loading_Video.json";
 import loading_last_frame from "../assets/animations/Loading_last_frame.png";
 import purple_logo from "../assets/images/Logo_Purple.png";
+import { useLoading } from "../hooks/GlobalContext";
 
 export const DelayedLink = (props) => {
     const {
@@ -29,6 +30,9 @@ export const DelayedLink = (props) => {
 }
 
 export const Loading = () => {
+    // const { loadingState } = useLoading();
+    // if (!loadingState.isLoading) return null;
+
     const location = useLocation();
     const [mediaToShow, setMediaToShow] = useState<'video' | 'image'> ('video');
     const [imageToShow, setImageToShow] = useState<'white' | 'purple'> ('white');

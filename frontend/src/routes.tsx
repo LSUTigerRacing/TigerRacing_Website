@@ -1,8 +1,8 @@
-import { lazy, Suspense } from "react"
-import { Routes, Route, Navigate } from "react-router-dom"
+import { lazy, Suspense, useEffect, useState } from "react"
+import { Routes, Route, Navigate, useLocation } from "react-router-dom"
 import { motion, AnimatePresence } from "motion/react"
-import { LoadingComponent } from "./components/Loading"
 import { Navbar } from "./components/Navbar"
+import { useLoading } from "./hooks/GlobalContext"
 // Public pages
 const Home = lazy(() => import('./pages/public/Home'))
 const About = lazy(() => import('./pages/public/About'))
@@ -15,10 +15,20 @@ const Sponsors = lazy(() => import('./pages/public/Sponsors'))
 const Dashboard = lazy(() => import('./pages/member/Dashboard'))
 
 export const AppRoutes = () => {
+    const { startLoading, finishLoading } = useLoading();
+    const location = useLocation();
+    const [prevLocation, setPrevLocation] = useState(location);
+
+    useEffect(() => {
+        if (location.pathname !== prevLocation.pathname) {
+            startLoading();
+            setPrevLocation(location);
+        }
+    }, [location, prevLocation, startLoading]);
+
     return (
         <>
             <Navbar />
-            <LoadingComponent/>
             <Suspense fallback={null}>
                 <Routes>
                     {/* public pages */}
