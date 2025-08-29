@@ -10,6 +10,7 @@ export default function App() {
     // <AuthProvider>
     <LoadingProvider>
       <BrowserRouter>
+        <ScrollToTop/>
         <LoadingComponent/>
         <AppRoutes/>
       </BrowserRouter>
