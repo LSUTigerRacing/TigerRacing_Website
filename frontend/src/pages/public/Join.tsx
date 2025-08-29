@@ -239,7 +239,8 @@ const Join = () => {
       {/* system pictures */}
       <div className="w-screen flex justify-center">
             <div className="w-[93vw] flex justify-between">
-              <div 
+              <Link 
+                to="./chassis"
                 className="w-[30vw] h-[40vh] bg-cover bg-center text-7xl relative"
                 style={{ 
                     backgroundImage: `url(${ChassisPic})`, 
@@ -247,9 +248,10 @@ const Join = () => {
               >
                 <div className="absolute inset-0 bg-[#510087] opacity-20 pointer-events-none"/>
                 <h1 className="text-[#F5F0F6] absolute bottom-4 left-2">CHASSIS</h1>
-              </div>
+              </Link>
 
-              <div
+              <Link
+              to="./powertrain"
                 className="w-[30vw] h-[40vh] bg-cover bg-center text-7xl relative"
                 style={{ 
                     backgroundImage: `url(${PowertrainPic})`, 
@@ -257,9 +259,10 @@ const Join = () => {
               >
                 <div className="absolute inset-0 bg-[#510087] opacity-20 pointer-events-none"/>
                 <h1 className="text-[#F5F0F6] absolute bottom-4 left-2">POWERTRAIN</h1>
-              </div>
+              </Link>
 
-              <div
+              <Link
+                to="./business"
                 className="w-[30vw] h-[40vh] bg-cover bg-center text-7xl relative"
                 style={{ 
                     backgroundImage: `url(${BuisnessPic})`, 
@@ -268,7 +271,7 @@ const Join = () => {
                 <div className="absolute inset-0 bg-[#510087] opacity-20 pointer-events-none"/>
 
                 <h1 className="text-[#F5F0F6] absolute bottom-4 left-2">BUSINESS</h1>
-              </div>
+              </Link>
             </div>
       </div>
 
@@ -322,7 +325,7 @@ const Join = () => {
               </div>
             </div>
             <Link 
-                to=""
+                to="./chassis"
                 className="w-[26vw] h-[85%] bg-cover flex items-center justify-center"
                 style={{ 
                       backgroundImage: `url(${ChassisPic})`, 
@@ -366,7 +369,7 @@ const Join = () => {
               </div>
             </div>
             <Link 
-                to=""
+                to="./powertrain"
                 className="w-[26vw] h-[85%] bg-cover flex items-center justify-center"
                 style={{ 
                       backgroundImage: `url(${PowertrainPic})`, 
@@ -408,7 +411,7 @@ const Join = () => {
               </div>
             </div>
             <Link 
-                to=""
+                to="./business"
                 className="w-[26vw] h-[85%] bg-cover flex items-center justify-center"
                 style={{ 
                       backgroundImage: `url(${BuisnessPic})`, 

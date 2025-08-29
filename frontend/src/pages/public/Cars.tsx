@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 
 import Car2025 from "../../assets/images/Cars/2025.png";
 import Car2022 from "../../assets/images/Cars/2022.png";
@@ -55,6 +55,7 @@ const Cars = () => {
           height="70"
           xPos="10vw"
           yPos="20vh"
+          titlePos="top-right"
         />
         <CarTile
           year="2022"
@@ -63,6 +64,7 @@ const Cars = () => {
           height="60"
           xPos="70vw"
           yPos="10vh"
+          titlePos="top-left"
         />
         <CarTile
           year="2021"
@@ -71,6 +73,7 @@ const Cars = () => {
           height="40"
           xPos="125vw"
           yPos="48vh"
+          titlePos="top-right"
         />
         <CarTile
           year="2019"
@@ -79,6 +82,7 @@ const Cars = () => {
           height="40"
           xPos="140vw"
           yPos="5vh"
+          titlePos="bottom-right"
         />
         <CarTile
           year="2018"
@@ -87,6 +91,7 @@ const Cars = () => {
           height="40"
           xPos="160vw"
           yPos="48vh"
+          titlePos="top-right"
         />
         <CarTile
           year="2017"
@@ -95,6 +100,7 @@ const Cars = () => {
           height="60"
           xPos="195vw"
           yPos="20vh"
+          titlePos="top-left"
         />
         <CarTile
           year="2016"
@@ -103,6 +109,7 @@ const Cars = () => {
           height="45"
           xPos="250vw"
           yPos="48vh"
+          titlePos="top-right"
         />
         <CarTile
           year="2015"
@@ -111,6 +118,7 @@ const Cars = () => {
           height="40"
           xPos="270vw"
           yPos="3vh"
+          titlePos="bottom-left"
         />
         <CarTile
           year="2014"
@@ -119,6 +127,7 @@ const Cars = () => {
           height="40"
           xPos="288vw"
           yPos="48vh"
+          titlePos="top-left"
         />
         <CarTile
           year="2013"
@@ -127,6 +136,7 @@ const Cars = () => {
           height="70"
           xPos="325vw"
           yPos="8vh"
+          titlePos="top-right"
         />
         <CarTile
           year="2022"
@@ -135,6 +145,7 @@ const Cars = () => {
           height="45"
           xPos="385vw"
           yPos="48vh"
+          titlePos="bottom-right"
         />
         <CarTile
           year="2011"
@@ -143,6 +154,7 @@ const Cars = () => {
           height="42"
           xPos="415vw"
           yPos="3vh"
+          titlePos="top-right"
         />
         <CarTile
           year="2009"
@@ -151,6 +163,7 @@ const Cars = () => {
           height="42"
           xPos="430vw"
           yPos="48vh"
+          titlePos="top-left"
         />
         <CarTile
           year="2008 2007"
@@ -159,6 +172,7 @@ const Cars = () => {
           height="58"
           xPos="468vw"
           yPos="20vh"
+          titlePos="top-left"
         />
         <CarTile
           year="2006"
@@ -167,14 +181,16 @@ const Cars = () => {
           height="40"
           xPos="520vw"
           yPos="48vh"
+          titlePos="top-right"
         />
         <CarTile
-          year="1093"
+          year="1993"
           img={Car1993}
           width="40"
           height="50"
           xPos="553vw"
           yPos="25vh"
+          titlePos="bottom-left"
         />
         <CarTile
           year="1983"
@@ -183,6 +199,7 @@ const Cars = () => {
           height="68"
           xPos="597vw"
           yPos="18vh"
+          titlePos="bottom-left"
         />
       </div>
 
@@ -197,9 +214,24 @@ const CarTile = (props) => {
     width,
     height,
     xPos,
-    yPos
+    yPos,
+    titlePos
   } = props;
   
+  const [titleCorner, setTitleCorner] = useState(0);
+
+  useEffect(() => {
+    if (titlePos === "top-left") {
+      setTitleCorner(0);
+    } else if (titlePos === "top-right") {
+      setTitleCorner(1);
+    } else if (titlePos === "bottom-left") {
+      setTitleCorner(2);
+    } else if (titlePos === "bottom-right") {
+      setTitleCorner(3);
+    }
+  }, [titlePos]);
+
   return (
     <div 
       className={`w-[${width}vw] h-[${height}vh] bg-cover bg-center overflow-hidden absolute`}
@@ -213,8 +245,13 @@ const CarTile = (props) => {
       }}
     >
       <h1 
-        className="text-[#F5F0F6]"
-        style={{ 
+        className={`text-[#F5F0F6] absolute
+          ${titleCorner === 0 ? 'top-[1%] left-[9%]' : ''}
+          ${titleCorner === 1 ? 'top-[1%] right-[9%]' : ''}
+          ${titleCorner === 2 ? 'bottom-[1%] left-[9%]' : ''}
+          ${titleCorner === 3 ? 'bottom-[1%] right-[9%]' : ''}
+          `}
+        style={{
           fontSize: `${width/6}vw`
         }}
       >{year}</h1>
