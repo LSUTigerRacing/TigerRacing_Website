@@ -12,7 +12,7 @@ const Sponsors = () => {
             <h1>KEEP OUR ENGINES ROARING.*</h1>
           </span>
           <span className="text-[#510087] text-[1rem] text-center leading-[1rem]">
-            <p>*note that our engines have been whirring since 2023.</p>
+            <p>*note that since 2023 we no longer have an engine nor does the car roar.</p>
           </span>
         </span>
 
