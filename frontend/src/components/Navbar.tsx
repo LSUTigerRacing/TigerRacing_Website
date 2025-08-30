@@ -32,7 +32,7 @@ export const Navbar = () => {
                     {/*  transition-transform duration-1000 ease-in
                                         ${animate ? 'translate-y-0' : '-translate-y-[10vh]'} */}
                     <div className={`w-[11rem]`}>
-                        <div className={`h-[5.4vh] bg-[rgb(81,0,135)] flex items-center justify-center rounded-4xl text-3xl`}>
+                        <div className={`h-[5.4vh] bg-[#510087] flex items-center justify-center rounded-4xl text-3xl`}>
                             <h2 className="text-[#F5F0F6]">Contact</h2>
                         </div>
                     </div>

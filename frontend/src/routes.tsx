@@ -3,6 +3,7 @@ import { Routes, Route, Navigate, useLocation } from "react-router-dom"
 import { motion, AnimatePresence } from "motion/react"
 import { Navbar } from "./components/Navbar"
 import { useLoading } from "./hooks/GlobalContext"
+import Footer from "./components/Footer"
 // Public pages
 const Home = lazy(() => import('./pages/public/Home'))
 const About = lazy(() => import('./pages/public/About'))
@@ -53,6 +54,7 @@ export const AppRoutes = () => {
                     <Route path="*" element={<Navigate to="/" replace/>}/>
                 </Routes>
             </Suspense>   
+            <Footer/>
         </>
     )
 }
