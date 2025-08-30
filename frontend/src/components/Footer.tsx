@@ -9,9 +9,9 @@ export const Footer = () => {
             <img
                 src={FooterFlair}
                 alt="2022 Car"
-                className="absolute right-0 bottom-0 z-0 select-none"
+                className="w-[60rem] absolute right-[7rem] bottom-0 z-0 select-none"
             />
-            <div className="w-[93%] h-full flex justify-between !mx-auto !pt-[8vh]">
+            <div className="w-[93%] h-full flex justify-between !mx-auto !pt-[8vh] z-10">
                 {/* Links */}
                 <div className="w-[30%] flex justify-between">
                     {/* Pages */}
