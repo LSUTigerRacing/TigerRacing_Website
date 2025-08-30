@@ -43,6 +43,21 @@ const Business = () => {
       <div className="w-[93%] !mx-auto text-center text-[2.5rem] leading-[3.5rem] !mt-[4vh]">
         <p>The teams that consistently win championships aren't just the ones with the fastest cars; they're the ones that <strong>master</strong> the complete business ecosystem of motorsports, where your financial acumen, strategic thinking, and communication skills aren't just valuable—they're absolutely essential to enabling, driving, and determining whether the engineering succeeds or fails on the track.</p>
       </div>
+      
+      <div className="h-[50vh] flex flex-col justify-between items-center text-center !my-[5rem]">
+        <div>
+          <span className="text-[6rem] text-[#510087]">
+            <h1>Sounds like a fit?</h1>
+          </span>
+          <span className="text-[3rem]">
+            <h2>Fill out our interest form and we’ll contact you from there!</h2>
+          </span>
+        </div>
+
+        <div className="w-fit h-fit bg-[#FFD500] !p-[1rem] !px-[2rem] text-[3.5rem] rounded-[2.5rem]">
+          <h2>Interest Form</h2>
+        </div>
+      </div>
     </div>
   );
 };

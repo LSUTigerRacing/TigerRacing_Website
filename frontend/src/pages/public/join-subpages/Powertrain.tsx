@@ -43,6 +43,21 @@ const Powertrain = () => {
       <div className="w-[93%] !mx-auto text-center text-[2.5rem] leading-[3.5rem] !mt-[4vh]">
         <p>Every component you design, every algorithm you optimize, and every system you integrate becomes part of a machine that will be tested at the absolute limits of performance, giving you real-world experience that transforms theoretical knowledge into the kind of practical expertise that launches careers in the most exciting sector of modern engineering.</p>
       </div>
+
+      <div className="h-[50vh] flex flex-col justify-between items-center text-center !my-[5rem]">
+        <div>
+          <span className="text-[6rem] text-[#510087]">
+            <h1>Sounds like a fit?</h1>
+          </span>
+          <span className="text-[3rem]">
+            <h2>Fill out our interest form and we’ll contact you from there!</h2>
+          </span>
+        </div>
+
+        <div className="w-fit h-fit bg-[#FFD500] !p-[1rem] !px-[2rem] text-[3.5rem] rounded-[2.5rem]">
+          <h2>Interest Form</h2>
+        </div>
+      </div>
     </div>
   );
 };
