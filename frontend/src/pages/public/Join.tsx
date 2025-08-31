@@ -426,13 +426,18 @@ const Join = () => {
       </div>
       
       {/* how join */}
-      <div className="w-screen h-fit min-h-screen bg-[#510087] text-[#F5F0F6]">
-        <div className="text-center text-[10rem] !pt-[8vh]">
-          <h1>How do I join?</h1>
+      <div className="w-screen !h-[70vh] bg-[#510087] flex flex-col items-center justify-between !py-[5vh]">
+        <div className="text-center text-[#F5F0F6]">
+          <span className="text-[10rem]">
+            <h1>How do I join?</h1>
+          </span>
+          <span className="text-[3rem]">
+            <p>Fill out our interest form and we’ll contact you from there!</p>
+          </span>
         </div>
-        <h2>Come to our General Body Meetings!</h2>
-        <p>When:</p>
-        <p>Where:</p>
+        <div className="w-fit h-fit bg-[#FFD500] !p-[1rem] !px-[2rem] text-[3.5rem] rounded-[2.5rem]">
+          <h2>Interest Form</h2>
+        </div>
       </div>
     </div>
   );
