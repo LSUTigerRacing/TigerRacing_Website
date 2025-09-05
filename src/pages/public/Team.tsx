@@ -1,3 +1,11 @@
+import President from "../../assets/images/Team/President.png"
+import VicePresident from "../../assets/images/Team/VicePres.png"
+import Treasurer from "../../assets/images/Team/Treasurer.png"
+import PublicRelations from "../../assets/images/Team/President.png"
+import President from "../../assets/images/Team/President.png"
+import President from "../../assets/images/Team/President.png"
+import President from "../../assets/images/Team/President.png"
+
 const Team = () => {
   return (
     <div className="w-screen text-[#510087]">

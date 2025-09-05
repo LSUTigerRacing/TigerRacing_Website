@@ -17,9 +17,6 @@ const Powertrain = lazy(() => import('./pages/public/join-subpages/Powertrain'))
 const Business = lazy(() => import('./pages/public/join-subpages/Business'))
 
 
-// Member pages
-const Dashboard = lazy(() => import('./pages/member/Dashboard'))
-
 export const AppRoutes = () => {
     const { startLoading, finishLoading } = useLoading();
     const location = useLocation();
@@ -47,8 +44,6 @@ export const AppRoutes = () => {
                         <Route path="/join/chassis" element={<Chassis />}/>
                         <Route path="/join/powertrain" element={<Powertrain />}/>
                         <Route path="/join/business" element={<Business />}/>
-                    {/* protected pages*/}
-                    <Route path="/dashboard" element={<Dashboard />} />
 
                     {/* the else statement (wow) */}
                     <Route path="*" element={<Navigate to="/" replace/>}/>
