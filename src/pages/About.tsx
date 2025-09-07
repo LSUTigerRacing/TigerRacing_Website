@@ -1,13 +1,13 @@
 import { useState, useEffect } from 'react';
 
-import HeroImage1 from "../../assets/images/About/2014.jpg";
-import HeroImage2 from "../../assets/images/About/2013.jpg";
-import HeroImage3 from "../../assets/images/About/2023.png";
-import HeroImage4 from "../../assets/images/About/2018.JPG";
-import HeroImage5 from "../../assets/images/About/2019.JPG";
-import HeroImage6 from "../../assets/images/About/2021.JPG";
+import HeroImage1 from "../assets/images/About/2014.jpg";
+import HeroImage2 from "../assets/images/About/2013.jpg";
+import HeroImage3 from "../assets/images/About/2023.png";
+import HeroImage4 from "../assets/images/About/2018.JPG";
+import HeroImage5 from "../assets/images/About/2019.JPG";
+import HeroImage6 from "../assets/images/About/2021.JPG";
 
-import History from "../../assets/images/About/history.png";
+import History from "../assets/images/About/history.png";
 
 
 const About = () => {

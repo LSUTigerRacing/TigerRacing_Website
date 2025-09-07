@@ -7,7 +7,7 @@ import Lottie from "react-lottie-player";
 import loading from "../assets/animations/Loading_Video.json";
 import loading_last_frame from "../assets/animations/Loading_last_frame.png";
 import purple_logo from "../assets/images/Logo_Purple.png";
-import { useLoading } from "../hooks/GlobalContext";
+import { useLoading } from "../hooks/LoadingContext";
 
 export const DelayedLink = (props) => {
     const {

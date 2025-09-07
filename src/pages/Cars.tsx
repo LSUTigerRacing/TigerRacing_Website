@@ -1,22 +1,22 @@
 import { useRef, useState, useEffect } from "react";
 
-import Car2025 from "../../assets/images/Cars/2025.png";
-import Car2022 from "../../assets/images/Cars/2022.png";
+import Car2025 from "../assets/images/Cars/2025.png";
+import Car2022 from "../assets/images/Cars/2022.png";
 import Car2021 from "../../assets/images/Cars/2021.png";
-import Car2019 from "../../assets/images/Cars/2019.png";
-import Car2018 from "../../assets/images/Cars/2018.png";
-import Car2017 from "../../assets/images/Cars/2017.png";
-import Car2016 from "../../assets/images/Cars/2016.png";
-import Car2015 from "../../assets/images/Cars/2015.png";
-import Car2014 from "../../assets/images/Cars/2014.png";
-import Car2013 from "../../assets/images/Cars/2013.png";
-import Car2012 from "../../assets/images/Cars/2012.png";
-import Car2011 from "../../assets/images/Cars/2011.png";
-import Car2009 from "../../assets/images/Cars/2009.png";
-import Car20082007 from "../../assets/images/Cars/2007-2008.png";
-import Car2006 from "../../assets/images/Cars/2006.png";
-import Car1993 from "../../assets/images/Cars/1993.png";
-import Car1983 from "../../assets/images/Cars/1983.png";
+import Car2019 from "../assets/images/Cars/2019.png";
+import Car2018 from "../assets/images/Cars/2018.png";
+import Car2017 from "../assets/images/Cars/2017.png";
+import Car2016 from "../assets/images/Cars/2016.png";
+import Car2015 from "../assets/images/Cars/2015.png";
+import Car2014 from "../assets/images/Cars/2014.png";
+import Car2013 from "../assets/images/Cars/2013.png";
+import Car2012 from "../assets/images/Cars/2012.png";
+import Car2011 from "../assets/images/Cars/2011.png";
+import Car2009 from "../assets/images/Cars/2009.png";
+import Car20082007 from "../assets/images/Cars/2007-2008.png";
+import Car2006 from "../assets/images/Cars/2006.png";
+import Car1993 from "../assets/images/Cars/1993.png";
+import Car1983 from "../assets/images/Cars/1983.png";
 
 const Cars = () => {
   const scrollRef = useRef<HTMLDivElement>(null);

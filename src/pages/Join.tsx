@@ -1,20 +1,20 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-import ChassisPic from "../../assets/images/Join/chassis.jpg"
-import PowertrainPic from "../../assets/images/Join/powertrain.png"
-import BuisnessPic from "../../assets/images/Join/business.jpg"
+import ChassisPic from "../assets/images/Join/chassis.jpg"
+import PowertrainPic from "../assets/images/Join/powertrain.png"
+import BuisnessPic from "../assets/images/Join/business.jpg"
 
-import CareerPic from "../../assets/images/Join/career.png"
-import CompetitionWin from "../../assets/images/Join/competition-win.png"
-import CompetitionWinMeme from "../../assets/images/Join/competition-win-meme.png"
-import CommunityHeader from "../../assets/images/Join/community-header.jpg"
-import Community1 from "../../assets/images/Join/community-1.png"
-import Community2 from "../../assets/images/Join/community-2.png"
-import Community3 from "../../assets/images/Join/community-3.png"
+import CareerPic from "../assets/images/Join/career.png"
+import CompetitionWin from "../assets/images/Join/competition-win.png"
+import CompetitionWinMeme from "../assets/images/Join/competition-win-meme.png"
+import CommunityHeader from "../assets/images/Join/community-header.jpg"
+import Community1 from "../assets/images/Join/community-1.png"
+import Community2 from "../assets/images/Join/community-2.png"
+import Community3 from "../assets/images/Join/community-3.png"
 
-import LeftArrow from "../../assets/images/General/arrow-left.png"
-import RightArrow from "../../assets/images/General/arrow-right.png"
+import LeftArrow from "../assets/images/General/arrow-left.png"
+import RightArrow from "../assets/images/General/arrow-right.png"
 
 const JoinReasons = () => {
   const [currentIndex, setCurrentIndex] = useState(0);

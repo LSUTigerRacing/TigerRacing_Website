@@ -1,28 +1,28 @@
 import { useState, useEffect } from "react";
-import { CollageSlide } from "../../components/CollageItem.tsx";
+import { CollageSlide } from "../components/CollageItem.tsx";
 import { motion } from "motion/react";
 
-import DriveVideo from "../../assets/images/Home/drive.webm";
+import DriveVideo from "../assets/images/Home/drive.webm";
 
-import OldAssPic from "../../assets/images/Home/OldAssPic.jpeg";
-import FirstClub from "../../assets/images/Home/2013-car.png";
-import ModernDay from "../../assets/images/Home/ModernDay.png";
+import OldAssPic from "../assets/images/Home/OldAssPic.jpeg";
+import FirstClub from "../assets/images/Home/2013-car.png";
+import ModernDay from "../assets/images/Home/ModernDay.png";
 
-import BASF from "../../assets/images/Home/Sponsor_Logos/BASF.png"
-import Exxon from "../../assets/images/Home/Sponsor_Logos/Exxon.png"
-import Haas from "../../assets/images/Home/Sponsor_Logos/Haas.png"
-import Hoosier from "../../assets/images/Home/Sponsor_Logos/Hoosier.png"
-import Kenesto from "../../assets/images/Home/Sponsor_Logos/Kenesto.png"
-import LSUCOE from "../../assets/images/Home/Sponsor_Logos/LSUCOE.png"
-import Siemens from "../../assets/images/Home/Sponsor_Logos/Siemens.png"
-import SolidWorks from "../../assets/images/Home/Sponsor_Logos/SolidWorks.png"
+import BASF from "../assets/images/Home/Sponsor_Logos/BASF.png"
+import Exxon from "../assets/images/Home/Sponsor_Logos/Exxon.png"
+import Haas from "../assets/images/Home/Sponsor_Logos/Haas.png"
+import Hoosier from "../assets/images/Home/Sponsor_Logos/Hoosier.png"
+import Kenesto from "../assets/images/Home/Sponsor_Logos/Kenesto.png"
+import LSUCOE from "../assets/images/Home/Sponsor_Logos/LSUCOE.png"
+import Siemens from "../assets/images/Home/Sponsor_Logos/Siemens.png"
+import SolidWorks from "../assets/images/Home/Sponsor_Logos/SolidWorks.png"
 
-import GeauxFaster from "../../assets/images/Home/Slides/GeauxFaster.png";
-import GeauxFurther from "../../assets/images/Home/Slides/GeauxFurther.png";
-import GeauxTogether from "../../assets/images/Home/Slides/GeauxTogether.png";
+import GeauxFaster from "../assets/images/Home/Slides/GeauxFaster.png";
+import GeauxFurther from "../assets/images/Home/Slides/GeauxFurther.png";
+import GeauxTogether from "../assets/images/Home/Slides/GeauxTogether.png";
 
-import LeftArrow from "../../assets/images/General/arrow-left-white.png"
-import RightArrow from "../../assets/images/General/arrow-right-white.png"
+import LeftArrow from "../assets/images/General/arrow-left-white.png"
+import RightArrow from "../assets/images/General/arrow-right-white.png"
 
 const createSvgBackground = (svgContent: string): string => {
   const encodedSvg = encodeURIComponent(svgContent);

@@ -1,10 +1,11 @@
-import President from "../../assets/images/Team/President.png"
-import VicePresident from "../../assets/images/Team/VicePres.png"
-import Treasurer from "../../assets/images/Team/Treasurer.png"
-import PublicRelations from "../../assets/images/Team/President.png"
-import President from "../../assets/images/Team/President.png"
-import President from "../../assets/images/Team/President.png"
-import President from "../../assets/images/Team/President.png"
+import President from "../assets/images/Team/Admin/President.png"
+import VicePresident from "../assets/images/Team/Admin/VicePres.png"
+import Treasurer from "../assets/images/Team/Admin/Treasurer.png"
+import PublicRelations from "../assets/images/Team/Admin/President.png"
+import Captain from "../assets/images/Team/Admin/Captain.png"
+import Powertrain from "../assets/images/Team/Admin/Powertrain.png"
+import Chassis from "../assets/images/Team/Admin/Chassis.png"
+import Safety from "../assets/images/Team/Admin/Safety.png"
 
 const Team = () => {
   return (

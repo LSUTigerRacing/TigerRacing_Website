@@ -2,19 +2,19 @@ import { lazy, Suspense, useEffect, useState } from "react"
 import { Routes, Route, Navigate, useLocation } from "react-router-dom"
 import { motion, AnimatePresence } from "motion/react"
 import { Navbar } from "./components/Navbar"
-import { useLoading } from "./hooks/GlobalContext"
+import { useLoading } from "./hooks/LoadingContext"
 import Footer from "./components/Footer"
 // Public pages
-const Home = lazy(() => import('./pages/public/Home'))
-const About = lazy(() => import('./pages/public/About'))
-const Team = lazy(() => import('./pages/public/Team'))
-const Cars = lazy(() => import('./pages/public/Cars'))
-const Join = lazy(() => import('./pages/public/Join'))
-const Sponsors = lazy(() => import('./pages/public/Sponsors'))
+const Home = lazy(() => import('./pages/Home'))
+const About = lazy(() => import('./pages/About'))
+const Team = lazy(() => import('./pages/Team'))
+const Cars = lazy(() => import('./pages/Cars'))
+const Join = lazy(() => import('./pages/Join'))
+const Sponsors = lazy(() => import('./pages/Sponsors'))
 
-const Chassis = lazy(() => import('./pages/public/join-subpages/Chassis'))
-const Powertrain = lazy(() => import('./pages/public/join-subpages/Powertrain'))
-const Business = lazy(() => import('./pages/public/join-subpages/Business'))
+const Chassis = lazy(() => import('./pages/join-subpages/Chassis'))
+const Powertrain = lazy(() => import('./pages/join-subpages/Powertrain'))
+const Business = lazy(() => import('./pages/join-subpages/Business'))
 
 
 export const AppRoutes = () => {
