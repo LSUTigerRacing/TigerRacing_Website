@@ -7,7 +7,8 @@ import Lottie from "react-lottie-player";
 import loading from "../assets/animations/Loading_Video.json";
 import loading_last_frame from "../assets/animations/Loading_last_frame.png";
 import purple_logo from "../assets/images/Logo_Purple.png";
-import { useLoading } from "../hooks/LoadingContext";
+import { useLoadingComplete } from "../hooks/LoadingContext";
+import { clear } from "console";
 
 export const DelayedLink = (props) => {
     const {
@@ -29,8 +30,7 @@ export const DelayedLink = (props) => {
 }
 
 export const Loading = () => {
-    // const { loadingState } = useLoading();
-    // if (!loadingState.isLoading) return null;
+    const { markAnimationComplete } = useLoadingComplete();
 
     const location = useLocation();
     const [mediaToShow, setMediaToShow] = useState<'video' | 'image'> ('video');
@@ -51,11 +51,24 @@ export const Loading = () => {
             setImageToShow('purple')
         }, logoTransitionLength);
 
+        const backupAnimationCompleteTimer = setTimeout(() => {
+            setLoadingFinished(true);
+            markAnimationComplete();
+        }, logoTransitionLength + 730)
+
         return () => {
             clearTimeout(timer);
-            clearTimeout(timerLogo)
+            clearTimeout(timerLogo);
+            clearTimeout(backupAnimationCompleteTimer);
         };
     }, [location.key]);
+
+    const handleAnimationComplete = () => {
+        setLoadingFinished(true);
+        markAnimationComplete();
+        console.log("animation complete");
+    }
+
 
     if (loadingFinished) return null;
 
@@ -91,7 +104,7 @@ export const Loading = () => {
                                 y: 0,
                             }}
                         transition={{ duration: 0.75, ease: "easeInOut" }}
-                        onAnimationComplete={() => {setLoadingFinished(true)}}
+                        onAnimationComplete={() => {handleAnimationComplete}}
                     >
                         {imageToShow === 'white' ? (
                             <img

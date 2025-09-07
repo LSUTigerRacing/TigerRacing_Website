@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, use } from "react";
 import { CollageSlide } from "../components/CollageItem.tsx";
 import { motion } from "motion/react";
 
@@ -23,6 +23,7 @@ import GeauxTogether from "../assets/images/Home/Slides/GeauxTogether.png";
 
 import LeftArrow from "../assets/images/General/arrow-left-white.png"
 import RightArrow from "../assets/images/General/arrow-right-white.png"
+import { useLoadingComplete } from "../hooks/LoadingContext.jsx";
 
 const createSvgBackground = (svgContent: string): string => {
   const encodedSvg = encodeURIComponent(svgContent);
@@ -41,6 +42,7 @@ interface ImageData {
   alt: string;
 }
 
+// Scrolling Bar of Sponsor Icons
 const SponsorsBar = () => {
   const images: ImageData[] = [
     { id: 1, src: BASF, alt: 'BASF'},
@@ -102,6 +104,7 @@ const SponsorsBar = () => {
   )
 }
 
+// The carousel of different pages at the bottom
 const PageCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const slides = [
@@ -174,126 +177,131 @@ const PageCarousel = () => {
 
 const Home = () => {
     const [animate, setAnimate] = useState(false)
-    
+    const { isFullyComplete, isLoadingComplete, isAnimationComplete } = useLoadingComplete();
+
     useEffect(() => {
+      if (isFullyComplete && !animate) {
+        console.log("Loading Done!");
+        
         const title_timer = setTimeout(() => {
-            setAnimate(true);
-        }, 2400);
+          setAnimate(true);
+        }, 200);
         
         return () => clearTimeout(title_timer);
-    })
+      }
+    }, [isFullyComplete, animate]);
 
-  return (
-    <div className="w-screen h-fit bg-[#F5F0F6]">
-      <div className="w-screen h-screen">
-        {/* Video */}
-        <div className="w-[95vw] h-[87vh] absolute top-1/2 left-1/2 transform -translate-y-6/13 -translate-x-1/2 overflow-hidden">
-          <video 
-            className="min-w-full min-h-full w-auto h-auto object-cover"              
-            autoPlay
-            loop
-          >
-              <source src={DriveVideo} type="video/webm"/>
-          </video>
-          <div className="absolute inset-0 bg-[#510087] opacity-40 pointer-events-none"></div>
-        </div>
-
-        {/* text and sumn */}
-        <div className="w-screen h-fit absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2">
-          <div className="w-full min-h-fit overflow-hidden text-[13rem] leading-40 z-10">
-            <h1 
-              className={`text-[#FFD500] text-center transition-transform duration-900 ease-in-out ${animate ? 'translate-y-0' : 'translate-y-full'}`} //+ (animate ? 'translate-y-0' : 'translate-y-full')
+    return (
+      <div className="w-screen h-fit bg-[#F5F0F6]">
+        <div className="w-screen h-screen">
+          {/* Video */}
+          <div className="w-[95vw] h-[87vh] absolute top-1/2 left-1/2 transform -translate-y-6/13 -translate-x-1/2 overflow-hidden">
+            <video 
+              className="min-w-full min-h-full w-auto h-auto object-cover"              
+              autoPlay
+              loop
             >
-              WELCOME <br/> TO TIGER RACING.
-            </h1>
+                <source src={DriveVideo} type="video/webm"/>
+            </video>
+            <div className="absolute inset-0 bg-[#510087] opacity-40 pointer-events-none"></div>
+          </div>
+
+          {/* text and sumn */}
+          <div className="w-screen h-fit absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2">
+            <div className="w-full min-h-fit overflow-hidden text-[13rem] leading-40 z-10">
+              <h1 
+                className={`text-[#FFD500] text-center transition-transform duration-900 ease-in-out ${animate ? 'translate-y-0' : 'translate-y-full'}`} //+ (animate ? 'translate-y-0' : 'translate-y-full')
+              >
+                WELCOME <br/> TO TIGER RACING.
+              </h1>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div 
-        className="w-screen h-fit overflow-hidden"
-        style={{
-          backgroundImage: createSvgBackground(blurb),
-          backgroundRepeat: `repeat`,
-          backgroundSize: "100vw 175vh"
-        }}  
-      >
-        <div className="!mt-[18rem]">
-          <div className="w-screen flex flex-col items-center">
-            <div className="w-[85%]">
-              <div className="text-9xl text-[#FFD500]">
-                <h1>LSU's Formula SAE</h1>
-              </div>
-
-              <div className="flex justify-between items-center !mt-[3vh]">
-                <div className="w-[40%] h-fit flex-none text-2xl text-[#F5F0F6]">
-                  <p>
-                    Starting in 1983 as an ME capstone project, LSU TigerRacing has become a proving ground where theory meets the test of competition. 
-                  </p>
-                  <br/>
-                  <p>
-                    Here, hands-on experience fuels innovation as we design, build, and race cutting-edge formula vehicles.
-                  </p>
-                  <br/>
-                  <p>
-                    Our shift to electric racing in 2023 reflects both our commitment to progress and our dedication to preparing the next generation of engineers. 
-                  </p>
-                  <br/>
-                  <p>
-                    Every season brings new challenges, new solutions, and new opportunities to push further—on the track and beyond it.
-                  </p>
+        <div 
+          className="w-screen h-fit overflow-hidden"
+          style={{
+            backgroundImage: createSvgBackground(blurb),
+            backgroundRepeat: `repeat`,
+            backgroundSize: "100vw 175vh"
+          }}  
+        >
+          <div className="!mt-[18rem]">
+            <div className="w-screen flex flex-col items-center">
+              <div className="w-[85%]">
+                <div className="text-9xl text-[#FFD500]">
+                  <h1>LSU's Formula SAE</h1>
                 </div>
-                <div className="max-w-[55%]">
-                  <img
-                    src={ModernDay}
-                    alt="2025 Team"
-                    className="h-full w-full object-cov"
-                  />
+
+                <div className="flex justify-between items-center !mt-[3vh]">
+                  <div className="w-[40%] h-fit flex-none text-2xl text-[#F5F0F6]">
+                    <p>
+                      Starting in 1983 as an ME capstone project, LSU TigerRacing has become a proving ground where theory meets the test of competition. 
+                    </p>
+                    <br/>
+                    <p>
+                      Here, hands-on experience fuels innovation as we design, build, and race cutting-edge formula vehicles.
+                    </p>
+                    <br/>
+                    <p>
+                      Our shift to electric racing in 2023 reflects both our commitment to progress and our dedication to preparing the next generation of engineers. 
+                    </p>
+                    <br/>
+                    <p>
+                      Every season brings new challenges, new solutions, and new opportunities to push further—on the track and beyond it.
+                    </p>
+                  </div>
+                  <div className="max-w-[55%]">
+                    <img
+                      src={ModernDay}
+                      alt="2025 Team"
+                      className="h-full w-full object-cov"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
 
-          <div className="text-8xl text-center !mt-[8vh]">
-            <h1 className="text-[#FFD500]">Powering TigerRacing</h1>
-          </div>
-          <SponsorsBar/>
-
-        </div>
-      </div>
-      <PageCarousel/>
-      <div className="w-[93%] h-[95vh] flex flex-col justify-between !mx-auto !pb-[10vh]">
-        <div/> {/* empty div to shove the second div down*/}
-        <div className="h-[60%] flex justify-between">
-          <div className="w-[55%] bg-[#FFD500]">
-            <div className="w-[90%] min-h-[85%] flex flex-col justify-between !mx-[2vw] !mt-[3%] !mb-[6%]">
-              <div className="text-2xl">
-                <h2>Want to keep our wheels spinning?</h2>
-                <p>Let's talk!</p>
-              </div>
-
-              <span className="text-8xl">
-                <h1>Sponsors</h1>
-              </span>
+            <div className="text-8xl text-center !mt-[8vh]">
+              <h1 className="text-[#FFD500]">Powering TigerRacing</h1>
             </div>
-          </div>
-         
-          <div className="w-[40%]  bg-[#510087]">
-            <div className="w-[90%] min-h-[85%] flex flex-col justify-between text-[#F5F0F6] !mx-[2vw] !mt-[3%] !mb-[6%]">
-              <div className="text-2xl">
-                <h2>No backseat engineers here.</h2>
-                <p>Grab the wheel!</p>
-              </div>
+            <SponsorsBar/>
 
-              <span className="text-8xl">
-                <h1>Join us</h1>
-              </span>    
-            </div>
-      
           </div>
         </div>
+        <PageCarousel/>
+        <div className="w-[93%] h-[95vh] flex flex-col justify-between !mx-auto !pb-[10vh]">
+          <div/> {/* empty div to shove the second div down*/}
+          <div className="h-[60%] flex justify-between">
+            <div className="w-[55%] bg-[#FFD500]">
+              <div className="w-[90%] min-h-[85%] flex flex-col justify-between !mx-[2vw] !mt-[3%] !mb-[6%]">
+                <div className="text-2xl">
+                  <h2>Want to keep our wheels spinning?</h2>
+                  <p>Let's talk!</p>
+                </div>
+
+                <span className="text-8xl">
+                  <h1>Sponsors</h1>
+                </span>
+              </div>
+            </div>
+          
+            <div className="w-[40%]  bg-[#510087]">
+              <div className="w-[90%] min-h-[85%] flex flex-col justify-between text-[#F5F0F6] !mx-[2vw] !mt-[3%] !mb-[6%]">
+                <div className="text-2xl">
+                  <h2>No backseat engineers here.</h2>
+                  <p>Grab the wheel!</p>
+                </div>
+
+                <span className="text-8xl">
+                  <h1>Join us</h1>
+                </span>    
+              </div>
+        
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
   );
 };
 
