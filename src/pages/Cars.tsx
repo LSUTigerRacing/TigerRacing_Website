@@ -2,7 +2,7 @@ import { useRef, useState, useEffect } from "react";
 
 import Car2025 from "../assets/images/Cars/2025.png";
 import Car2022 from "../assets/images/Cars/2022.png";
-import Car2021 from "../../assets/images/Cars/2021.png";
+import Car2021 from "../assets/images/Cars/2021.png";
 import Car2019 from "../assets/images/Cars/2019.png";
 import Car2018 from "../assets/images/Cars/2018.png";
 import Car2017 from "../assets/images/Cars/2017.png";
