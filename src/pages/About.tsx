@@ -1,11 +1,13 @@
 import { useState, useEffect } from 'react';
 
-import HeroImage1 from "../assets/images/About/2014.jpg";
-import HeroImage2 from "../assets/images/About/2013.jpg";
-import HeroImage3 from "../assets/images/About/2023.png";
-import HeroImage4 from "../assets/images/About/2018.JPG";
-import HeroImage5 from "../assets/images/About/2019.JPG";
-import HeroImage6 from "../assets/images/About/2021.JPG";
+import HeroImage1 from "../assets/images/About/Collage/2014.jpg";
+import HeroImage2 from "../assets/images/About/Collage/2013.jpg";
+import HeroImage3 from "../assets/images/About/Collage/firstcar.png";
+import HeroImage4 from "../assets/images/About/Collage/2023.png";
+import HeroImage5 from "../assets/images/About/Collage/guy_welding.jpg";
+import HeroImage6 from "../assets/images/About/Collage/PCBSPREAD.jpg";
+import HeroImage7 from "../assets/images/About/Collage/osha_violation.jpeg";
+import HeroImage8 from "../assets/images/About/Collage/2021.JPG";
 
 import History from "../assets/images/About/history.png";
 
@@ -21,7 +23,9 @@ const About = () => {
     HeroImage3,
     HeroImage4,
     HeroImage5,
-    HeroImage6
+    HeroImage6,
+    HeroImage7,
+    HeroImage8
   ]
 
   const mottos = [
@@ -42,7 +46,7 @@ const About = () => {
       setVhHeight(scrollVh)
       let imgInd; 
       let mottoInd;
-      let vhSwitch = 600/images.length; //vh length that each image has before switching to next
+      let vhSwitch = 800/images.length; //vh length that each image has before switching to next
 
       imgInd = Math.min(Math.floor(scrollVh / vhSwitch), images.length - 1);
       mottoInd = Math.min(Math.floor(scrollVh / (vhSwitch * 2)), mottos.length - 1);
@@ -62,17 +66,29 @@ const About = () => {
   })
 
   return (
-    <div className='h-fit bg-[#FFFDF0]'>
-      <div className={`h-[600vh] relative flex justify-center`}>
+    <div className='h-fit bg-[#F5F0F6]'>
+      <div className={`h-[820vh] relative flex justify-center`}>
         <div
             className={`
-              w-[58vw] h-[60vh] flex flex-col gap-4
-              ${fixedPos ? ` fixed !mt-[12vh]`
-                : `absolute bottom-[30vh]`}`} 
+              w-[58vw] h-[80vh] flex flex-col justify-between
+              ${fixedPos ? 
+                `fixed !mt-[12vh]`
+                : 
+                `absolute bottom-[30vh]`}`
+            } 
         >
-          <img
-            src={images[imageIndex]}
-          />
+          <div className="w-full h-[90%]"
+               style={{ 
+                    backgroundImage: `url(${images[imageIndex]})`, 
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center'
+                }}
+            >
+            <img
+              // src={images[imageIndex]}
+              className='object-cover bg-amber-50'
+            />
+          </div>
           <div className='w-[100%] text-center text-2xl'>
             <h1 >
               {mottos[0][0]}
