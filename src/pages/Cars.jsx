@@ -19,21 +19,32 @@ import Car1993 from "../assets/images/Cars/1993.png";
 import Car1983 from "../assets/images/Cars/1983.png";
 
 const Cars = () => {
-  const scrollRef = useRef<HTMLDivElement>(null);
-
-  const handleScroll = (e: React.WheelEvent) => {
-    console.log('Scroll triggered', e.deltaY); // Add this line
-    e.preventDefault();
-    if (scrollRef.current) {
-      console.log('Scrolling left', e.deltaY); // Add this line
-      const container = scrollRef.current;
-      console.log('scrollWidth:', container.scrollWidth);
-      console.log('clientWidth:', container.clientWidth);
-      console.log('current scrollLeft:', container.scrollLeft);
-      container.scrollLeft += e.deltaY;
-      console.log('new scrollLeft:', container.scrollLeft);
+  const scrollRef = useRef(null);
+  
+  useEffect(() => {
+    const handleScroll = (event) => {
+      console.log('Scroll triggered', event.deltaY); // Add this line
+      if (scrollRef.current) {
+        e.preventDefault();
+        console.log('Scrolling left', event.deltaY); // Add this line
+        scrollRef.current.scrollLeft += e.deltaY;
+      }
     }
-  }
+    
+    const element = scrollRef.current;
+    if (element) {
+      element.addEventListener('wheel', handleScroll);
+    }
+
+    return () => {
+      if (element) {
+        element.removeEventListener('wheel', handleScroll);
+      }
+    };
+  }, [])
+
+
+
 
   return (
     <div className="h-screen w-fit">

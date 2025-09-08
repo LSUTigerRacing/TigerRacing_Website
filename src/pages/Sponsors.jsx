@@ -1,7 +1,7 @@
-import SponsorshipPacket from "../../assets/documents/Sponsorship-Packet-25-26.pdf"
+import SponsorshipPacket from "../assets/documents/Sponsorship-Packet-25-26.pdf"
 
-import Giveback from "../../assets/images/Sponsors/Giveback.png"
-import Car from "../../assets/images/Sponsors/Car.png"
+import Giveback from "../assets/images/Sponsors/Giveback.png"
+import Car from "../assets/images/Sponsors/Car.png"
 
 const Sponsors = () => {
   return (

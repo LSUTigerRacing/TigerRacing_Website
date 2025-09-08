@@ -8,7 +8,7 @@ import Footer from "./components/Footer"
 const Home = lazy(() => import('./pages/Home'))
 const About = lazy(() => import('./pages/About'))
 const Team = lazy(() => import('./pages/Team'))
-const Cars = lazy(() => import('./pages/Cars'))
+const Cars = lazy(() => import('./pages/Cars.jsx'))
 const Join = lazy(() => import('./pages/Join'))
 const Sponsors = lazy(() => import('./pages/Sponsors'))
 
@@ -48,7 +48,7 @@ export const AppRoutes = () => {
                     </Routes>
                 </LoadingDetector>
             </Suspense>   
-            <Footer/>
+            {/* <Footer/> */}
         </>
     )
 }
