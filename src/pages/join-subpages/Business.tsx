@@ -1,12 +1,12 @@
-import BlurbPic1 from "../../../assets/images/Join/Business/BlurbPic1.png"
-import BlurbPic2 from "../../../assets/images/Join/Business/BlurbPic2.png"
+import BlurbPic1 from "../../assets/images/Join/Business/BlurbPic1.png"
+import BlurbPic2 from "../../assets/images/Join/Business/BlurbPic2.png"
 
 const Business = () => {
   return (
     <div className="w-screen h-fit flex flex-col justify-center !pt-[10vh]">
       <div className="h-[85vh] flex flex-col justify-between items-center text-center !mb-[10vh]">
         <span className="text-[#510087] text-[10rem] leading-[10rem]">
-          <h1>THE ENGINE BEHIND THE ENGINE.</h1>
+          <h1>THE BATTERY BEHIND THE ENGINE.</h1>
         </span>
   
         <span className="text-[2.2rem] leading-[2rem]">

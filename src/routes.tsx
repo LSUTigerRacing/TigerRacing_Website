@@ -7,10 +7,10 @@ import Footer from "./components/Footer"
 // Public pages
 const Home = lazy(() => import('./pages/Home'))
 const About = lazy(() => import('./pages/About'))
-const Team = lazy(() => import('./pages/Team'))
+const Team = lazy(() => import('./pages/Team.jsx'))
 const Cars = lazy(() => import('./pages/Cars.jsx'))
 const Join = lazy(() => import('./pages/Join'))
-const Sponsors = lazy(() => import('./pages/Sponsors'))
+const Sponsors = lazy(() => import('./pages/Sponsors.jsx'))
 
 const Chassis = lazy(() => import('./pages/join-subpages/Chassis'))
 const Powertrain = lazy(() => import('./pages/join-subpages/Powertrain'))
@@ -48,7 +48,7 @@ export const AppRoutes = () => {
                     </Routes>
                 </LoadingDetector>
             </Suspense>   
-            {/* <Footer/> */}
+            <Footer/>
         </>
     )
 }

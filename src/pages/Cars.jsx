@@ -1,4 +1,6 @@
 import { useRef, useState, useEffect } from "react";
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react'
 
 import Car2025 from "../assets/images/Cars/2025.png";
 import Car2022 from "../assets/images/Cars/2022.png";
@@ -18,46 +20,57 @@ import Car2006 from "../assets/images/Cars/2006.png";
 import Car1993 from "../assets/images/Cars/1993.png";
 import Car1983 from "../assets/images/Cars/1983.png";
 
+gsap.registerPlugin(useGSAP);
+
 const Cars = () => {
   const scrollRef = useRef(null);
-  
-  useEffect(() => {
+
+  useGSAP(() => {
     const handleScroll = (event) => {
-      console.log('Scroll triggered', event.deltaY); // Add this line
       if (scrollRef.current) {
-        e.preventDefault();
-        console.log('Scrolling left', event.deltaY); // Add this line
-        scrollRef.current.scrollLeft += e.deltaY;
+        event.preventDefault();
+        const targetScroll = scrollRef.current.scrollLeft + (event.deltaY * 10);
+        scrollRef.current.scrollTo({
+          left: targetScroll,
+          behavior: 'smooth'
+        })
       }
     }
-    
-    const element = scrollRef.current;
-    if (element) {
-      element.addEventListener('wheel', handleScroll);
-    }
+    document.addEventListener('wheel', handleScroll, { passive: false });
 
     return () => {
-      if (element) {
-        element.removeEventListener('wheel', handleScroll);
-      }
+        document.removeEventListener('wheel', handleScroll);
     };
   }, [])
 
+  // useEffect(() => {
+  //   const handleScroll = (event) => {
+  //     if (scrollRef.current) {
+  //       event.preventDefault();
+  //       const targetScroll = scrollRef.current.scrollLeft + (event.deltaY * 10);
+  //       scrollRef.current.scrollTo({
+  //         left: targetScroll,
+  //         behavior: 'smooth'
+  //       })
+  //     }
+  //   }
+  //   document.addEventListener('wheel', handleScroll, { passive: false });
 
-
+  //   return () => {
+  //       document.removeEventListener('wheel', handleScroll);
+  //   };
+  // }, [])
 
   return (
-    <div className="h-screen w-fit">
-      <span className="fixed bottom-0 left-5 text-[20vw]">
-        <h1 className="text-[#510087]">
-          CARS
-        </h1>
+    <div className="h-screen w-screen overflow-hidden">
+      <span className="fixed bottom-0 left-5 text-[20vw] pointer-events-none text-[#510087]">
+        <h1>CARS</h1>
       </span>
 
       <div 
         ref={scrollRef}
-        onWheel={handleScroll}
-        className="overflow-x-auto overflow-y-hidden h-screen w-max"
+        className="overflow-x-auto overflow-y-hidden h-screen relative"
+        style={{ scrollBehavior: 'smooth' }}
       >
         <CarTile
           year="2025"

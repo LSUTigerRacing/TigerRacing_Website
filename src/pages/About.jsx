@@ -42,11 +42,11 @@ const About = () => {
       const scrollPosition = window.scrollY;
       const windowHeight = window.innerHeight;
 
-      const scrollVh = (scrollPosition / windowHeight) * 100;
+      const scrollVh = (scrollPosition / windowHeight) * 50;
       setVhHeight(scrollVh)
       let imgInd; 
       let mottoInd;
-      let vhSwitch = 800/images.length; //vh length that each image has before switching to next
+      let vhSwitch = 400/images.length; //vh length that each image has before switching to next
 
       imgInd = Math.min(Math.floor(scrollVh / vhSwitch), images.length - 1);
       mottoInd = Math.min(Math.floor(scrollVh / (vhSwitch * 2)), mottos.length - 1);
@@ -83,12 +83,7 @@ const About = () => {
                     backgroundSize: 'cover',
                     backgroundPosition: 'center'
                 }}
-            >
-            <img
-              // src={images[imageIndex]}
-              className='object-cover bg-amber-50'
-            />
-          </div>
+          />
           <div className='w-[100%] text-center text-2xl'>
             <h1 >
               {mottos[0][0]}

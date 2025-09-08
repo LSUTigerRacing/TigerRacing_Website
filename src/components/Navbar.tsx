@@ -56,12 +56,49 @@ export const Navbar = () => {
                         </div>
                     </div>
                 </nav>
+                {/* <NavMenu/> */}
             </span>
-            <div className={`h-0 absolute right-12 overflow-hidden transition-all duration-600 ease-out
-                ${navMenuOpen ? 'h-[85vh]' : 'h-0 pointer-events-none'}`}>
-                <div className="w-fit h-full flex flex-col">
-                    <div className="w-full h-fit bg-[#510087] rounded-4xl !p-10 !pl-15 !pr-15">
-                        <div className="flex flex-col justify-between items-center">
+        </div>
+    )
+}
+
+const NavPage = (props) => {
+    const {
+        pageTitle,
+        pageURL
+    } = props;
+    const location = useLocation();
+    const [currentPage, setCurrentPage] = useState(false);
+
+    useEffect(() => {
+        if (location.pathname === pageURL) {
+            setCurrentPage(true);
+        } else {
+            setCurrentPage(false);
+        }
+    }, [location]);
+
+    return (
+        <Link 
+            to={pageURL}
+            className="w-fit flex justify-between select-none cursor-pointer text-[6vh]  transition-colors duration-300"
+        >
+            <h2 className="text-[#F5F0F6] hover:text-[#FFD500]">{pageTitle}</h2>
+            {/* <h2 className={`${currentPage ? "opacity-100" : "opacity-0" } text-[#F5F0F6]`}>•</h2> */}
+        </Link>
+    )
+}
+
+const NavMenu = () => {
+    return (
+        <div className="w-screen h-screen overflow-hidden bg-[#510087]">
+            <div className="w-[93%] h-[90%] !m-auto flex flex-col ">
+                <div className="w-full h-full ">
+                    <div className="flex">
+                        <div className="flex flex-col gap-[0.5rem]">
+                            <span className="text-[#F5F0F6] text-[2rem]">
+                                <p>Explore</p>
+                            </span>
                             <NavPage 
                                 pageTitle="Home"
                                 pageURL="/"
@@ -87,41 +124,33 @@ export const Navbar = () => {
                                 pageURL="/Sponsors"
                             />
                         </div>
+                        <div className="flex flex-col gap-[0.5rem]">
+                            <span className="text-[#F5F0F6] text-[2rem]">
+                                <p>Media</p>
+                            </span>
+                            <NavPage 
+                                pageTitle="Instagram"
+                                pageURL="/"
+                            />
+                            <NavPage 
+                                pageTitle="Linkedin"
+                                pageURL="/join"
+                            />
+                            <NavPage 
+                                pageTitle="Facebook"
+                                pageURL="/Sponsors"
+                            />
+                        </div>
                     </div>
 
-                    <div className="w-full h-fit bg-[#FFD500] rounded-4xl !p-10 !mt-[3vh] flex justify-center text-[6vh]">
+                    
+                    <div className="w-fit h-fit bg-[#FFD500] rounded-4xl !p-10 !mt-[3vh] flex justify-center text-[6vh]">
                         <h1 className="text-[#FFFFFFF]">Member Portal →</h1>
                     </div>
-                </div>            
-            </div>
+                </div>
 
+
+            </div>            
         </div>
     )
-}
-
-const NavPage = (props) => {
-    const {
-        pageTitle,
-        pageURL
-    } = props;
-    const location = useLocation();
-    const [currentPage, setCurrentPage] = useState(false);
-
-    useEffect(() => {
-        if (location.pathname === pageURL) {
-            setCurrentPage(true);
-        } else {
-            setCurrentPage(false);
-        }
-    }, [location]);
-
-    return (
-        <Link 
-            to={pageURL}
-            className="w-full flex justify-between select-none cursor-pointer text-[6vh]"
-        >
-            <h2 className="text-[#F5F0F6]">{pageTitle}</h2>
-            <h2 className={`${currentPage ? "opacity-100" : "opacity-0" } text-[#F5F0F6]`}>•</h2>
-        </Link>
-    )
-}
+};

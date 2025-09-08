@@ -5,7 +5,7 @@
 
 @import "tailwindcss"; 
 @import "tailwindcss/preflight"; 
-
+@custom-variant hover (&:hover);
 
 :root {
     --font-heading: 'Manrope', sans-serif;

@@ -1,5 +1,5 @@
-import BlurbPic1 from "../../../assets/images/Join/Chassis/BlurbPic1.png"
-import BlurbPic2 from "../../../assets/images/Join/Chassis/BlurbPic2.png"
+import BlurbPic1 from "../../assets/images/Join/Chassis/BlurbPic1.png"
+import BlurbPic2 from "../../assets/images/Join/Chassis/BlurbPic2.png"
 
 const Chassis = () => {
   return (
