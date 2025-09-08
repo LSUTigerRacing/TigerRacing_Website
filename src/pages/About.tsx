@@ -103,17 +103,17 @@ const About = () => {
       </div>
 
       <div className='w-screen h-fit relative flex flex-col justify-center items-center'>
-        <div className='w-[50%] text-center text-4xl !mb-[15vh]'>
+        <div className='w-[50%] text-center text-[2rem] leading-[3rem] !mb-[15vh]'>
           <p>
-            TigerRacing started in 1983 as a senior design project and evolved into LSU's premier Formula SAE team. We're a dedicated group of engineers turning classroom theory into championship-winning racecars, placing 2nd in Skidpad and 7th overall in 2022 before making our bold transition to electric vehicles.        
+            TigerRacing <strong>started in 1983</strong> as a senior design project and evolved into LSU's premier <strong>Formula SAE team</strong>. We're a dedicated group of engineers turning classroom theory into championship-winning racecars, placing 2nd in Skidpad and <strong>7th overall in 2022</strong> before making our bold transition to electric vehicles.        
           </p>
           <br/>
           <p>
-            Today, we're pioneering the future of motorsport with cutting-edge EV technology, from high-voltage systems to advanced battery design. Our team is where ambitious students gain real-world engineering experience, compete at the highest level, and build the innovations that drive tomorrow's automotive industry.
+            Today, we're pioneering the future of motorsport with cutting-edge EV technology, from high-voltage systems to advanced battery design. Our team is where ambitious students gain <strong>real-world engineering experience</strong>, compete at the highest level, and build the innovations that drive tomorrow's automotive industry.
           </p>
           <br/>
           <p>
-    Whether you're a student ready to push boundaries or a sponsor looking to support the next generation of automotive pioneers, TigerRacing is where serious engineering meets serious results.
+            Whether you're a student ready to push boundaries or a sponsor looking to support the next generation of automotive pioneers, TigerRacing is where serious engineering meets serious results.
           </p>
         </div>
 
@@ -123,8 +123,24 @@ const About = () => {
         />
       </div>
 
-
-
+      <div className='w-[85%] !mx-auto !my-[10vh] overflow-hidden '>
+        <div className='w-[60%] float-left'>
+          <span className='text-[#510087] text-[4rem]'>
+            <h2>What is Formula SAE?</h2>
+          </span>
+          <span className='text-[2.25rem]'>
+          <p>Formula SAE is the world's <strong>largest collegiate engineering competition</strong>, encompassing hundreds of schools from around the world. The competition calls for students to design and build an approximately <strong>two-thirds scale Formula One car</strong> from the ground up every year.  There are several annual competitions located in the US, UK, Germany, Australia  Austria, Japan, Italy, and Brazil.  </p>
+          </span>
+        </div>
+        <div className='w-[70%] text-right float-right'>
+          <span className='text-[#510087] text-[4rem]'>
+            <h2>Competition</h2>
+          </span>
+          <span className='text-[2.25rem]'>
+            <p>The students must defend their design to a panel of industry leaders through a <strong>series of static and dynamic tests</strong>.  The static events include <strong>business presentation, cost evaluation, and design evaluation</strong> in which a team can acquire 30% of competition points.  In order to proceed to the dynamic events, a car must pass a rigorous technical inspection to ensure the car is safe and follows competition regulations.  Finally, a team can back any smack talk and try to gain the remaining 70% of points through the dynamic tests: <strong>skid-pad, acceleration, autocross, and endurance.</strong></p>
+          </span>
+        </div>
+      </div>
 
     </div> 
 
