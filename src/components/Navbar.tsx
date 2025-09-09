@@ -3,7 +3,8 @@ import { useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "motion/react"
 
-import purple_logo from "../assets/images/Logo_Purple.png";
+import purple_logo from "../assets/images/General/tigerracing-logo-purple.png";
+import white_logo from "../assets/images/General/tigerracing-logo-white.png";
 
 export const Navbar = () => {
     const [animate, setAnimate] = useState(false);
@@ -23,11 +24,15 @@ export const Navbar = () => {
         return () => clearTimeout(timer);
     })
 
+    useEffect(() => {
+
+    }, [])
+
     return (
         <div className="fixed z-50">
             <span className="w-screen flex justify-center">
                 <nav
-                    className="w-[95vw] h-[10vh] flex items-center justify-between"
+                    className="w-[95vw] h-[10vh] flex items-center justify-between z-50"
                 >
                     {/*  transition-transform duration-1000 ease-in
                                         ${animate ? 'translate-y-0' : '-translate-y-[10vh]'} */}
@@ -56,7 +61,10 @@ export const Navbar = () => {
                         </div>
                     </div>
                 </nav>
-                {/* <NavMenu/> */}
+                <div className={`absolute left-0 ${navMenuOpen ? "opacity-100" : "opacity-0"}`}>
+                    <NavMenu/>
+                </div>
+
             </span>
         </div>
     )
@@ -81,7 +89,7 @@ const NavPage = (props) => {
     return (
         <Link 
             to={pageURL}
-            className="w-fit flex justify-between select-none cursor-pointer text-[6vh]  transition-colors duration-300"
+            className="w-fit flex justify-between select-none cursor-pointer text-[4.5rem] transition-colors duration-300"
         >
             <h2 className="text-[#F5F0F6] hover:text-[#FFD500]">{pageTitle}</h2>
             {/* <h2 className={`${currentPage ? "opacity-100" : "opacity-0" } text-[#F5F0F6]`}>•</h2> */}
@@ -91,10 +99,11 @@ const NavPage = (props) => {
 
 const NavMenu = () => {
     return (
-        <div className="w-screen h-screen overflow-hidden bg-[#510087]">
-            <div className="w-[93%] h-[90%] !m-auto flex flex-col ">
+        <div className="w-screen h-screen absolute overflow-hidden bg-[#510087]">
+            <div className="w-[90%] h-[80%] !m-auto !mt-[15vh] flex">
                 <div className="w-full h-full ">
-                    <div className="flex">
+                    <div className="flex gap-[5rem]">
+                        {/* Pages */}
                         <div className="flex flex-col gap-[0.5rem]">
                             <span className="text-[#F5F0F6] text-[2rem]">
                                 <p>Explore</p>
@@ -124,6 +133,7 @@ const NavMenu = () => {
                                 pageURL="/Sponsors"
                             />
                         </div>
+                        {/* Media */}
                         <div className="flex flex-col gap-[0.5rem]">
                             <span className="text-[#F5F0F6] text-[2rem]">
                                 <p>Media</p>
@@ -142,13 +152,12 @@ const NavMenu = () => {
                             />
                         </div>
                     </div>
-
-                    
-                    <div className="w-fit h-fit bg-[#FFD500] rounded-4xl !p-10 !mt-[3vh] flex justify-center text-[6vh]">
+                </div>
+                <div className="w-[60%] flex flex-col justify-between">
+                    <div className="w-fit h-fit bg-[#FFD500] rounded-[4rem] !p-[2.5rem] !mt-[3rem] flex justify-center text-[4rem]">
                         <h1 className="text-[#FFFFFFF]">Member Portal →</h1>
                     </div>
                 </div>
-
 
             </div>            
         </div>

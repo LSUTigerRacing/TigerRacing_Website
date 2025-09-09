@@ -20,7 +20,7 @@ import Car2006 from "../assets/images/Cars/2006.png";
 import Car1993 from "../assets/images/Cars/1993.png";
 import Car1983 from "../assets/images/Cars/1983.png";
 
-gsap.registerPlugin(useGSAP);
+// gsap.registerPlugin(useGSAP);
 
 const Cars = () => {
   const scrollRef = useRef(null);
@@ -29,6 +29,13 @@ const Cars = () => {
     const handleScroll = (event) => {
       if (scrollRef.current) {
         event.preventDefault();
+        const delta = Math.sign(event.deltaY)
+
+        if (delta === 1) {
+          scrollRef.current.scrollLeft += 20;
+        } else {
+          scrollRef.current.scrollLeft += 20;
+        }
         const targetScroll = scrollRef.current.scrollLeft + (event.deltaY * 10);
         scrollRef.current.scrollTo({
           left: targetScroll,

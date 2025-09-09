@@ -6,7 +6,7 @@ import { Link, useNavigate } from "react-router-dom";
 import Lottie from "react-lottie-player";
 import loading from "../assets/animations/Loading_Video.json";
 import loading_last_frame from "../assets/animations/Loading_last_frame.png";
-import purple_logo from "../assets/images/Logo_Purple.png";
+import purple_logo from "../assets/images/General/tigerracing-logo-purple.png";
 import { useLoadingComplete } from "../hooks/LoadingContext";
 import { clear } from "console";
 
