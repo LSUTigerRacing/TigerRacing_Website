@@ -24,9 +24,9 @@ export const Navbar = () => {
         return () => clearTimeout(timer);
     })
 
-    useEffect(() => {
+    //     useEffect(() => {
 
-    }, [])
+    // }, [])
 
     return (
         <div className="fixed z-50">
@@ -61,7 +61,7 @@ export const Navbar = () => {
                         </div>
                     </div>
                 </nav>
-                <div className={`absolute left-0 ${navMenuOpen ? "opacity-100" : "opacity-0"}`}>
+                <div className={`absolute left-0 ${navMenuOpen ? "opacity-100" : "opacity-0 pointer-events-none"}`}>
                     <NavMenu/>
                 </div>
 
