@@ -5,7 +5,7 @@ import { Navbar } from "./components/Navbar"
 import { useLoadingComplete } from "./hooks/LoadingContext"
 import Footer from "./components/Footer"
 // Public pages
-const Home = lazy(() => import('./pages/Home'))
+const Home = lazy(() => import('./pages/Home.jsx'))
 const About = lazy(() => import('./pages/About'))
 const Team = lazy(() => import('./pages/Team.jsx'))
 const Cars = lazy(() => import('./pages/Cars.jsx'))
