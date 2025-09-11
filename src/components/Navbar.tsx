@@ -42,14 +42,12 @@ export const Navbar = () => {
                 <nav
                     className="w-[95vw] h-[10vh] flex items-center justify-between z-50"
                 >
-                    <div className="w-[11rem]">
-                        <div
-                            className="w-full h-[5.4vh] bg-[rgb(81,0,135)] cursor-pointer flex items-center justify-center rounded-4xl text-3xl float-right"
-                            onClick={() => setNavMenuOpen(!navMenuOpen)}
-                        >
-                            <h2 className="text-[#F5F0F6] select-none">Menu</h2>
+                    <div className={`w-[11rem]`}>
+                        <div className={`h-[5.4vh] bg-[rgb(81,0,135)] flex items-center justify-center rounded-4xl text-3xl`}>
+                            <h2 className="text-[#F5F0F6]">Contact</h2>
                         </div>
                     </div>
+
                     {/*  transition-transform duration-1000 ease-in
                                         ${animate ? 'translate-y-0' : '-translate-y-[10vh]'} */}
  
@@ -64,9 +62,12 @@ export const Navbar = () => {
                         </Link>
                     </div>
 
-                    <div className={`w-[11rem]`}>
-                        <div className={`h-[5.4vh] bg-[rgb(81,0,135)] flex items-center justify-center rounded-4xl text-3xl`}>
-                            <h2 className="text-[#F5F0F6]">Contact</h2>
+                    <div className="w-[11rem]">
+                        <div
+                            className="w-full h-[5.4vh] bg-[rgb(81,0,135)] cursor-pointer flex items-center justify-center rounded-4xl text-3xl float-right"
+                            onClick={() => setNavMenuOpen(!navMenuOpen)}
+                        >
+                            <h2 className="text-[#F5F0F6] select-none">Menu</h2>
                         </div>
                     </div>
 
@@ -147,7 +148,8 @@ const NavMenu = () => {
                             <span className="text-[#F5F0F6] text-[2rem]">
                                 <p>Explore</p>
                             </span>
-                            <div
+                            <div 
+                                className="w-fit"
                                 onMouseEnter={() => setHoveredPage(0)}
                                 onMouseLeave={() => setHoveredPage(-1)}
                             >
@@ -157,6 +159,7 @@ const NavMenu = () => {
                                 />
                             </div>
                             <div
+                                className="w-fit"
                                 onMouseEnter={() => setHoveredPage(1)}
                                 onMouseLeave={() => setHoveredPage(-1)}
                             >
@@ -166,6 +169,7 @@ const NavMenu = () => {
                             />
                             </div>
                             <div
+                                className="w-fit"
                                 onMouseEnter={() => setHoveredPage(2)}
                                 onMouseLeave={() => setHoveredPage(-1)}
                             >
@@ -175,6 +179,7 @@ const NavMenu = () => {
                                 />
                             </div>
                             <div
+                                className="w-fit"
                                 onMouseEnter={() => setHoveredPage(3)}
                                 onMouseLeave={() => setHoveredPage(-1)}
                             >
@@ -184,6 +189,7 @@ const NavMenu = () => {
                                 />
                             </div>
                             <div
+                                className="w-fit"
                                 onMouseEnter={() => setHoveredPage(4)}
                                 onMouseLeave={() => setHoveredPage(-1)}
                             >
@@ -193,6 +199,7 @@ const NavMenu = () => {
                                 />
                             </div>
                             <div
+                                className="w-fit"
                                 onMouseEnter={() => setHoveredPage(5)}
                                 onMouseLeave={() => setHoveredPage(-1)}
                             >
@@ -207,7 +214,7 @@ const NavMenu = () => {
                 </div>
                 <div className="flex flex-col justify-between items-end">
                     <div 
-                        className="w-[40vw] h-[50vh]"
+                        className="w-[48vw] h-[60vh]"
                         style={{
                             backgroundImage: `url(${pageImages[hoveredPage]})`,
                             backgroundPosition: 'center',
