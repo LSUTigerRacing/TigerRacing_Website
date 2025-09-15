@@ -43,8 +43,14 @@ export const Navbar = () => {
                     className="w-[95vw] h-[10vh] flex items-center justify-between z-50"
                 >
                     <div className={`w-[11rem]`}>
-                        <div className={`h-[5.4vh] bg-[rgb(81,0,135)] flex items-center justify-center rounded-4xl text-3xl`}>
-                            <h2 className="text-[#F5F0F6]">Contact</h2>
+                        <div className={`
+                            h-[5.4vh] ] flex items-center justify-center rounded-4xl text-3xl
+                            ${navMenuOpen ? 
+                                "bg-[#FFD500] text-black" 
+                                : 
+                                "bg-[rgb(81,0,135)] text-[#F5F0F6]"} 
+                            `}>
+                            <h2 className="">Contact</h2>
                         </div>
                     </div>
 
@@ -53,6 +59,7 @@ export const Navbar = () => {
  
 
                     <div className={`w-[20rem] ${animate ? 'opacity-100' : 'opacity-0'}`}>
+                        
                         <Link to="/">
                             <img
                                 src={purple_logo}
@@ -64,10 +71,15 @@ export const Navbar = () => {
 
                     <div className="w-[11rem]">
                         <div
-                            className="w-full h-[5.4vh] bg-[rgb(81,0,135)] cursor-pointer flex items-center justify-center rounded-4xl text-3xl float-right"
+                            className={`w-full h-[5.4vh] cursor-pointer flex items-center justify-center rounded-4xl text-3xl float-right
+                                                            ${navMenuOpen ? 
+                                "bg-[#FFD500] text-black" 
+                                : 
+                                "bg-[rgb(81,0,135)] text-[#F5F0F6]"} 
+                            `}
                             onClick={() => setNavMenuOpen(!navMenuOpen)}
                         >
-                            <h2 className="text-[#F5F0F6] select-none">Menu</h2>
+                            <h2 className="select-none">Menu</h2>
                         </div>
                     </div>
 
@@ -100,10 +112,12 @@ const NavPage = (props) => {
     return (
         <Link 
             to={pageURL}
-            className="w-fit flex justify-between select-none cursor-pointer text-[4.5rem] transition-colors duration-300"
+            className="group w-[25rem] flex flex-col justify-between select-none cursor-pointer text-[4.5rem]"
         >
-            <h2 className="text-[#F5F0F6] hover:text-[#FFD500]">{pageTitle}</h2>
-            {/* <h2 className={`${currentPage ? "opacity-100" : "opacity-0" } text-[#F5F0F6]`}>•</h2> */}
+            <h2 className="text-[#F5F0F6] group-hover:text-[#FFD500]">{pageTitle}</h2>
+            <span className="w-full flex justify-center"> {/* i tried to use the hr tag but its not cooperating with tailwind so im doing this for now */}
+                <div className="w-[93vw] h-1 bg-[#F5F0F6] group-hover:bg-[#FFD500] mx-auto"></div>
+            </span>
         </Link>
     )
 }
@@ -122,108 +136,108 @@ const NavMenu = () => {
 
     return (
         <div className="w-screen h-screen absolute overflow-hidden bg-[#510087]">
-            <div className="w-[90%] h-[80%] !m-auto !mt-[15vh] flex">
-                <div className="w-full h-full ">
-                    <div className="flex gap-[5rem] items-end">
-                                                {/* Media */}
-                        <div className="flex flex-col gap-[0.5rem]">
-                            <span className="text-[#F5F0F6] text-[2rem]">
-                                <p>Media</p>
-                            </span>
+            <div className="w-[90%] h-[80%] !m-auto !mt-[12vh] flex">
+                <div className="w-full h-fit flex flex-row justify-between gap-[2rem] relative">
+                    {/* Pages */}
+                    <div className="flex flex-col gap-[0.5rem]">
+                        <span className="text-[#F5F0F6] text-[2rem]">
+                            <p>Explore</p>
+                        </span>
+                        <div 
+                            className="w-fit"
+                            onMouseEnter={() => setHoveredPage(0)}
+                            onMouseLeave={() => setHoveredPage(-1)}
+                        >
                             <NavPage 
-                                pageTitle="Instagram"
+                                pageTitle="Home"
                                 pageURL="/"
                             />
-                            <NavPage 
-                                pageTitle="Linkedin"
-                                pageURL="/join"
-                            />
-                            <NavPage 
-                                pageTitle="Facebook"
-                                pageURL="/Sponsors"
-                            />
                         </div>
-                        {/* Pages */}
-                        <div className="flex flex-col gap-[0.5rem]">
-                            <span className="text-[#F5F0F6] text-[2rem]">
-                                <p>Explore</p>
-                            </span>
-                            <div 
-                                className="w-fit"
-                                onMouseEnter={() => setHoveredPage(0)}
-                                onMouseLeave={() => setHoveredPage(-1)}
-                            >
-                                <NavPage 
-                                    pageTitle="Home"
-                                    pageURL="/"
-                                />
-                            </div>
-                            <div
-                                className="w-fit"
-                                onMouseEnter={() => setHoveredPage(1)}
-                                onMouseLeave={() => setHoveredPage(-1)}
-                            >
+                        <div
+                            className="w-fit"
+                            onMouseEnter={() => setHoveredPage(1)}
+                            onMouseLeave={() => setHoveredPage(-1)}
+                        >
                             <NavPage 
                                 pageTitle="About"
                                 pageURL="/about"
                             />
-                            </div>
-                            <div
-                                className="w-fit"
-                                onMouseEnter={() => setHoveredPage(2)}
-                                onMouseLeave={() => setHoveredPage(-1)}
-                            >
-                                <NavPage 
-                                    pageTitle="Cars"
-                                    pageURL="/cars"
-                                />
-                            </div>
-                            <div
-                                className="w-fit"
-                                onMouseEnter={() => setHoveredPage(3)}
-                                onMouseLeave={() => setHoveredPage(-1)}
-                            >
-                                <NavPage 
-                                    pageTitle="Team"
-                                    pageURL="/team"
-                                />
-                            </div>
-                            <div
-                                className="w-fit"
-                                onMouseEnter={() => setHoveredPage(4)}
-                                onMouseLeave={() => setHoveredPage(-1)}
-                            >
-                                <NavPage 
-                                    pageTitle="Join"
-                                    pageURL="/join"
-                                />
-                            </div>
-                            <div
-                                className="w-fit"
-                                onMouseEnter={() => setHoveredPage(5)}
-                                onMouseLeave={() => setHoveredPage(-1)}
-                            >
-                                <NavPage 
-                                    pageTitle="Sponsors"
-                                    pageURL="/Sponsors"
-                                />
-                            </div>
                         </div>
-
+                        <div
+                            className="w-fit"
+                            onMouseEnter={() => setHoveredPage(2)}
+                            onMouseLeave={() => setHoveredPage(-1)}
+                        >
+                            <NavPage 
+                                pageTitle="Cars"
+                                pageURL="/cars"
+                            />
+                        </div>
+                        <div
+                            className="w-fit"
+                            onMouseEnter={() => setHoveredPage(3)}
+                            onMouseLeave={() => setHoveredPage(-1)}
+                        >
+                            <NavPage 
+                                pageTitle="Team"
+                                pageURL="/team"
+                            />
+                        </div>
+                        <div
+                            className="w-fit"
+                            onMouseEnter={() => setHoveredPage(4)}
+                            onMouseLeave={() => setHoveredPage(-1)}
+                        >
+                            <NavPage 
+                                pageTitle="Join"
+                                pageURL="/join"
+                            />
+                        </div>
+                        <div
+                            className="w-fit"
+                            onMouseEnter={() => setHoveredPage(5)}
+                            onMouseLeave={() => setHoveredPage(-1)}
+                        >
+                            <NavPage 
+                                pageTitle="Sponsors"
+                                pageURL="/Sponsors"
+                            />
+                        </div>
                     </div>
-                </div>
-                <div className="flex flex-col justify-between items-end">
                     <div 
-                        className="w-[48vw] h-[60vh]"
+                        className="w-[55rem] h-[40rem]"
                         style={{
                             backgroundImage: `url(${pageImages[hoveredPage]})`,
                             backgroundPosition: 'center',
                             backgroundSize: 'cover',
                             backgroundRepeat: 'no-repeat'
                         }}
-                    />
-                    <div className="w-fit h-fit bg-[#FFD500] rounded-[4rem] !p-[2.5rem] !mt-[3rem] flex justify-center text-[4rem]">
-                        <h1 className="text-[#FFFFFFF]">Member Portal →</h1>
+                    />                
+                    <div className="w-fit flex flex-col">
+                    {/* Media */}
+                        <div className="flex flex-col gap-[0.5rem]">
+                            <span className="text-[#F5F0F6] text-[2rem]">
+                                <p>Media</p>
+                            </span>
+                            <a href="" target="_blank">
+                                <span className="text-[3rem] text-[#F5F0F6]">
+                                    <h2>Instagram</h2>
+                                </span>
+                            </a>
+                            <a href="" target="_blank">
+                                <span className="text-[3rem] text-[#F5F0F6]">
+                                    <h2>Facebook</h2>
+                                </span>
+                            </a>
+                            <a href="" target="_blank">
+                                <span className="text-[3rem] text-[#F5F0F6]">
+                                    <h2>Linkedin</h2>
+                                </span>
+                            </a>
+                        </div>
+                        <div className="w-fit h-fit bg-[#FFD500] rounded-[4rem] !p-[1rem] !mt-[3rem] flex justify-center text-center text-[3rem] leading-[5rem]">
+                            <h1 className="text-[#FFFFFFF]">Member Portal</h1>
+                        </div>
                     </div>
                 </div>
 
