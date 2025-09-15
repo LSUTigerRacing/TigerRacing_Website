@@ -204,7 +204,7 @@ const NavMenu = () => {
                             />
                         </div>
                     </div>
-                    <div asdfsasdfs
+                    <div asdfsdf
                         className="w-[55rem] h-[40rem]"
                         style={{
                             backgroundImage: `url(${pageImages[hoveredPage]})`,
