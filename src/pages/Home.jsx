@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { CollageSlide } from "../components/CollageItem.tsx";
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react"
+import { useLoadingComplete } from "../hooks/LoadingContext.jsx";
+import { motion } from "motion/react";
 
 import DriveVideo from "../assets/images/Home/drive.webm";
 
@@ -24,7 +24,6 @@ import GeauxTogether from "../assets/images/Home/Slides/GeauxTogether.png";
 
 import LeftArrow from "../assets/images/General/arrow-left-white.png"
 import RightArrow from "../assets/images/General/arrow-right-white.png"
-import { useLoadingComplete } from "../hooks/LoadingContext.jsx";
 
 const createSvgBackground = (svgContent) => {
   const encodedSvg = encodeURIComponent(svgContent);
@@ -192,18 +191,6 @@ const Home = () => {
       }
     }, [isFullyComplete, animate]);
 
-    // gsap
-    const linkBox = useRef();
-
-    useGSAP(() => {
-      
-      gsap.from(linkBox.current, {
-        x: 360,
-        stagger: {
-          each: 30
-        }
-      })
-    }, {scope: linkBox})
 
     return (
       <div className="w-screen h-fit bg-[#F5F0F6]">
@@ -287,9 +274,12 @@ const Home = () => {
         <div className="w-[93%] h-[95vh] flex flex-col justify-between !mx-auto !pb-[10vh]">
           <div/> {/* empty div to shove the second div down*/}
           <div className="h-[60%] flex justify-between">
-            <div 
+            <motion.div 
               className="w-[55%] bg-[#FFD500]"
-              ref={linkBox}  
+              initial={{ clipPath: 'inset(100% 0 0 0)' }}
+              whileInView = {{ clipPath: 'inset(0 0 0 0)' }}
+              transition={{ duration: 0.7, ease: "easeInOut" }}
+              viewport={{ once: true, amount: 0.9 }}
             >
               <div className="w-[90%] min-h-[85%] flex flex-col justify-between !mx-[2vw] !mt-[3%] !mb-[6%]">
                 <div className="text-2xl">
@@ -301,11 +291,14 @@ const Home = () => {
                   <h1>Sponsors</h1>
                 </span>
               </div>
-            </div>
+            </motion.div>
           
-            <div 
+            <motion.div 
               className="w-[40%] bg-[#510087]"
-              ref={linkBox}
+              initial={{ clipPath: 'inset(100% 0 0 0)' }}
+              whileInView = {{ clipPath: 'inset(0 0 0 0)' }}
+              transition={{ duration: 0.7, ease: "easeInOut", delay: 0.1 }}
+              viewport={{ once: true, amount: 0.9 }}
             >
               <div className="w-[90%] min-h-[85%] flex flex-col justify-between text-[#F5F0F6] !mx-[2vw] !mt-[3%] !mb-[6%]">
                 <div className="text-2xl">
@@ -317,7 +310,7 @@ const Home = () => {
                   <h1>Join us</h1>
                 </span>    
               </div>  
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>
