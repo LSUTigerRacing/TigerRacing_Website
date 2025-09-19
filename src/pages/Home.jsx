@@ -42,67 +42,66 @@ const blurb =`
 //   alt: string;
 // }
 
-// Scrolling Bar of Sponsor Icons
-// const SponsorsBar = () => {
-//   const images: ImageData[] = [
-//     { id: 1, src: BASF, alt: 'BASF'},
-//     { id: 2, src: Exxon, alt: 'Exxon'},
-//     { id: 3, src: Haas, alt: 'Haas Foundation'},
-//     { id: 4, src: Hoosier, alt: 'Hoosier'},
-//     { id: 5, src: SolidWorks, alt: 'SolidWorks'},
-//     { id: 6, src: Kenesto, alt: 'Kenesto'},
-//     { id: 7, src: LSUCOE, alt: 'LSU College of Engineering'},
-//     { id: 8, src: Siemens, alt: 'Siemens'},
-//   ];
+const SponsorsBar = () => {
+  const images = [
+    { id: 1, src: BASF, alt: 'BASF'},
+    { id: 2, src: Exxon, alt: 'Exxon'},
+    { id: 3, src: Haas, alt: 'Haas Foundation'},
+    { id: 4, src: Hoosier, alt: 'Hoosier'},
+    { id: 5, src: SolidWorks, alt: 'SolidWorks'},
+    { id: 6, src: Kenesto, alt: 'Kenesto'},
+    { id: 7, src: LSUCOE, alt: 'LSU College of Engineering'},
+    { id: 8, src: Siemens, alt: 'Siemens'},
+  ];
 
-//   return (
-//     <div className="relative w-fit h-fit !my-[5vh]">
-//       <div className="w-fit flex gap-[5rem] animate-scroll whitespace-nowrap">
-//         {images.map((image) => (
-//           <div
-//             key={`first-${image.id}`}
-//             className="inline-block shrink-0"
-//           >
-//             <img
-//               src={image.src}
-//               alt={image.alt}
-//               className="!h-[15rem] !max-w-[40vw] w-auto object-contain"
-//             />
-//           </div>
-//         ))}
-//         {/* duped image set for looping */}
-//         {images.map((image) => (
-//           <div
-//             key={`first-${image.id}`}
-//             className="inline-block shrink-0"
-//           >
-//             <img
-//               src={image.src}
-//               alt={image.alt}
-//               className="!h-[15rem] !max-w-[40vw] w-auto object-contain"
-//             />
-//           </div>
-//         ))}
-//       </div>
-//       {/* Custom CSS for animation (this is gpt'd) */}
-//       <style>{`
-//         @keyframes scroll {
-//           0% {
-//             transform: translateX(0);
-//           }
-//           100% {
-//             transform: translateX(-50%);
-//           }
-//         }
+  return (
+    <div className="relative w-fit h-fit !my-[5vh]">
+      <div className="w-fit flex gap-[5rem] animate-scroll whitespace-nowrap">
+        {images.map((image) => (
+          <div
+            key={`first-${image.id}`}
+            className="inline-block shrink-0"
+          >
+            <img
+              src={image.src}
+              alt={image.alt}
+              className="!h-[15rem] !max-w-[40vw] w-auto object-contain"
+            />
+          </div>
+        ))}
+        {/* duped image set for looping */}
+        {images.map((image) => (
+          <div
+            key={`first-${image.id}`}
+            className="inline-block shrink-0"
+          >
+            <img
+              src={image.src}
+              alt={image.alt}
+              className="!h-[15rem] !max-w-[40vw] w-auto object-contain"
+            />
+          </div>
+        ))}
+      </div>
+      {/* Custom CSS for animation (this is gpt'd) */}
+      <style>{`
+        @keyframes scroll {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-50%);
+          }
+        }
         
-//         .animate-scroll {
-//           animation: scroll 40s linear infinite;
-//         }
-//       `}</style>
-//     </div>
+        .animate-scroll {
+          animation: scroll 40s linear infinite;
+        }
+      `}</style>
+    </div>
 
-//   )
-// }
+  )
+}
 
 // The carousel of different pages at the bottom
 const PageCarousel = () => {

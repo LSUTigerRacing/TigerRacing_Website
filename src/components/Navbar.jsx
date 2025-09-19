@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "motion/react"
 
@@ -17,12 +17,19 @@ import Empty from "../assets/images/Nav/Purple.png"
 export const Navbar = () => {
     const [animate, setAnimate] = useState(false);
     const [navMenuOpen, setNavMenuOpen] = useState(false);
+    const [isNavigating, setIsNavigating] = useState(false);
     const location = useLocation();
+    const fadeTime = 550
+
+    useEffect(() => {
+        setAnimate(false);
+        setIsNavigating(false);
+    }, [location.key]);
 
     useEffect(() => {
         setNavMenuOpen(false);
+        setIsNavigating(false);
     }, [location]);
-
 
     useEffect(() => {
         const timer = setTimeout(() => {
@@ -32,15 +39,13 @@ export const Navbar = () => {
         return () => clearTimeout(timer);
     })
 
-    //     useEffect(() => {
-
-    // }, [])
-
     return (
         <div className="fixed z-50">
             <span className="w-screen flex justify-center">
-                <nav
+                <motion.nav
                     className="w-[95vw] h-[10vh] flex items-center justify-between z-50"
+                    animate={isNavigating ? {y: -30, opacity: 0} : {y: 0, opacity: 1}}
+                    transition={{ duration: 0.2, delay: 0.25, ease: "easeOut" }}
                 >
                     <div className={`w-[11rem]`}>
                         <div className={`
@@ -59,14 +64,27 @@ export const Navbar = () => {
  
 
                     <div className={`w-[20rem] ${animate ? 'opacity-100' : 'opacity-0'}`}>
-                        
-                        <Link to="/">
-                            <img
-                                src={purple_logo}
-                                alt="Home Button"
-                                className="h-full object-cover"
-                            />
-                        </Link>
+                        {navMenuOpen
+                        ?  
+                        (
+                            <Link to="/">
+                                <img
+                                    src={white_logo}
+                                    alt="Home Button"
+                                    className="h-full object-cover"
+                                />
+                            </Link>
+                        )
+                        :
+                        (
+                            <Link to="/">
+                                <img
+                                    src={purple_logo}
+                                    alt="Home Button"
+                                    className="h-full object-cover"
+                                />
+                            </Link>
+                        )}
                     </div>
 
                     <div className="w-[11rem]">
@@ -83,47 +101,28 @@ export const Navbar = () => {
                         </div>
                     </div>
 
-                </nav>
-                <div className={`absolute left-0 ${navMenuOpen ? "opacity-100" : "opacity-0 pointer-events-none"}`}>
-                    <NavMenu/>
-                </div>
+                </motion.nav>
+                <motion.div 
+                    className={`absolute left-0`}
+                    animate={navMenuOpen ? {y: 0, pointerEvents: 'auto'} : {y: '-100vh', pointerEvents: 'none'}}
+                    transition={{ duration: 0.3, ease: "easeInOut" }}
+                >
+                    <NavMenu
+                        isNavigating = {isNavigating}
+                        setIsNavigating={setIsNavigating}
+                        fadeTime={fadeTime}
+                    />
+                </motion.div>
 
             </span>
         </div>
     )
-}
+};
 
-const NavPage = (props) => {
-    const {
-        pageTitle,
-        pageURL
-    } = props;
-    const location = useLocation();
-    const [currentPage, setCurrentPage] = useState(false);
-
-    useEffect(() => {
-        if (location.pathname === pageURL) {
-            setCurrentPage(true);
-        } else {
-            setCurrentPage(false);
-        }
-    }, [location]);
-
-    return (
-        <Link 
-            to={pageURL}
-            className="group w-[25rem] flex flex-col justify-between select-none cursor-pointer text-[4.5rem]"
-        >
-            <h2 className="text-[#F5F0F6] group-hover:text-[#FFD500]">{pageTitle}</h2>
-            <span className="w-full flex justify-center"> {/* i tried to use the hr tag but its not cooperating with tailwind so im doing this for now */}
-                <div className="w-[93vw] h-1 bg-[#F5F0F6] group-hover:bg-[#FFD500] mx-auto"></div>
-            </span>
-        </Link>
-    )
-}
-
-const NavMenu = () => {
+const NavMenu = ({ isNavigating, setIsNavigating, fadeTime }) => {
     const [hoveredPage, setHoveredPage] = useState(-1);
+    const navigate = useNavigate();
+
     const pageImages = [
         Home,
         About,
@@ -134,10 +133,22 @@ const NavMenu = () => {
         Empty
     ]
 
+    const handleNavigation = (pageURL) => {
+        setIsNavigating(true);
+        
+        setTimeout(() => {
+            navigate(pageURL);
+        }, fadeTime);
+    };
+
     return (
-        <div className="w-screen h-screen absolute overflow-hidden bg-[#510087]">
+        <div className="w-screen h-screen absolute overflow-hidden bg-[#48007C]">
             <div className="w-[90%] h-[80%] !m-auto !mt-[12vh] flex">
-                <div className="w-full h-fit flex flex-row justify-between gap-[2rem] relative">
+                <motion.div 
+                    className="w-full h-fit flex flex-row justify-between gap-[2rem] relative"
+                    animate={isNavigating ? {y: -30, opacity: 0} : {y: 0, opacity: 1}}
+                    transition={{ duration: 0.4, ease: "easeOut" }}
+                >
                     {/* Pages */}
                     <div className="flex flex-col gap-[0.5rem]">
                         <span className="text-[#F5F0F6] text-[2rem]">
@@ -151,6 +162,7 @@ const NavMenu = () => {
                             <NavPage 
                                 pageTitle="Home"
                                 pageURL="/"
+                                onNavigate={handleNavigation}
                             />
                         </div>
                         <div
@@ -161,6 +173,7 @@ const NavMenu = () => {
                             <NavPage 
                                 pageTitle="About"
                                 pageURL="/about"
+                                onNavigate={handleNavigation}
                             />
                         </div>
                         <div
@@ -171,6 +184,7 @@ const NavMenu = () => {
                             <NavPage 
                                 pageTitle="Cars"
                                 pageURL="/cars"
+                                onNavigate={handleNavigation}
                             />
                         </div>
                         <div
@@ -181,6 +195,7 @@ const NavMenu = () => {
                             <NavPage 
                                 pageTitle="Team"
                                 pageURL="/team"
+                                onNavigate={handleNavigation}
                             />
                         </div>
                         <div
@@ -191,6 +206,7 @@ const NavMenu = () => {
                             <NavPage 
                                 pageTitle="Join"
                                 pageURL="/join"
+                                onNavigate={handleNavigation}
                             />
                         </div>
                         <div
@@ -201,6 +217,7 @@ const NavMenu = () => {
                             <NavPage 
                                 pageTitle="Sponsors"
                                 pageURL="/Sponsors"
+                                onNavigate={handleNavigation}
                             />
                         </div>
                     </div>
@@ -239,10 +256,28 @@ const NavMenu = () => {
                             <h1 className="text-[#FFFFFFF]">Member Portal</h1>
                         </div>
                     </div>
-                </div>
-
-
+                </motion.div>
             </div>            
+        </div>
+    )
+};
+
+const NavPage = ({pageTitle, pageURL, onNavigate }) => {
+    const handleClick = () => {
+        if (onNavigate) {
+            onNavigate(pageURL);
+        }
+    };
+
+    return (
+        <div
+            onClick={handleClick}
+            className="group w-[25rem] flex flex-col justify-between select-none cursor-pointer text-[4.5rem]"
+        >
+            <h2 className="text-[#F5F0F6] group-hover:text-[#FFD500]">{pageTitle}</h2>
+            <span className="w-full flex justify-center"> {/* i tried to use the hr tag but its not cooperating with tailwind so im doing this for now */}
+                <div className="w-[93vw] h-1 bg-[#F5F0F6] group-hover:bg-[#FFD500] mx-auto"></div>
+            </span>
         </div>
     )
 };

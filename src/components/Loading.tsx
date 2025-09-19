@@ -10,24 +10,6 @@ import purple_logo from "../assets/images/General/tigerracing-logo-purple.png";
 import { useLoadingComplete } from "../hooks/LoadingContext";
 import { clear } from "console";
 
-export const DelayedLink = (props) => {
-    const {
-        to
-    } = props;
-
-    const navigate = useNavigate();
-    const [isNavigating, setIsNavigating] = useState(false);
-
-    const handleClick = (e) => {
-        e.preventDefault();
-        setIsNavigating(true);
-    }
-
-    return (
-        <Link to={to}>
-        </Link>
-    )
-}
 
 export const Loading = () => {
     const { markAnimationComplete } = useLoadingComplete();
@@ -41,6 +23,13 @@ export const Loading = () => {
     const videoLength = 1200;
     const logoTransitionLength = videoLength + 320;
 
+    useEffect(() => {
+        setMediaToShow('video');
+        setImageToShow('white');
+        setLoadingFinished(false);
+        setAnimate(false);
+    }, [location.key]);
+    
     useEffect(() => {
         const timer = setTimeout(() => {
             setMediaToShow('image'); 
