@@ -3,7 +3,7 @@ import { Routes, Route, Navigate, useLocation } from "react-router-dom"
 import { Navbar } from "./components/Navbar.tsx"
 import Footer from "./components/Footer"
 // Public pages
-const Home = lazy(() => import('./pages/Home.tsx'))
+const Home = lazy(() => import('./pages/Home'))
 // const About = lazy(() => import('./pages/About'))
 // const Team = lazy(() => import('./pages/Team.jsx'))
 // const Cars = lazy(() => import('./pages/Cars.jsx'))
