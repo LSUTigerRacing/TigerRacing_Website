@@ -7,6 +7,7 @@
     --standard-purple: #510087;
     --standard-yellow: #FFD500;
     --tinted-white: #F5F0F6;
+    --purple-line: #6300A6;
 
 }
 
@@ -32,15 +33,16 @@
     }
     h2 {
         font-size: 50.3px;
+        line-height: 1.2;
     }
     h3 {
-        font-size: 32px;
+        font-size: 25.2px;
     }
     h4 {
         font-size: 12.5px;
     }
     p {
-        font-size: 20px;
+        font-size: 15.7px;
     }
 }
 
@@ -58,4 +60,21 @@ html {
     html {
         font-size:min(.8333333333vw, .8333333333vh * 2.3)
     }
+}
+
+.background {
+    background-color: var(--standard-purple);
+    color: var(--tinted-white);
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.purple-line {
+    width: 100%;
+    height: 4px;
+    background-color: var(--purple-line);
 }
