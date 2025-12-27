@@ -7,7 +7,7 @@ import Logo from "../assets/images/General/tigerracing-logo-purple.png";
 export const Navbar = () => {
     return (
         <div className="navbar">
-            <div className="navbar-container text-[var(--standard-purple)]">
+            <div className="navbar-container text-[var(--standard-purple)]!">
                 <img src={Logo} alt="Tiger Racing Logo"/>
                 <div className="w-[35%] flex flex-row justify-between">
                     <h4>About</h4>
