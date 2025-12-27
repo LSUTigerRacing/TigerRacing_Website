@@ -5,7 +5,7 @@ import Footer from "./components/Footer"
 // Public pages
 const Home = lazy(() => import('./pages/Home'))
 // const About = lazy(() => import('./pages/About'))
-// const Team = lazy(() => import('./pages/Team.jsx'))
+const Team = lazy(() => import('./pages/Team'))
 // const Cars = lazy(() => import('./pages/Cars.jsx'))
 // const Join = lazy(() => import('./pages/Join'))
 // const Sponsors = lazy(() => import('./pages/Sponsors.jsx'))
@@ -22,8 +22,8 @@ export const AppRoutes = () => {
                     <Routes>
                         {/* public pages */}
                         <Route path="/" element={<Home />} />
-                        {/* <Route path="/about" element={<About />} />
                         <Route path="/team" element={<Team />} />
+                        {/* <Route path="/about" element={<About />} />
                         <Route path="/cars" element={<Cars />} />
                         <Route path="/sponsors" element={<Sponsors />} />
                         <Route path="/join" element={<Join />}/> 

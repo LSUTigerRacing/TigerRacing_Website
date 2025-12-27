@@ -58,6 +58,7 @@ const Home = () => {
                 title="Sponsor Us"
                 description="We started as a curriculum-integrated program. Now, we grow as our own independent team. Learn more about our history behind TigerRacing."
             />
+            
         </section>
     </div>
   );
