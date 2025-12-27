@@ -1,0 +1,61 @@
+/* @import "tailwindcss/preflight";  */
+
+:root {
+    --font-heading: 'Manrope', sans-serif;
+    --font-body: 'Sora', sans-serif;
+
+    --standard-purple: #510087;
+    --standard-yellow: #FFD500;
+    --tinted-white: #F5F0F6;
+
+}
+
+@layer base {
+     *, *::before, *::after {
+        box-sizing: border-box;
+        font-synthesis: none;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-family: var(--font-heading);
+        font-weight: 700;
+        /* font-size: 100%; */
+    }
+    p, a {
+        font-family: var(--font-body);
+    }
+
+    h1 {
+        font-size: 76px;
+    }
+    h2 {
+        font-size: 50.3px;
+    }
+    h3 {
+        font-size: 32px;
+    }
+    h4 {
+        font-size: 12.5px;
+    }
+    p {
+        font-size: 20px;
+    }
+}
+
+html {
+    font-size:1.3vw
+}
+
+@media (min-width: 600px) {
+    html {
+        font-size:min(1.2vw, 1vh * 2.3)
+    }
+}
+
+@media (min-width: 1025px) {
+    html {
+        font-size:min(.8333333333vw, .8333333333vh * 2.3)
+    }
+}
