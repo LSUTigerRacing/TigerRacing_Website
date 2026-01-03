@@ -4,15 +4,16 @@ import { Navbar } from "./components/Navbar.tsx"
 import Footer from "./components/Footer"
 // Public pages
 const Home = lazy(() => import('./pages/Home'))
-// const About = lazy(() => import('./pages/About'))
 const Team = lazy(() => import('./pages/Team'))
-// const Cars = lazy(() => import('./pages/Cars.jsx'))
 const Join = lazy(() => import('./pages/Join'))
 const Sponsor = lazy(() => import('./pages/Sponsor'))
 
-// const Chassis = lazy(() => import('./pages/join-subpages/Chassis'))
-// const Powertrain = lazy(() => import('./pages/join-subpages/Powertrain'))
-// const Business = lazy(() => import('./pages/join-subpages/Business'))
+const Chassis = lazy(() => import('./pages/System-Pages/Chassis'))
+const Powertrain = lazy(() => import('./pages/System-Pages/Powertrain'))
+const Business = lazy(() => import('./pages/System-Pages/Business'))
+const PublicRelations = lazy(() => import('./pages/System-Pages/PublicRelations'))
+const Software = lazy(() => import('./pages/System-Pages/Software'))
+
 
 export const AppRoutes = () => {    
     return (
@@ -26,11 +27,12 @@ export const AppRoutes = () => {
                         <Route path="/sponsor" element={<Sponsor />} />
                         <Route path="/join" element={<Join />}/> 
 
-                        {/* <Route path="/about" element={<About />} />
-                        <Route path="/cars" element={<Cars />} />
-                            <Route path="/join/chassis" element={<Chassis />}/>
-                            <Route path="/join/powertrain" element={<Powertrain />}/>
-                            <Route path="/join/business" element={<Business />}/> */}
+                        {/* subpages */}
+                        <Route path="/join/chassis" element={<Chassis />}/>
+                        <Route path="/join/powertrain" element={<Powertrain />}/>
+                        <Route path="/join/business" element={<Business />}/>
+                        <Route path="/join/public-relations" element={<Business />}/>
+                        <Route path="/join/software" element={<Business />}/>
 
                         {/* the else statement (wow) */}
                         <Route path="*" element={<Navigate to="/" replace/>}/>
