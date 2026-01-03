@@ -137,6 +137,45 @@ html {
 .seperator-bottom-sm {
     margin-bottom: 2%;
 }
+
+.white-landing {
+    width: 100%;
+    height: 110%;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    margin-inline: auto;
+    padding-inline: 7.5vw;
+    padding-block: 10rem;
+
+    border-bottom-right-radius: 32px;
+    border-bottom-left-radius: 32px;
+
+    color: black;
+    background-color: white;
+}
+
+.white-landing-content {
+    width: 55%;
+}
+
+.white-landing-content h2 {
+    margin-top: 4rem;
+    margin-bottom: 1rem;
+}
+
+.white-landing-content p {
+    margin-top: 3rem;
+    margin-bottom: 9rem;
+}
+
+.white-landing img {
+    width: 40%;
+    height: 100%;
+    object-fit: cover;
+}
 .systems-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

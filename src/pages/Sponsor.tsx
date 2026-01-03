@@ -4,14 +4,10 @@ import WhyPartner from "../assets/images/Sponsor/WhyPartner.png";
 const Sponsor = () => {
   return (
     <div className="w-full background">
-        <section className="w-full h-[calc(110%)] flex flex-row mx-auto px-[5vw] py-40 justify-between rounded-b-[32px] text-black bg-white">
-            <div className="w-[50%]">
-                <br/><br/> 
-                <br/><br/> 
+        <section className="white-landing">
+            <div className="white-landing-content">
                 <h2>Keep our engines roaring.*</h2>
                 <h4>*and our batteries whirring.</h4>
-                <br/> 
-                <br/>
                 <p>
                     The LSU TigerRacing team sincerely thanks all of our generous sponsors. We could not build our electric vehicles, maintain our combustion cars, and thrive as one of LSU's premiere engineering organizations without the help of our sponsors. 
                     <br/> <br/> 
@@ -19,8 +15,6 @@ const Sponsor = () => {
                     <br/> <br/>
                     Your support makes a real difference to our team.
                 </p>
-                                    <br/> <br/> 
-                    <br/> <br/> 
 
                 <div className="w-fit bg-[var(--standard-yellow)] px-6 py-3 mt-6 cursor-pointer hover:brightness-90 transition-all rounded-[10vw]">
                     <h3>Sponsorship Packet</h3>
@@ -28,7 +22,6 @@ const Sponsor = () => {
             </div>
             <img
                 src={Landing}
-                className="w-[40%] h-full object-cover"
             />
         </section>
 
