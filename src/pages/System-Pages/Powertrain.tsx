@@ -1,7 +1,7 @@
 import Landing from "../../assets/images/System-Pages/Powertrain/Landing.png";
 import TempPicture from "../../assets/images/System-Pages/Powertrain/PCB.png";
 
-import { LandingComponent, SubsystemComponent } from "./SystemComponents";
+import { LandingComponent, SubsystemComponent, TableOfContents } from "./SystemComponents";
 
 const Powertrain = () => {
   return (
@@ -12,7 +12,14 @@ const Powertrain = () => {
                     
         As a powertrain team member, you'll develop battery systems that monitor thousands of cells for temperature and voltage, write embedded software that makes split-second decisions, and engineer high-voltage PCB layouts that withstand the extreme demands of competitive racing."
         image={Landing} />
-
+        <TableOfContents
+            sections={[
+                { index: "01", title: "Electronics" },
+                { index: "02", title: "Battery" },
+                { index: "03", title: "Low Voltage" },
+                { index: "04", title: "Tractive System" },
+            ]}
+        />
         <SubsystemComponent
             index="01"
             title="Electronics"
