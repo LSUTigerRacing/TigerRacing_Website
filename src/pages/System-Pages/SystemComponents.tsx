@@ -31,14 +31,22 @@ const TableOfContents = ( props: { sections: any } ) => {
     const {
         sections
     } = props;
+
+    const scrollToSection = ( index: any ) => {
+        const sectionIndex = parseInt(index) - 1;
+    };
+
     return (
         <div className="table-of-contents">
-            {sections.map((section: any) => (
-                <div className="table-of-contents-item">
-                    <h3>{section.index}</h3>
-                    <h2>{section.title}</h2>
-                </div>
-            ))}
+            <h3 className="seperator-bottom-sm">Our Subsystems</h3>
+            <div className="table-of-contents-container">
+                {sections.map((section: any) => (
+                    <div className="table-of-contents-item">
+                        <h3>{section.index}</h3>
+                        <h3>{section.title}</h3>
+                    </div>
+                ))}
+            </div>
         </div>
   );
 };
@@ -135,4 +143,4 @@ const CollageHeroBottom = ( props: { images: any }) => {
 
 
 
-export { LandingComponent, SubsystemComponent };
+export { LandingComponent, SubsystemComponent, TableOfContents };
