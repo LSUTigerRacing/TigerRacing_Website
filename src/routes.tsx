@@ -31,8 +31,8 @@ export const AppRoutes = () => {
                         <Route path="/join/chassis" element={<Chassis />}/>
                         <Route path="/join/powertrain" element={<Powertrain />}/>
                         <Route path="/join/business" element={<Business />}/>
-                        <Route path="/join/public-relations" element={<Business />}/>
-                        <Route path="/join/software" element={<Business />}/>
+                        <Route path="/join/public-relations" element={<PublicRelations />}/>
+                        <Route path="/join/software" element={<Software />}/>
 
                         {/* the else statement (wow) */}
                         <Route path="*" element={<Navigate to="/" replace/>}/>
