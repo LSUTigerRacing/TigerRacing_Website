@@ -8,7 +8,6 @@
     --standard-yellow: #FFD500;
     --tinted-white: #F5F0F6;
     --purple-line: #6300A6;
-
 }
 
 @layer base {
@@ -85,4 +84,14 @@ html {
     width: 100%;
     height: 4px;
     background-color: var(--purple-line);
+}
+
+.white-line {
+    width: 100%;
+    height: 4px;
+    background-color: var(--tinted-white);
+}
+
+.seperator-bottom-sm {
+    margin-bottom: 2%;
 }
