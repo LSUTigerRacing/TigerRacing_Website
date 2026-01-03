@@ -8,7 +8,7 @@ const Sponsor = () => {
             <div className="white-landing-content">
                 <h2>Keep our engines roaring.*</h2>
                 <h4>*and our batteries whirring.</h4>
-                <p>
+                <p className="mb-[9rem]">
                     The LSU TigerRacing team sincerely thanks all of our generous sponsors. We could not build our electric vehicles, maintain our combustion cars, and thrive as one of LSU's premiere engineering organizations without the help of our sponsors. 
                     <br/> <br/> 
                     If you are interested in becoming a TigerRacing sponsor, please look at our sponsorship packet linked below and contact our team at 
