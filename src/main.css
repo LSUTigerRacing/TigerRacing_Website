@@ -244,8 +244,19 @@ html {
     /* background-color: aqua; */
 }
 
-.navbar-container img {
+.navbar-container > * {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+
+}
+
+
+.navbar-logo {
     height: 80%;
+    object-fit: contain;
+    user-select: none;
 }
 .subsystem-component {
     width: 93%;
