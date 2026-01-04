@@ -13,6 +13,7 @@ import SystemBusiness from "../assets/images/Team/SystemBusiness.png";
 import SystemPublicRelations from "../assets/images/General/filler.png";
 import SystemSoftware from "../assets/images/General/filler.png";
 
+import Linkedin from "../assets/images/General/icons/linkedin.png"
 
 const Team = () => {
   return (
@@ -144,24 +145,26 @@ const Portrait = ( props: { to: any; image: any; title: any; name: any; } ) => {
         name
     } = props;
     return (
-        <div className="relative flex-1 h-[60vh]">
+        <div className="portrait">
             <img
                 src={image}
                 alt={title}
-                className="absolute w-fit h-full object-cover rounded-[36px]"
+                className="portrait-image"
             />
-            <div className="absolute-center border-2 rounded-[30px] "
-                  style={{
-                    width: 'calc(100% - 20px)',
-                    height: 'calc(100% - 20px)'
-                }}
-            >
-                <div className="absolute bottom-4 left-5">
+            <div className="portrait-lining">
+                <div className="portrait-content">
                     <p>{name}</p>
                     <h3>{title}</h3>
                 </div>
             </div>
-
+            <div className="portrait-contact">
+                <div className="portrait-contact-content">
+                    <h3>Contact</h3>
+                    <a href={to}>
+                        <img src={Linkedin}/>
+                    </a>
+                </div>
+            </div>
 
         </div>
     )

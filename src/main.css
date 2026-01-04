@@ -240,8 +240,6 @@ html {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    /* background-color: aqua; */
 }
 
 .navbar-container > * {
@@ -251,7 +249,6 @@ html {
     user-select: none;
 
 }
-
 
 .navbar-logo {
     height: 80%;
@@ -377,4 +374,81 @@ html {
     width: 0;
     flex: 1;
     object-fit: cover;
+}
+.portrait {
+    height: 60vh;
+
+    position: relative;
+    flex: 1
+}
+
+.portrait > * {
+    transition: all 0.3s ease;
+}
+
+.portrait-image {
+    width: fit-content;
+    height: 100%;
+
+    object-position: 100% 30%;
+    object-fit: cover;
+    border-radius: 36px;
+
+    position: absolute;
+    transition: all 0.3s ease;
+}
+
+.portrait-lining {
+    width: calc(100% - 20px);
+    height: calc(100% - 20px);
+
+    position: absolute;
+    inset: 10px; /* Sets top, right, bottom, left all to 10px */
+    margin: 0 auto; /* Centers horizontally */
+    border-width: 2px;
+    border-radius: 30px;
+}
+
+.portrait-content {
+    position: absolute;
+    bottom: 1rem;
+    left: 1.25rem;
+}
+
+.portrait-contact {
+    width: 99%;
+    height: 100%;
+
+    background-color: var(--standard-yellow);
+    border-radius: 36px;
+}
+
+.portrait-contact-content {
+    width: 85%;
+    height: fit-content;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-inline: auto;
+    padding-top: 124%; /* hella hardcoded for the content to be ground to the floor but w/e */
+ 
+    color: black;
+}
+
+.portrait-contact-content a img {
+    height: 2vw;
+}
+
+.portrait:hover .portrait-image {
+    height: 85%;
+    object-position: 100% 30%;
+
+    transition: all 0.3s ease;
+}
+
+.portrait:hover .portrait-lining {
+    height: calc(85% - 20px);
+
+    transition: all 0.3s ease;
 }

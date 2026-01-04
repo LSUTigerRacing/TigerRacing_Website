@@ -24,8 +24,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    /* background-color: aqua; */
 }
 
 .navbar-container > * {
@@ -35,7 +33,6 @@
     user-select: none;
 
 }
-
 
 .navbar-logo {
     height: 80%;
