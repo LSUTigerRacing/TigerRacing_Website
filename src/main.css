@@ -1,4 +1,195 @@
-@import "tailwindcss";
+/* @import "tailwindcss/preflight";  */
+@import "tailwindcss"; /* index named as _index to keep this import at top of main.css*/
+
+:root {
+    --font-heading: 'Manrope', sans-serif;
+    --font-body: 'Sora', sans-serif;
+
+    --standard-purple: #510087;
+    --standard-yellow: #FFD500;
+    --tinted-white: #F5F0F6;
+    --purple-line: #6300A6;
+}
+
+@layer base {
+     *, *::before, *::after {
+        box-sizing: border-box;
+        font-synthesis: none;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-family: var(--font-heading);
+        font-weight: 700;
+        /* font-size: 100%; */
+    }
+    p, a {
+        font-family: var(--font-body);
+    }
+
+    h1 {
+        font-size: 4.75rem;
+    }
+    h2 {
+        font-size: 3.14rem;
+        line-height: 1.2;
+    }
+    h3 {
+        font-size: 1.6rem;
+    }
+    h4 {
+        font-size: 0.8rem;
+    }
+    p {
+        font-size: 1rem;
+    }
+}
+
+html {
+    font-size: 16px;
+}
+
+@media (max-width: 1024px) {
+    html {
+        font-size: 14px
+    }
+}
+
+@media (max-width: 600px) {
+    html {
+        font-size: 12px
+    }
+}
+
+@media (max-width: 375px) {
+    html {
+        font-size: 10px;
+    }
+}
+/* @media (min-width: 600px) {
+    html {
+        font-size:min(1.2vw, 1vh * 2.3)
+    }
+}*/
+
+.background {
+    background-color: var(--standard-purple);
+    color: var(--tinted-white);
+}
+
+.flex-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.absolute-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.purple-line {
+    width: 100%;
+    height: 4px;
+    background-color: var(--purple-line);
+}
+
+.white-line {
+    width: 100%;
+    height: 4px;
+    background-color: var(--tinted-white);
+}
+
+.seperator-bottom-sm {
+    margin-bottom: 2%;
+}
+
+.white-landing {
+    width: 100%;
+    height: 110vh;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    margin-inline: auto;
+    padding-inline: 7.5vw;
+    padding-block: 8rem;
+
+    border-bottom-right-radius: 32px;
+    border-bottom-left-radius: 32px;
+
+    color: black;
+    background-color: white;
+}
+
+
+
+.white-landing-content {
+    width: 55%;
+}
+
+.white-landing-content h2 {
+    margin-top: 4rem;
+    margin-bottom: 1rem;
+}
+
+.white-landing-content p {
+    margin-top: 3rem;
+}
+
+.white-landing img {
+    width: 40%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media (max-width: 800px) {
+    .white-landing {
+        flex-direction: column;
+
+        padding-block: 5rem;
+    }
+
+    .white-landing-content {
+        width: 100%;
+    }
+
+    .white-landing-content h2 {
+        margin-top: 3rem;
+        /* margin-bottom: 1rem; */
+    }
+
+    .white-landing-content p {
+        margin-top: 1rem;
+    }
+
+
+    .white-landing img {
+        width: 100%;
+        height: 40%;
+    }
+}
+
+.yellow-button {
+    width: fit-content;
+    background-color: var(--standard-yellow);
+    padding-inline: 1.5rem;
+    padding-block: 0.75rem;
+    margin-top: 1.5rem;
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+    border-radius: 10vw;
+    text-align: center;
+}
+
+
 
 /* manrope-regular - latin */
 @font-face {
@@ -40,155 +231,24 @@
 }
 
 
-/* @import "tailwindcss/preflight";  */
-
-:root {
-    --font-heading: 'Manrope', sans-serif;
-    --font-body: 'Sora', sans-serif;
-
-    --standard-purple: #510087;
-    --standard-yellow: #FFD500;
-    --tinted-white: #F5F0F6;
-    --purple-line: #6300A6;
-}
-
-@layer base {
-     *, *::before, *::after {
-        box-sizing: border-box;
-        font-synthesis: none;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-    }
-
-    h1, h2, h3, h4, h5, h6 {
-        font-family: var(--font-heading);
-        font-weight: 700;
-        /* font-size: 100%; */
-    }
-    p, a {
-        font-family: var(--font-body);
-    }
-
-    h1 {
-        font-size: 76px;
-    }
-    h2 {
-        font-size: 50.3px;
-        line-height: 1.2;
-    }
-    h3 {
-        font-size: 25.2px;
-    }
-    h4 {
-        font-size: 12.5px;
-    }
-    p {
-        font-size: 15.7px;
-    }
-}
-
-html {
-    font-size:1.3vw
-}
-
-@media (min-width: 600px) {
-    html {
-        font-size:min(1.2vw, 1vh * 2.3)
-    }
-}
-
-@media (min-width: 1025px) {
-    html {
-        font-size:min(.8333333333vw, .8333333333vh * 2.3)
-    }
-}
-
-.background {
-    background-color: var(--standard-purple);
-    color: var(--tinted-white);
-}
-
-.flex-center {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.absolute-center {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.purple-line {
-    width: 100%;
-    height: 4px;
-    background-color: var(--purple-line);
-}
-
-.white-line {
-    width: 100%;
-    height: 4px;
-    background-color: var(--tinted-white);
-}
-
-.seperator-bottom-sm {
-    margin-bottom: 2%;
-}
-
-.white-landing {
-    width: 100%;
-    height: 110vh;
+.redirect {
+    width: 92.5%;
     
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 
+    gap: 3%;
+
     margin-inline: auto;
-    padding-inline: 7.5vw;
     padding-block: 10rem;
-
-    border-bottom-right-radius: 32px;
-    border-bottom-left-radius: 32px;
-
-    color: black;
-    background-color: white;
 }
 
-.white-landing-content {
-    width: 55%;
+@media screen and (max-width: 850px) {
+    .redirect {
+        flex-direction: column;
+    }
 }
-
-.white-landing-content h2 {
-    margin-top: 4rem;
-    margin-bottom: 1rem;
-}
-
-.white-landing-content p {
-    margin-top: 3rem;
-}
-
-.white-landing img {
-    width: 40%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.yellow-button {
-    width: fit-content;
-    background-color: var(--standard-yellow);
-    padding-inline: 1.5rem;
-    padding-block: 0.75rem;
-    margin-top: 1.5rem;
-    cursor: pointer;
-
-    transition: all 0.3s ease;
-    border-radius: 10vw;
-    text-align: center;
-}
-
 .systems-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -215,7 +275,7 @@ html {
   }
 }
 .navbar {
-    width: 57vw;
+    width: 850px;
     height: 50px;
     position: fixed;
 
@@ -230,6 +290,10 @@ html {
     border-radius: 36px;
 
     z-index: 10;
+}
+
+@media screen and (max-width: 1024px) {
+    
 }
 
 .navbar-container {

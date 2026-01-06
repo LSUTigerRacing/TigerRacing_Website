@@ -1,0 +1,94 @@
+/* @import "tailwindcss/preflight";  */
+@import "tailwindcss"; /* index named as _index to keep this import at top of main.css*/
+
+:root {
+    --font-heading: 'Manrope', sans-serif;
+    --font-body: 'Sora', sans-serif;
+
+    --standard-purple: #510087;
+    --standard-yellow: #FFD500;
+    --tinted-white: #F5F0F6;
+    --purple-line: #6300A6;
+}
+
+@layer base {
+     *, *::before, *::after {
+        box-sizing: border-box;
+        font-synthesis: none;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-family: var(--font-heading);
+        font-weight: 700;
+        /* font-size: 100%; */
+    }
+    p, a {
+        font-family: var(--font-body);
+    }
+
+    h1 {
+        font-size: 4.75rem;
+    }
+    h2 {
+        font-size: 3.14rem;
+        line-height: 1.2;
+    }
+    h3 {
+        font-size: 1.6rem;
+    }
+    h4 {
+        font-size: 0.8rem;
+    }
+    p {
+        font-size: 1rem;
+    }
+}
+
+html {
+    font-size: 16px;
+}
+
+@media (max-width: 1024px) {
+    html {
+        font-size: 14px
+    }
+}
+
+@media (max-width: 600px) {
+    html {
+        font-size: 12px
+    }
+}
+
+@media (max-width: 375px) {
+    html {
+        font-size: 10px;
+    }
+}
+/* @media (min-width: 600px) {
+    html {
+        font-size:min(1.2vw, 1vh * 2.3)
+    }
+}*/
+
+.background {
+    background-color: var(--standard-purple);
+    color: var(--tinted-white);
+}
+
+.flex-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.absolute-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
