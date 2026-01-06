@@ -8,7 +8,7 @@ const Sponsor = () => {
             <div className="white-landing-content">
                 <h2>Keep our engines roaring.*</h2>
                 <h4>*and our batteries whirring.</h4>
-                <p className="mb-[9rem]">
+                <p>
                     The LSU TigerRacing team sincerely thanks all of our generous sponsors. We could not build our electric vehicles, maintain our combustion cars, and thrive as one of LSU's premiere engineering organizations without the help of our sponsors. 
                     <br/> <br/> 
                     If you are interested in becoming a TigerRacing sponsor, please look at our sponsorship packet linked below and contact our team at 
@@ -16,7 +16,7 @@ const Sponsor = () => {
                     Your support makes a real difference to our team.
                 </p>
 
-                <div className="w-fit bg-[var(--standard-yellow)] px-6 py-3 mt-6 cursor-pointer hover:brightness-90 transition-all rounded-[10vw]">
+                <div className="yellow-button white-landing-button">
                     <h3>Sponsorship Packet</h3>
                 </div>
             </div>
