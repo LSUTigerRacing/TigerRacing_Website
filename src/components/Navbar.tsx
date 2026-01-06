@@ -2,6 +2,8 @@
 // import { useLocation, useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 
+import MenuIcon from "../assets/images/General/icons/menu.png"
+
 import Logo from "../assets/images/General/tigerracing-logo-purple.png";
 
 export const Navbar = () => {
@@ -15,7 +17,7 @@ export const Navbar = () => {
                         className="navbar-logo"
                     />
                 </Link>
-                <div className="w-[35%] flex flex-row justify-between">
+                <div className="navbar-buttons">
                     <Link to="/team">
                         <h4>Team</h4>
                     </Link>
