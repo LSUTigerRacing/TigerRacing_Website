@@ -18,12 +18,12 @@ import Linkedin from "../assets/images/General/icons/linkedin.png"
 const Team = () => {
   return (
     <div className="w-full background">
-        <section className="w-full py-40">
+        <section className="team-landing">
             <span className="text-center">
                 <h1>Meet the hands behind the wheel.</h1>
                 <p>TigerRacing has asdjflkasdjflkasdjflkaTigerRacing has asdjflkasdjflkasdjflkaTigerRacig has asdjflkasdjflkasdjflkaTigerRacing has as</p>
             </span>
-            <section className="w-[92.5%] flex flex-row justify-between gap-[26px] mx-auto">
+            <section className="team-redirect-container">
                 <Redirect
                     to="/about"
                     image={SystemChassis}
@@ -45,7 +45,7 @@ const Team = () => {
                 <Redirect
                     to="/cars"
                     image={SystemPublicRelations}
-                    title="Public Relations"
+                    title="PR"
                     description="Responsible for the aslkdjfl kasd kasdjflasdflkjasdklfj askldfjalskdjf laskdjflkad jfasdkfjal"
                 />
                 <Redirect
@@ -60,7 +60,7 @@ const Team = () => {
             </span>
         </section>
 
-        <section className="w-[92.5%] grid grid-cols-4 gap-6 py-50 mx-auto">
+        <section className="team-portrait-container">
             <Portrait
                 to="/team/member1"
                 image={President}
@@ -125,12 +125,11 @@ const Redirect = ( props: { to: any; image: any; title: any; description: any; }
         description
     } = props;
     return (
-        <div className="flex-1">
+        <div className="team-redirect">
             <h3>{title}</h3>
             <img
                 src={image}
                 alt={title}
-                className="w-fit h-[30vh] object-cover"
             />
             <p>{description}</p>
         </div>
