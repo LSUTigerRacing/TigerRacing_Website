@@ -5,76 +5,78 @@ import Logo from "../assets/images/General/tigerracing-logo-white.png"
 
 export const Footer = () => {
     return (
-        <div className="w-screen h-[75vh] relative bg-[#510087]">
+        <div className="footer">
             <img
                 src={FooterFlair}
                 alt="2022 Car"
-                className="w-[60rem] absolute right-[7rem] bottom-0 z-0 select-none"
+                className="footer-image"
             />
-            <div className="w-[93%] h-full flex justify-between !mx-auto !pt-[8vh] z-10">
+            <div className="footer-responsive-section">
                 {/* Links */}
-                <div className="w-[30%] flex justify-between">
+                <div className="footer-links">
                     {/* Pages */}
-                    <div className="w-[20%] h-[50%] flex flex-row gap-[2vw]">
+                    <section className="footer-link-section">
                         <span className="text-[#F5F0F6] text-[1.5rem]">
                             <p>Explore</p>
                         </span>
-                        <div className="h-full flex flex-col gap-[2vh] text-[#F5F0F6] text-[3rem] leading-[3rem]">
+                        <div className="footer-link-container">
                             <Link to="/">
-                                <h1>Home</h1>
+                                <h2>Home</h2>
                             </Link>
                             <Link to="/about">
-                                <h1>About</h1>
+                                <h2>About</h2>
                             </Link>
                             <Link to="/team">
-                                <h1>Team</h1>
+                                <h2>Team</h2>
                             </Link>
                             <Link to="/cars">
-                                <h1>Cars</h1>
+                                <h2>Cars</h2>
                             </Link>
                             <Link to="/join">
-                                <h1>Join Us</h1>
+                                <h2>Join Us</h2>
                             </Link>
                             <Link to="/sponsors">
-                                <h1>Sponsors</h1>
+                                <h2>Sponsors</h2>
                             </Link>
                         </div>
                     
-                    </div>
+                    </section>
                     {/* Medias */}
-                    <div className="w-[20%] h-[50%] flex flex-row gap-[2vw]">
+                    <section className="footer-link-section">
                         <span className="text-[#F5F0F6] text-[1.5rem]">
                             <p>Media</p>
                         </span>
-                        <div className="h-full flex flex-col gap-[2vh] text-[#F5F0F6] text-[3rem] leading-[3rem]">
+                        <div className="footer-link-container">
                             <a href="https://www.instagram.com/formulalsu/" target="_blank">
-                                <h1>Instagram</h1>
+                                <h2>Instagram</h2>
                             </a>
                             <a href="https://www.linkedin.com/company/lsu-tiger-racing-formula-sae/posts/?feedView=all" target="_blank">
-                                <h1>Linkedin</h1>
+                                <h2>Linkedin</h2>
                             </a>
                             <a href="https://www.facebook.com/FormulaLSU" target="_blank">
-                                <h1>Facebook</h1>
+                                <h2>Facebook</h2>
                             </a>
                         </div>
-                    </div>
+                    </section>
                 </div>
 
-                <div className="text-[#F5F0F6] text-right">
+                <div className="footer-email">
                     <p>Contact Us</p>
-                    <span className="text-[3rem] leading-[3rem]">
-                        <h1>FormulaLSU@gmail.com</h1>
-                    </span>
+                    <h2 className="text-[2rem]!">FormulaLSU@gmail.com</h2>
                 </div>
             </div>
-            <div className="absolute right-[4rem] bottom-[2rem] text-[#F5F0F6] text-[2.3rem] z-10">
-                <h2>Patrick F. Taylor Hall, S Quad Dr 3261, 3304, Baton Rouge, LA </h2>
+            <div className="footer-logo-address">
+                <img
+                    src={Logo}
+                    alt="Logo"
+                    className="footer-logo"
+                />
+                <div className="footer-address">
+                    <h3>Patrick F. Taylor Hall, S Quad Dr 3261, 3304, Baton Rouge, LA </h3>
+                </div>
+   
             </div>
-            <img
-                src={Logo}
-                alt="Logo"
-                className="w-[20%] object-cover absolute left-[4rem] bottom-[2rem] z-0 select-none"
-            />
+     
         </div>
     )
 }

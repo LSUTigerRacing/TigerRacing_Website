@@ -1,0 +1,141 @@
+.footer {
+    width: 100vw;
+    height: 75vh;
+
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    background-color: var(--standard-purple);
+}
+
+.footer-image {
+    width: 50rem;
+    
+    position: absolute;
+    right: min(7rem, 7vw);
+    bottom: 0rem;
+
+    z-index: 0;
+    
+    user-select: none;
+}
+
+@media (max-width: 800px) {
+    .footer-image {
+        right: 1/2;
+    }
+}
+
+.footer-responsive-section {
+    flex: 1;
+    width: 92.5%;
+
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-between;
+
+    margin-inline: auto;
+    padding-top: 8vh;
+    
+    z-index: 10;
+}
+
+.footer-links {
+    width: fit-content;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.footer-link-section {
+    width: fit-content;
+    height: 50%;
+    
+    display: flex;
+    flex-direction: row;
+
+    gap: 2rem;
+}
+
+.footer-link-container {
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    
+    color: white;
+}
+
+.footer-link-container > * {
+    z-index: 10;
+}
+
+.footer-email {
+    color: white;
+    text-align: right;
+
+    z-index: 10;
+}
+
+@media (max-width: 1200px) {
+    .footer {
+        height: 90vh;
+    }
+
+    .footer-responsive-section {
+        width: 92.5%;
+        flex-direction: column;
+        justify-content: space-between;
+
+        margin-inline: auto;
+
+        gap: 2rem;
+    }
+
+    .footer-links {
+        width: 80%;
+    }
+
+    .footer-email {
+        color: white;
+        text-align: right;
+
+        z-index: 10;
+    }
+}
+
+.footer-logo-address {
+    width: 92.5%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    /* position: absolute; */
+
+    margin-inline: auto;
+    padding-block: 1rem;
+
+    bottom: 0;
+}
+
+.footer-address {
+    position: relative;
+
+    color: white;
+}
+
+.footer-logo {
+    width: 20%;
+    object-fit: cover;
+
+    position: relative;
+
+    user-select: none;
+}
