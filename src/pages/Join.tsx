@@ -4,19 +4,19 @@ import Collage_2 from "../assets/images/Join/Collage_2.png";
 const Join = () => {
   return (
     <div className="w-full background text-black! bg-white!">
-        <section className="w-full h-[105vh] mx-auto px-[5vw] py-40 text-white text-center bg-[var(--standard-purple)] rounded-b-[32px]">
-            <div className="w-[62.5%] mx-auto">
-                <h2>Join one of LSU’s oldest and largest engineering organizations.</h2>
+        <section className="purple-landing">
+            <div className="join-landing-phrase">
+                <h2 className="">Join one of LSU’s oldest and largest engineering organizations.</h2>
+                <h3>All Majors Welcome!</h3>
             </div>
-            <h3>All Majors Welcome!</h3>
 
-            <div className="w-fit text-black mx-auto px-6 py-3 mt-6 cursor-pointer hover:brightness-90 transition-all rounded-[10vw] bg-[var(--standard-yellow)]">
+            <div className="yellow-button text-black mx-auto">
                 <h3>Interest Form</h3>
             </div>
         </section>
         
-        <section className="w-[90%] h-fit flex justify-between mx-auto mt-50">
-            <div className="w-[40%]">
+        <section className="join-blurb-section">
+            <div className="join-blurb-content">
                 <h2 className="seperator-bottom-sm">Why Join?</h2>
                 <p>We welcome LSU students of all majors and experience levels who are motivated and willing to donate themselves to building something incredible. <br/><br/>
                     We provide undergraduates with opportunities for technical and management experience on a large engineering project. <br/><br/>
@@ -27,7 +27,7 @@ const Join = () => {
                      <br/><br/>You will also experience fabricating parts of various complexity using conventional tools to Computer Numerical Control (CNC) machines, laying of carbon composite materials, PCB manufacturing, etc. ​Addtionally, there are supplementary roles like sponsorships, publicity, media, events, welfare and more.Most importantly, you will pick up lifelong intangibles like teamwork, communication and management skills
                 </p>
             </div>
-            <div className="w-[55%] flex flex-row gap-5">
+            <div className="join-blurb-collage">
                 <div className="flex-1 flex flex-col gap-5">
                     <img
                         src={Collage_2}
@@ -67,14 +67,15 @@ const Join = () => {
                 />
                 <SystemBox
                     to="/join/chassis"
-                    title="Public Relations"
+                    title="Software"
                     description="Our chassis system forms the foundation of our race car, covering frame design, suspension, brakes, aero, and ergonomics. If you're interested in mechanical systems, structural design, or the fundamental engineering that makes cars run, Chassis is where you belong."
                 />
                 <SystemBox
                     to="/join/chassis"
-                    title="Software"
+                    title="Public Relations"
                     description="Our chassis system forms the foundation of our race car, covering frame design, suspension, brakes, aero, and ergonomics. If you're interested in mechanical systems, structural design, or the fundamental engineering that makes cars run, Chassis is where you belong."
                 />
+
             </div>
         </section>
     </div>

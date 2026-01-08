@@ -33,8 +33,6 @@
     background-color: white;
 }
 
-
-
 .white-landing-content {
     width: 55%;
 }
@@ -79,6 +77,23 @@
         width: 100%;
         height: 40%;
     }
+}
+
+.purple-landing {
+    width: 100%;
+    height: 110vh;
+
+    display: flex;
+    flex-direction: column;
+    
+    /* padding-inline: 5vw; */
+    padding-block: 8rem;
+
+    border-bottom-right-radius: 32px;
+    border-bottom-left-radius: 32px;
+
+    color: white;
+    background-color: var(--standard-purple);
 }
 
 .yellow-button {

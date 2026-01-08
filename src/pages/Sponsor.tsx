@@ -59,9 +59,9 @@ const Sponsor = () => {
             </div>
         </section>
 
-        <section className="w-[90%] mt-[30vh] mx-auto">
+        <section className="sponsor-tier-section">
             <h2>Sponsorship Tiers</h2>
-            <div className=" flex flex-row ">
+            <div className="sponsor-tier-container">
                 <Tier
                     image={Landing}
                     title="Platinum Tier"
