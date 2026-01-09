@@ -1,5 +1,8 @@
+import { Link } from "react-router-dom";
 import Collage_1 from "../assets/images/Join/Collage_1.png";
 import Collage_2 from "../assets/images/Join/Collage_2.png";
+
+import Right_Arrow from "../assets/images/Join/join-right-arrow.png"
 
 const Join = () => {
   return (
@@ -56,22 +59,22 @@ const Join = () => {
                     description="Our chassis system forms the foundation of our race car, covering frame design, suspension, brakes, aero, and ergonomics. If you're interested in mechanical systems, structural design, or the fundamental engineering that makes cars run, Chassis is where you belong."
                 />
                 <SystemBox
-                    to="/join/chassis"
+                    to="/join/powertrain"
                     title="Powertrain"
                     description="Our chassis system forms the foundation of our race car, covering frame design, suspension, brakes, aero, and ergonomics. If you're interested in mechanical systems, structural design, or the fundamental engineering that makes cars run, Chassis is where you belong."
                 />
                 <SystemBox
-                    to="/join/chassis"
+                    to="/join/business"
                     title="Business"
                     description="Our chassis system forms the foundation of our race car, covering frame design, suspension, brakes, aero, and ergonomics. If you're interested in mechanical systems, structural design, or the fundamental engineering that makes cars run, Chassis is where you belong."
                 />
                 <SystemBox
-                    to="/join/chassis"
+                    to="/join/software"
                     title="Software"
                     description="Our chassis system forms the foundation of our race car, covering frame design, suspension, brakes, aero, and ergonomics. If you're interested in mechanical systems, structural design, or the fundamental engineering that makes cars run, Chassis is where you belong."
                 />
                 <SystemBox
-                    to="/join/chassis"
+                    to="/join/public-relations"
                     title="Public Relations"
                     description="Our chassis system forms the foundation of our race car, covering frame design, suspension, brakes, aero, and ergonomics. If you're interested in mechanical systems, structural design, or the fundamental engineering that makes cars run, Chassis is where you belong."
                 />
@@ -95,7 +98,15 @@ const SystemBox = ( props: { to: any; title: any; description: any; } ) => {
         <div className="flex-1 text-black m-4 p-6 border-[var(--standard-purple)] border-4">
             <h2 className="mb-[2%] text-[var(--standard-purple)]">{title}</h2>
             <p className="mb-[2%] whitespace-pre-line">{description}</p>
-            <h3 className="text-right">See More</h3>
+            <Link 
+                to={to}
+                className="flex items-center justify-end gap-1"
+            >
+                <h3>See More</h3>
+                <img
+                    src={Right_Arrow}
+                />
+            </Link>
         </div>
     )
 }
