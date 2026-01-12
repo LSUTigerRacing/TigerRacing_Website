@@ -1,11 +1,4 @@
-import President from "../assets/images/Team/Admin/President.png"
-import VicePresident from "../assets/images/Team/Admin/VicePres.png"
-import Treasurer from "../assets/images/Team/Admin/Treasurer.png"
-import PublicRelations from "../assets/images/Team/Admin/PublicRelations.png"
-import Captain from "../assets/images/Team/Admin/Captain.png"
-import Powertrain from "../assets/images/Team/Admin/Powertrain.png"
-import Chassis from "../assets/images/Team/Admin/Chassis.png"
-import Safety from "../assets/images/Team/Admin/Safety.png"
+import { AdminImages, ChassisImages, PowertrainImages, SoftwareImages } from "../assets/images/Team";
 
 import SystemChassis from "../assets/images/Team/SystemChassis.png";
 import SystemPowertrain from "../assets/images/Team/SystemPowertrain.png";
@@ -60,55 +53,164 @@ const Team = () => {
             </span>
         </section>
 
-        <section className="team-portrait-container">
-            <Portrait
-                to="/team/member1"
-                image={President}
-                title="President"
-                name="Mizuki Teryama"
-            />
-            <Portrait
-                to="/team/member1"
-                image={VicePresident}
-                title="Vice President"
-                name="Urwah Abbas"
-            />
-            <Portrait
-                to="/team/member1"
-                image={PublicRelations}
-                title="Public Relations"
-                name="Thomas Au"
-            />
-            <Portrait
-                to="/team/member1"
-                image={Treasurer}
-                title="Treasurer"
-                name="Syphany Guo"
-            />
-            <Portrait
-                to="/team/member1"
-                image={Captain}
-                title="Captain"
-                name="Gareth Oram"
-            />
-            <Portrait
-                to="/team/member1"
-                image={Chassis}
-                title="Chassis Lead"
-                name="Tristan Thai"
-            />
-            <Portrait
-                to="/team/member1"
-                image={Powertrain}
-                title="Powertrain Lead"
-                name="Yianni Kiritsis"
-            />
-            <Portrait
-                to="/team/member1"
-                image={Safety}
-                title="Safety Chair"
-                name="Luka Brekalo"
-            />
+        {/* admin */}
+        <section className="team-portrait-section">
+        <h2>Admin</h2>
+            <div className="team-portrait-container">
+                <Portrait
+                    to="/team/member1"
+                    image={AdminImages.President}
+                    title="President"
+                    name="Mizuki Teryama"
+                />
+                <Portrait
+                    to="/team/member1"
+                    image={AdminImages.VicePresident}
+                    title="Vice President"
+                    name="Urwah Abbas"
+                />
+                <Portrait
+                    to="/team/member1"
+                    image={AdminImages.PublicRelations}
+                    title="Public Relations"
+                    name="Thomas Au"
+                />
+                <Portrait
+                    to="/team/member1"
+                    image={AdminImages.Treasurer}
+                    title="Treasurer"
+                    name="Syphany Guo"
+                />
+                <Portrait
+                    to="/team/member1"
+                    image={AdminImages.Captain}
+                    title="Captain"
+                    name="Gareth Oram"
+                />
+                <Portrait
+                    to="/team/member1"
+                    image={AdminImages.Chassis}
+                    title="Chassis Lead"
+                    name="Tristan Thai"
+                />
+                <Portrait
+                    to="/team/member1"
+                    image={AdminImages.Powertrain}
+                    title="Powertrain Lead"
+                    name="Yianni Kiritsis"
+                />
+                <Portrait
+                    to="/team/member1"
+                    image={AdminImages.Safety}
+                    title="Safety Chair"
+                    name="Luka Brekalo"
+                />
+            </div>
+        </section>
+
+        <div className="purple-line"/>
+
+        {/* chassis */}
+        <section className="team-portrait-section">
+        <h2>Chassis Leads</h2>
+            <div className="team-portrait-container">
+                <Portrait
+                    to="/team/member1"
+                    image={ChassisImages.Frame}
+                    title="Frame"
+                    name="Nick Fortie"
+                />
+                <Portrait
+                    to="/team/member1"
+                    image={ChassisImages.Aerodynamics}
+                    title="Aerodynamics"
+                    name="Brady Vidrine"
+                />
+                <Portrait
+                    to="/team/member1"
+                    image={ChassisImages.Suspension}
+                    title="Suspension"
+                    name="James Sirois"
+                />
+                <Portrait
+                    to="/team/member1"
+                    image={ChassisImages.Brakes}
+                    title="Brakes"
+                    name="Anthony Terry-Rojas"
+                />
+                <Portrait
+                    to="/team/member1"
+                    image={ChassisImages.Ergonomics}
+                    title="Ergonomics"
+                    name="Urwah Abbas"
+                />
+                <Portrait
+                    to="/team/member1"
+                    image={ChassisImages.Drivetrain}
+                    title="Drivetrain"
+                    name="??"
+                />
+            </div>
+        </section>
+
+        <div className="purple-line"/>
+
+        {/* powertrain */}
+        <section className="team-portrait-section">
+        <h2>Powertrain Leads</h2>
+            <div className="team-portrait-container">
+                <Portrait
+                    to="/team/member1"
+                    image={PowertrainImages.Electronics}
+                    title="Electronics"
+                    name="Vinh Le"
+                />
+                <Portrait
+                    to="/team/member1"
+                    image={PowertrainImages.Battery}
+                    title="Battery"
+                    name="Gareth Oram"
+                />
+                <Portrait
+                    to="/team/member1"
+                    image={PowertrainImages.LowVoltage}
+                    title="Low Voltage"
+                    name="Sammy Ziegler"
+                />
+                <Portrait
+                    to="/team/member1"
+                    image={PowertrainImages.TractiveSystem}
+                    title="Tractive System"
+                    name="Luka Brekalo"
+                />
+            </div>
+        </section>
+        <div className="purple-line"/>
+
+        {/* Software */}
+        <section className="team-portrait-section">
+        <h2>Software Leads</h2>
+            <div className="team-portrait-container">
+                <Portrait
+                    to="/team/member1"
+                    image={SoftwareImages.AppDev}
+                    title="Software Lead
+                    App Development"
+                    name="Ricky Liang"
+                />
+                <Portrait
+                    to="/team/member1"
+                    image={SoftwareImages.Embedded}
+                    title="Embedded Controls"
+                    name="Alex Bui"
+                />
+                <Portrait
+                    to="/team/member1"
+                    image={SoftwareImages.DAQ}
+                    title="Data Analysis"
+                    name="Brandon Randle"
+                />
+            </div>
         </section>
 
     </div>
@@ -153,7 +255,7 @@ const Portrait = ( props: { to: any; image: any; title: any; name: any; } ) => {
             <div className="portrait-lining">
                 <div className="portrait-content">
                     <p>{name}</p>
-                    <h3>{title}</h3>
+                    <h3 className="whitespace-pre-line">{title}</h3>
                 </div>
             </div>
             <div className="portrait-contact">
