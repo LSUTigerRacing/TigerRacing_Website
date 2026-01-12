@@ -43,15 +43,21 @@
     }
 }
 
-.team-portrait-container {
+.team-portrait-section {
     width: 92.5%;
+    margin-inline: auto;
+    padding-block: 5rem;
+
+}
+
+.team-portrait-container {
+    width: 100%;
 
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 1.5rem;
-    
-    padding-block: 12.5rem;
-    margin-inline: auto;
+
+    padding-top: 1rem;
 }
 
 
@@ -76,6 +82,8 @@
 
     position: absolute;
     transition: all 0.3s ease;
+
+    z-index: 2;
 }
 
 .portrait-lining {
@@ -87,6 +95,8 @@
     margin: 0 auto; /* Centers horizontally */
     border-width: 2px;
     border-radius: 30px;
+    
+    z-index: 3;
 }
 
 .portrait-content {
@@ -96,11 +106,12 @@
 }
 
 .portrait-contact {
-    width: 99%;
+    width: 100%;
     height: 100%;
 
     background-color: var(--standard-yellow);
     border-radius: 36px;
+    z-index: 0;
 }
 
 .portrait-contact-content {
@@ -110,25 +121,29 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-inline: auto;
-    padding-top: 124%; /* hella hardcoded for the content to be ground to the floor but w/e */
+
+    position: absolute;
+
+    bottom: 0%;
+    left: 50%;
+    transform: translate(-50%, -40%);
  
     color: black;
 }
 
 .portrait-contact-content a img {
-    height: 2vw;
+    height: 2rem;
 }
 
 .portrait:hover .portrait-image {
-    height: 85%;
+    height: calc(100% - 4rem);
     object-position: 50% 30%;
 
     transition: all 0.3s ease;
 }
 
 .portrait:hover .portrait-lining {
-    height: calc(85% - 20px);
+    height: calc(100% - 4rem - 20px);
 
     transition: all 0.3s ease;
 }
