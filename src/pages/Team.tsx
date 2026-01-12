@@ -58,49 +58,49 @@ const Team = () => {
         <h2>Admin</h2>
             <div className="team-portrait-container">
                 <Portrait
-                    to="/team/member1"
+                    to="none"
                     image={AdminImages.President}
                     title="President"
                     name="Mizuki Teryama"
                 />
                 <Portrait
-                    to="/team/member1"
+                    to="https://www.linkedin.com/in/urwah-abbas/"
                     image={AdminImages.VicePresident}
                     title="Vice President"
                     name="Urwah Abbas"
                 />
                 <Portrait
-                    to="/team/member1"
+                    to="none"
                     image={AdminImages.PublicRelations}
                     title="Public Relations"
                     name="Thomas Au"
                 />
                 <Portrait
-                    to="/team/member1"
+                    to="https://www.linkedin.com/in/syphany-guo-3773b82b6/"
                     image={AdminImages.Treasurer}
                     title="Treasurer"
-                    name="Syphany Guo"
+                    name="Syph Guo"
                 />
                 <Portrait
-                    to="/team/member1"
+                    to="https://www.linkedin.com/in/gareth-oram-02470a22b/"
                     image={AdminImages.Captain}
                     title="Captain"
                     name="Gareth Oram"
                 />
                 <Portrait
-                    to="/team/member1"
+                    to="https://www.linkedin.com/in/tristan-thai-13288a2b4/"
                     image={AdminImages.Chassis}
                     title="Chassis Lead"
                     name="Tristan Thai"
                 />
                 <Portrait
-                    to="/team/member1"
+                    to="https://www.linkedin.com/in/john-kiritsis/"
                     image={AdminImages.Powertrain}
                     title="Powertrain Lead"
                     name="Yianni Kiritsis"
                 />
                 <Portrait
-                    to="/team/member1"
+                    to="https://www.linkedin.com/in/luka-brekalo1/"
                     image={AdminImages.Safety}
                     title="Safety Chair"
                     name="Luka Brekalo"
@@ -115,13 +115,13 @@ const Team = () => {
         <h2>Chassis Leads</h2>
             <div className="team-portrait-container">
                 <Portrait
-                    to="/team/member1"
+                    to="https://www.linkedin.com/in/nicholas-fortie-987191331/"
                     image={ChassisImages.Frame}
                     title="Frame"
                     name="Nick Fortie"
                 />
                 <Portrait
-                    to="/team/member1"
+                    to="https://www.linkedin.com/in/brady-vidrine-113a75279/"
                     image={ChassisImages.Aerodynamics}
                     title="Aerodynamics"
                     name="Brady Vidrine"
@@ -133,13 +133,13 @@ const Team = () => {
                     name="James Sirois"
                 />
                 <Portrait
-                    to="/team/member1"
+                    to="https://www.linkedin.com/in/anthony-terry-rojas-71788b2b2/"
                     image={ChassisImages.Brakes}
                     title="Brakes"
                     name="Anthony Terry-Rojas"
                 />
                 <Portrait
-                    to="/team/member1"
+                    to="https://www.linkedin.com/in/urwah-abbas/"
                     image={ChassisImages.Ergonomics}
                     title="Ergonomics"
                     name="Urwah Abbas"
@@ -160,25 +160,25 @@ const Team = () => {
         <h2>Powertrain Leads</h2>
             <div className="team-portrait-container">
                 <Portrait
-                    to="/team/member1"
+                    to="https://www.linkedin.com/in/vinh-le-grad2026/"
                     image={PowertrainImages.Electronics}
                     title="Electronics"
                     name="Vinh Le"
                 />
                 <Portrait
-                    to="/team/member1"
+                    to="https://www.linkedin.com/in/gareth-oram-02470a22b/"
                     image={PowertrainImages.Battery}
                     title="Battery"
                     name="Gareth Oram"
                 />
                 <Portrait
-                    to="/team/member1"
+                    to="https://www.linkedin.com/in/sammy-ziegler/"
                     image={PowertrainImages.LowVoltage}
                     title="Low Voltage"
                     name="Sammy Ziegler"
                 />
                 <Portrait
-                    to="/team/member1"
+                    to="https://www.linkedin.com/in/luka-brekalo1/"
                     image={PowertrainImages.TractiveSystem}
                     title="Tractive System"
                     name="Luka Brekalo"
@@ -192,20 +192,20 @@ const Team = () => {
         <h2>Software Leads</h2>
             <div className="team-portrait-container">
                 <Portrait
-                    to="/team/member1"
+                    to="https://www.linkedin.com/in/rickyxliang/"
                     image={SoftwareImages.AppDev}
                     title="Software Lead
                     App Development"
                     name="Ricky Liang"
                 />
                 <Portrait
-                    to="/team/member1"
+                    to="https://www.linkedin.com/in/alex-bui-707b90355/"
                     image={SoftwareImages.Embedded}
                     title="Embedded Controls"
                     name="Alex Bui"
                 />
                 <Portrait
-                    to="/team/member1"
+                    to="https://www.linkedin.com/in/brandon-randle-link/"
                     image={SoftwareImages.DAQ}
                     title="Data Analysis"
                     name="Brandon Randle"
@@ -262,7 +262,7 @@ const Portrait = ( props: { to: any; image: any; title: any; name: any; } ) => {
             <div className="portrait-contact">
                 <div className="portrait-contact-content">
                     <h3>Contact</h3>
-                    <a href={to}>
+                    <a href={to} target="_blank">
                         <img src={Linkedin}/>
                     </a>
                 </div>
