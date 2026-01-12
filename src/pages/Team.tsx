@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import { AdminImages, ChassisImages, PowertrainImages, SoftwareImages } from "../assets/images/Team";
 
 import SystemChassis from "../assets/images/Team/SystemChassis.png";
@@ -19,31 +21,31 @@ const Team = () => {
             </span>
             <section className="team-redirect-container">
                 <Redirect
-                    to="/about"
+                    to="/join/chassis"
                     image={SystemChassis}
                     title="Chassis"
                     description="Responsible for the aslkdjfl kasd kasdjflasdflkjasdklfj askldfjalskdjf laskdjflkad jfasdkfjal"
                 />
                 <Redirect
-                    to="/join"
+                    to="/join/powertrain"
                     image={SystemPowertrain}
                     title="Powertrain"
                     description="Responsible for the aslkdjfl kasd kasdjflasdflkjasdklfj askldfjalskdjf laskdjflkad jfasdkfjal"
                 />
                 <Redirect
-                    to="/cars"
+                    to="/join/business"
                     image={SystemBusiness}
                     title="Business"
                     description="Responsible for the aslkdjfl kasd kasdjflasdflkjasdklfj askldfjalskdjf laskdjflkad jfasdkfjal"
                 />
                 <Redirect
-                    to="/cars"
+                    to="/join/public-relations"
                     image={SystemPublicRelations}
                     title="PR"
                     description="Responsible for the aslkdjfl kasd kasdjflasdflkjasdklfj askldfjalskdjf laskdjflkad jfasdkfjal"
                 />
                 <Redirect
-                    to="/cars"
+                    to="/join/software"
                     image={SystemSoftware}
                     title="Software"
                     description="Responsible for the aslkdjfl kasd kasdjflasdflkjasdklfj askldfjalskdjf laskdjflkad jfasdkfjal"
@@ -249,14 +251,20 @@ const Redirect = ( props: { to: any; image: any; title: any; description: any; }
         description
     } = props;
     return (
-        <div className="team-redirect">
+        <Link 
+            to={to}
+            className="team-redirect"
+        >
             <h3>{title}</h3>
-            <img
-                src={image}
-                alt={title}
-            />
+            <div className="team-redirect-img-container">
+                <img
+                    src={image}
+                    alt={title}
+                />
+            </div>
+
             <p>{description}</p>
-        </div>
+        </Link>
     )
 }
 
