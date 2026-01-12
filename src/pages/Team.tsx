@@ -238,6 +238,7 @@ const Redirect = ( props: { to: any; image: any; title: any; description: any; }
     )
 }
 
+// use "none" as an input to disable hover
 const Portrait = ( props: { to: any; image: any; title: any; name: any; } ) => {
     const {
         to,
@@ -246,7 +247,7 @@ const Portrait = ( props: { to: any; image: any; title: any; name: any; } ) => {
         name
     } = props;
     return (
-        <div className="portrait">
+        <div className={`portrait ${to === "none" ? 'block-hover' : ''}`}>
             <img
                 src={image}
                 alt={title}
