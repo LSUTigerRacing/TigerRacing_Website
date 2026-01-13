@@ -1,12 +1,27 @@
-// import { useState, useEffect } from "react";
-// import { useLocation, useNavigate } from "react-router-dom";
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
+import { ScrollTrigger } from 'gsap/all';
+
 import { Link } from "react-router-dom";
 
 import MenuIcon from "../assets/images/General/icons/menu.png"
 
 import Logo from "../assets/images/General/tigerracing-logo-purple.png";
 
+gsap.registerPlugin(useGSAP);
+gsap.registerPlugin(ScrollTrigger);
+
 export const Navbar = () => {
+    // useGSAP(() => {
+	// 	gsap.from(".navbar", {
+	// 		y: -60,
+	// 		opacity: 0,
+    //         delay: 0.5,
+	// 		duration: 0.8,
+    //         ease: "power1.out"
+	// 	})
+	// })
+
     return (
         <div className="navbar">
             <div className="navbar-container text-[var(--standard-purple)]!">
