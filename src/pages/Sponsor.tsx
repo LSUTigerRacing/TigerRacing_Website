@@ -25,9 +25,9 @@ const Sponsor = () => {
             />
         </section>
 
-        <section className="w-[90%] h-[80vh] flex flex-row justify-between mt-45 mx-auto">
-            <div className="w-[60%] mt-10">
-                <h2>Why partner with us?</h2>
+        <section className="w-[90%] h-[80vh] flex flex-row justify-between mt-45 mx-auto" >
+            <div className="w-[45%]">
+                <h2 className="mb-5">Why partner with us?</h2>
                 <p>
                     External sponsors account for 95% of our team’s annual budget. Contributions towards our team allow us to continue representing LSU on an international stage, as well as giving back to our local community. 
                     <br/> <br/>
@@ -35,25 +35,33 @@ const Sponsor = () => {
                     <br/> <br/>
                     TigerRacing is a registered 501(c)(3) non-profit organization. Any and all donations are considered tax-deductible.
                 </p>
-                <img
-                    src={WhyPartner}
-                    className="w-full object-cover"
-                />
             </div>
-            <div className="w-[30%] flex flex-col justify-between">
-                <div className="h-[30%] text-center flex-center">
-                    <h1>12+</h1>
+            <div className="w-[45%] flex flex-col justify-between">
+                <div className="h-[40%]">
+                    <h1 className="text-[8rem]!">12+</h1>
                     <h3>Years of Performance</h3>
                 </div>
                 <div className="purple-line"/>
-                <div className="h-[30%] text-center flex-center">
-                    <h1>5000+</h1>
-                    <h3>Instagram Followers</h3>
+                <div className="flex gap-20">
+                    <div>
+                        <h2>5500+</h2>
+                        <p>Followers across social medias</p>
+                    </div>
+                    <div>
+                        <h2>7th/89</h2>
+                        <p>Peak overall placement</p>
+                    </div>
                 </div>
                 <div className="purple-line"/>
-                <div className="h-[30%] text-center flex-center">
-                    <h1>7th/89+</h1>
-                    <h3>Peak overall placement</h3>
+                <div className="flex gap-20">
+                    <div>
+                        <h2>xx%</h2>
+                        <p>of alumni in major-relevant careers</p>
+                    </div>
+                    <div>
+                        <h2>80+</h2>
+                        <p>Active Members</p>
+                    </div>
                 </div>
                 <div className="purple-line"/>
             </div>
