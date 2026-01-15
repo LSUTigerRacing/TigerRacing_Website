@@ -1,4 +1,8 @@
+import { useRef } from "react";
 import { Link } from "react-router-dom";
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
+import { ScrollTrigger } from 'gsap/all';
 
 import { AdminImages, ChassisImages, PowertrainImages, SoftwareImages } from "../assets/images/Team";
 
@@ -11,44 +15,70 @@ import SystemSoftware from "../assets/images/General/filler.png";
 import Linkedin from "../assets/images/General/icons/linkedin.png"
 import Mail from "../assets/images/General/icons/mail.png"
 
+gsap.registerPlugin(useGSAP);
+gsap.registerPlugin(ScrollTrigger);
+
 const Team = () => {
-  return (
+    const landingRef = useRef<HTMLDivElement>(null);
+    const tl = useRef<gsap.core.Timeline | null>(null);
+
+	useGSAP(() => {
+        tl.current = gsap
+            .timeline()
+            .from("#team-landing-text", {
+                opacity: 0,
+                y: -30,
+                duration: 0.8,
+                ease: "power1.out"
+            })
+            .from(".team-redirect-container", {
+                opacity: 0,
+                y: 30,
+                duration: 0.8,
+                ease: "power1.out",
+            })
+    }, { scope: landingRef })
+
+    return (
     <div className="w-full background">
-        <section className="team-landing">
-            <span className="text-center">
-                <h1>Meet the hands behind the wheel.</h1>
-                <p>TigerRacing has asdjflkasdjflkasdjflkaTigerRacing has asdjflkasdjflkasdjflkaTigerRacig has asdjflkasdjflkasdjflkaTigerRacing has as</p>
-            </span>
+        <section className="team-landing" ref={landingRef}>
+            <div id="team-landing-text" className="text-center">
+                <h1 className="team-landing-phrase">Meet the hands behind the wheel.</h1>
+                <p>
+                    TigerRacing is split into five different systems similar to a real engineering business operation.<br/>
+                    Click on the icons to learn more!
+                </p>
+            </div>
             <section className="team-redirect-container">
                 <Redirect
                     to="/join/chassis"
                     image={SystemChassis}
                     title="Chassis"
-                    description="Responsible for the aslkdjfl kasd kasdjflasdflkjasdklfj askldfjalskdjf laskdjflkad jfasdkfjal"
+                    description="Designs and builds all the mechanical components that make up the car's structure."
                 />
                 <Redirect
                     to="/join/powertrain"
                     image={SystemPowertrain}
                     title="Powertrain"
-                    description="Responsible for the aslkdjfl kasd kasdjflasdflkjasdklfj askldfjalskdjf laskdjflkad jfasdkfjal"
+                    description="Develops the electrical systems that power and control the vehicle."
                 />
                 <Redirect
                     to="/join/business"
                     image={SystemBusiness}
                     title="Business"
-                    description="Responsible for the aslkdjfl kasd kasdjflasdflkjasdklfj askldfjalskdjf laskdjflkad jfasdkfjal"
+                    description="Manages sponsor relationships, fundraising, and the team's financial operations."
                 />
                 <Redirect
                     to="/join/public-relations"
                     image={SystemPublicRelations}
                     title="PR"
-                    description="Responsible for the aslkdjfl kasd kasdjflasdflkjasdklfj askldfjalskdjf laskdjflkad jfasdkfjal"
+                    description="Creates marketing materials, graphics, and media content to promote the team."
                 />
                 <Redirect
                     to="/join/software"
                     image={SystemSoftware}
                     title="Software"
-                    description="Responsible for the aslkdjfl kasd kasdjflasdflkjasdklfj askldfjalskdjf laskdjflkad jfasdkfjal"
+                    description="Builds internal web tools and embedded devices to improve team productivity."
                 />
             </section>
             <span className="text-center">
