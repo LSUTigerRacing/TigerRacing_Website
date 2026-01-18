@@ -1,27 +1,64 @@
+import { useRef } from "react";
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
+import { ScrollTrigger } from 'gsap/all';
+
+import DownArrow from "../../assets/images/General/down-arrow.png"
+
+gsap.registerPlugin(useGSAP);
+gsap.registerPlugin(ScrollTrigger);
+
+
 const LandingComponent = ( props: { name: any; blurb: any; image: any } ) => {
     const {
         name,
         blurb,
         image
     } = props;
+    // const tl = useRef<gsap.core.Timeline | null>(null);
+
+    useGSAP(() => {
+        gsap.from("#landing-title", {
+            opacity:0,
+            y: -20,
+            ease: "power1.out",
+            duration: 0.8
+        })
+        gsap.from("#landing-blurb", {
+            opacity:0,
+            y: 20,
+            ease: "power1.out",
+            duration: 0.8,
+            delay: 0.3
+        })
+        gsap.from("#landing-img", {
+            clipPath: "inset(100% 0 0 0)",
+			ease: "power1.out",
+            duration: 0.7,
+            delay: 0.7
+        })
+	})
+
     return (
         <section className="white-landing">
             <div className="white-landing-content">
-                <h2>Meet {name}.</h2>
-                <p className="whitespace-pre-line">
+                <h2 id="landing-title">Meet {name}.</h2>
+                <p className="whitespace-pre-line" id="landing-blurb">
                     {blurb}
                 </p>
 
                 <div className="w-fit bg-[var(--standard-yellow)] px-6 py-3 mt-6 cursor-pointer hover:brightness-90 transition-all rounded-[10vw]">
                     <h3>Interest Form</h3>
                 </div>
+                    {/* <img className="w-[1rem] h-[1rem]" src={DownArrow}/> */}
 
-                <div className="mt-35">
+                <div className="mt-30 h-[1.6rem] flex items-center">
                     <h3>Explore {name}</h3>
                 </div>
             </div>
             <img
                 src={image}
+                id="landing-img"
             />
         </section>
   );

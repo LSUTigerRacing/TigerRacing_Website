@@ -1,4 +1,4 @@
-import Landing from "../../assets/images/System-Pages/Powertrain/Landing.png";
+import Landing from "../../assets/images/System-Pages/Powertrain/Landing.jpg";
 import TempPicture from "../../assets/images/System-Pages/Powertrain/PCB.png";
 
 import { LandingComponent, SubsystemComponent, TableOfContents } from "./SystemComponents";
@@ -23,28 +23,28 @@ const Powertrain = () => {
         <SubsystemComponent
             index="01"
             title="Electronics"
-            description="Formula SAE is about much more than just engineering. Being a part of the Business division provides an unparalleled collegiate experience in all aspects of running a racing team including financial management, procurement, sponsorship and more. Business division members gain valuable experience with recruitment, event planning, content creation, social media management, procurement of materials, establishing and maintaining relationships with sponsors, and managing the team’s finances. Members develop their speaking skills through many presentations to alumni, stakeholders, and judges. In addition, a major portion of the Formula SAE competition is a business presentation based on a chosen prompt to a prospective client. "
+            description="Every sensor, controller, and system on our race car needs custom electronics to function reliably. Our electronics team takes PCB projects through the complete development cycle, from schematic capture and component selection to board layout, fabrication ordering, and assembly. Members develop skills in circuit design software, surface-mount soldering techniques, board bring-up procedures, and debugging methodologies that reveal why circuits behave the way they do. The challenge lies in making boards that are compact, reliable, and manufacturable while meeting strict performance requirements, all within the constraints of student budgets and manufacturing timelines."
             images={[TempPicture, TempPicture, TempPicture]} 
             layout={2}
         />
         <SubsystemComponent
             index="02"
             title="Battery"
-            description="Formula SAE is about much more than just engineering. Being a part of the Business division provides an unparalleled collegiate experience in all aspects of running a racing team including financial management, procurement, sponsorship and more. Business division members gain valuable experience with recruitment, event planning, content creation, social media management, procurement of materials, establishing and maintaining relationships with sponsors, and managing the team’s finances. Members develop their speaking skills through many presentations to alumni, stakeholders, and judges. In addition, a major portion of the Formula SAE competition is a business presentation based on a chosen prompt to a prospective client. "
+            description="Powering an electric race car requires more than just connecting cells together. Our battery team designs and assembles the high-voltage energy storage system from the ground up, working with cutting-edge lithium-ion cell technology to create custom battery management systems that monitor cell health, balance charge levels, and ensure safe operation under extreme racing conditions. Members gain hands-on experience with thermal management solutions, electrical protection schemes, and rigorous safety testing protocols. From cell selection and characterization to pack assembly and Formula SAE compliance, every decision involves balancing competing demands of energy density, power delivery, and weight optimization."
             images={[TempPicture, TempPicture, TempPicture]} 
             layout={2}
         />
         <SubsystemComponent
             index="03"
             title="Low Voltage"
-            description="Formula SAE is about much more than just engineering. Being a part of the Business division provides an unparalleled collegiate experience in all aspects of running a racing team including financial management, procurement, sponsorship and more. Business division members gain valuable experience with recruitment, event planning, content creation, social media management, procurement of materials, establishing and maintaining relationships with sponsors, and managing the team’s finances. Members develop their speaking skills through many presentations to alumni, stakeholders, and judges. In addition, a major portion of the Formula SAE competition is a business presentation based on a chosen prompt to a prospective client. "
+            description="Behind every successful on-track performance is a web of carefully designed wiring that most people never see. Our GLV team designs and implements all the wiring harnesses and low-voltage systems that support vehicle operation, from the critical shutdown circuit to sensor power distribution. Members create comprehensive wiring diagrams, select appropriate wire gauges and connectors, and develop routing strategies that minimize weight while ensuring reliability and serviceability. The work provides essential experience with electrical system architecture, signal integrity, connector crimping and assembly techniques, and the systematic troubleshooting methodologies that separate functional cars from garage ornaments."
             images={[TempPicture, TempPicture, TempPicture]} 
             layout={2}
         />
         <SubsystemComponent
             index="04"
             title="Tractive System"
-            description="Formula SAE is about much more than just engineering. Being a part of the Business division provides an unparalleled collegiate experience in all aspects of running a racing team including financial management, procurement, sponsorship and more. Business division members gain valuable experience with recruitment, event planning, content creation, social media management, procurement of materials, establishing and maintaining relationships with sponsors, and managing the team’s finances. Members develop their speaking skills through many presentations to alumni, stakeholders, and judges. In addition, a major portion of the Formula SAE competition is a business presentation based on a chosen prompt to a prospective client. "
+            description="Converting electrical energy into motion is where theory meets asphalt. Our tractive system team manages everything from motor selection and inverter configuration to drivetrain integration and thermal management, working with high-performance electric motors and controllers to optimize torque delivery and efficiency across the entire operating range. Members gain deep experience with power electronics, motor control algorithms, cooling system design, and performance characterization through dynamometer testing. Understanding both electrical and mechanical domains is essential, making this an ideal area for anyone interested in electromechanical systems integration and the physics of how cars actually accelerate."
             images={[TempPicture, TempPicture, TempPicture]} 
             layout={2}
         />
