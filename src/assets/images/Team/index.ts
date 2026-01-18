@@ -6,7 +6,7 @@ import PublicRelations from "./Admin/PublicRelations.png"
 import Captain from "./Admin/Captain.png"
 import Powertrain from "./Admin/Powertrain.png"
 import Chassis from "./Admin/Chassis.png"
-import Safety from "./Admin/Safety.png"
+import Safety from "./Admin/Safety.jpg"
 
 // Chassis
 import Frame from "./Chassis/Frame.png"
@@ -20,7 +20,7 @@ import Drivetrain from "./Chassis/Drivetrain.png"
 import Electronics from "./Powertrain/Electronics.png"
 import Battery from "./Powertrain/Battery.png"
 import LowVoltage from "./Powertrain/LowVoltage.png"
-import TractiveSystem from "./Powertrain/TractiveSystem.png"
+import TractiveSystem from "./Powertrain/TractiveSystem.jpg"
 
 // Software
 import AppDev from "./Software/AppDev.png"

@@ -27,14 +27,15 @@ const Team = () => {
             .timeline()
             .from("#team-landing-text", {
                 opacity: 0,
-                y: -30,
-                duration: 0.8,
+                y: -10,
+                duration: 0.5,
                 ease: "power1.out"
             })
             .from(".team-redirect-container", {
                 opacity: 0,
                 y: 30,
-                duration: 0.8,
+                delay: 0.1,
+                duration: 0.5,
                 ease: "power1.out",
             })
     }, { scope: landingRef })
@@ -167,7 +168,7 @@ const Team = () => {
                     email="bvidr16@lsu.edu"
                     image={ChassisImages.Aerodynamics}
                     title="Aerodynamics"
-                    name="Brady Vidrine"
+                    name="Robert Grusch"
                 />
                 <Portrait
                     to="/team/member1"
@@ -191,11 +192,11 @@ const Team = () => {
                     name="Urwah Abbas"
                 />
                 <Portrait
-                    to="none"
-                    email="none"
+                    to="https://www.linkedin.com/in/gareth-oram-02470a22b/"
+                    email="goram1@lsu.edu"
                     image={ChassisImages.Drivetrain}
                     title="Drivetrain"
-                    name="??"
+                    name="Gareth Oram"
                 />
             </div>
         </section>
