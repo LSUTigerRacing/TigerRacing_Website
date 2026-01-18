@@ -1,13 +1,67 @@
+import { useRef } from "react";
 import { Link } from "react-router-dom";
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
+import { ScrollTrigger } from 'gsap/all';
+
 import Collage_1 from "../assets/images/Join/Collage_1.png";
 import Collage_2 from "../assets/images/Join/Collage_2.png";
 
 import Right_Arrow from "../assets/images/Join/join-right-arrow.png"
 
+gsap.registerPlugin(useGSAP);
+gsap.registerPlugin(ScrollTrigger);
+
 const Join = () => {
+    const landingRef = useRef<HTMLDivElement>(null);
+    const tl = useRef<gsap.core.Timeline | null>(null);
+
+    useGSAP(() => {
+        tl.current = gsap
+            .timeline()
+            .from(".join-landing-phrase", {
+                opacity: 0,
+                y: -50,
+                delay: 0.3,
+                duration: 0.8,
+                ease: "power1.out",})
+            .from(".yellow-button", {
+                opacity: 0,
+                y: -20,
+                duration: 0.6,
+                ease: "power1.out",
+        })
+    }, {scope: landingRef})
+
+    useGSAP(() => {
+		gsap.from(".collage-item", {
+			clipPath: " inset(0 0 100% 0)",
+			duration: 0.8,
+			ease: "power1.out",
+			stagger: 0.2,
+			scrollTrigger: {
+				trigger: ".join-blurb-collage",
+				start: "top center",
+				markers: true
+			}
+		})
+        
+        gsap.from(".join-systems-box", {
+            opacity: 0,
+            y: 100,
+            duration: 0.8,
+			ease: "power1.out",
+			stagger: 0.2,
+			scrollTrigger: {
+				trigger: ".systems-container",
+				start: "top center",
+				markers: true
+			}
+		})
+    }, [])
   return (
     <div className="w-full background text-black! bg-white!">
-        <section className="purple-landing">
+        <section className="purple-landing" ref={landingRef}>
             <div className="join-landing-phrase">
                 <h2 className="">Join one of LSU’s oldest and largest engineering organizations.</h2>
                 <h3>All Majors Welcome!</h3>
@@ -34,16 +88,16 @@ const Join = () => {
                 <div className="flex-1 flex flex-col gap-5">
                     <img
                         src={Collage_2}
-                        className="object-cover flex-1"
+                        className="collage-item object-cover flex-1" // collage-item is a class used for only gsap anims
                     />
                     <img
                         src={Collage_2}
-                        className="object-cover flex-1"
+                        className="collage-item object-cover flex-1"
                     />
                 </div>
                 <img
                     src={Collage_1}
-                    className="w-[50%] object-cover flex-1"
+                    className="collage-item w-[50%] object-cover flex-1"
                 />
             </div>
                 
@@ -95,7 +149,7 @@ const SystemBox = ( props: { to: any; title: any; description: any; } ) => {
         description,
     } = props;
     return (
-        <div className="flex-1 text-black m-4 p-6 border-[var(--standard-purple)] border-4">
+        <div className="join-systems-box">
             <h2 className="mb-[2%] text-[var(--standard-purple)]">{title}</h2>
             <p className="mb-[2%] whitespace-pre-line">{description}</p>
             <Link 
