@@ -9,8 +9,8 @@ const Powertrain = () => {
         <LandingComponent 
         name="Powertrain"
         blurb="Our powertrain system serves as the electric heart of our race car, where battery management, motor control, and embedded systems transform stored electrical energy into the instantaneous torque that launches our machine to championship speeds.
-                    
-        As a powertrain team member, you'll develop battery systems that monitor thousands of cells for temperature and voltage, write embedded software that makes split-second decisions, and engineer high-voltage PCB layouts that withstand the extreme demands of competitive racing."
+
+        As a powertrain team member, you'll develop battery systems that monitor thousands of cells for temperature and voltage, design motor controllers that deliver precise torque across the entire rpm range, and engineer high-voltage PCB layouts that withstand the extreme demands of competitive racing."
         image={Landing} />
         <TableOfContents
             sections={[

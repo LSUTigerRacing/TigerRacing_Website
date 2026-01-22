@@ -8,11 +8,9 @@ const Business = () => {
  	<div className="w-full background">
         <LandingComponent 
 			name="Business"
-			blurb="The LSU TigerRacing team sincerely thanks all of our generous sponsors. We could not build our electric vehicles, maintain our combustion cars, and thrive as one of LSU's premiere engineering organizations without the help of our sponsors.
-			
-			If you are interested in becoming a TigerRacing sponsor, please look at our sponsorship packet linked below and contact our team at 
-			
-			Your support makes a real difference to our team."
+			blurb="Our business system manages the financial and partnership infrastructure that makes our racing program possible, where budget oversight and sponsor relationships secure the resources needed to build and compete with a world-class race car.
+
+            As a business team member, you'll track expenditures across technical subsystems to ensure fiscal responsibility, develop funding strategies that sustain operations year after year, and cultivate partnerships with companies that share our commitment to engineering excellence and innovation."
         	image={Landing} 
 		/>
 

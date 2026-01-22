@@ -8,11 +8,10 @@ const Software = () => {
  <div className="w-full background">
         <LandingComponent 
 			name="Software"
-			blurb="The LSU TigerRacing team sincerely thanks all of our generous sponsors. We could not build our electric vehicles, maintain our combustion cars, and thrive as one of LSU's premiere engineering organizations without the help of our sponsors.
-			
-			If you are interested in becoming a TigerRacing sponsor, please look at our sponsorship packet linked below and contact our team at 
-			
-			Your support makes a real difference to our team."
+			blurb="Our software system develops the digital tools and intelligence that power both our race car and team operations, where embedded firmware, custom applications, and data analysis transform raw information into competitive advantages.
+
+            As a software team member, you'll write real-time code for microcontrollers managing critical vehicle functions, build applications that streamline team workflows and pit operations, and develop analysis tools that turn thousands of data points per lap into actionable performance improvements.
+"
 			image={Landing} 
 		/>
 

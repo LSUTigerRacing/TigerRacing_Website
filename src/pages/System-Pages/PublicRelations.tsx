@@ -8,11 +8,9 @@ const PublicRelations = () => {
  	<div className="w-full background">
         <LandingComponent 
 			name="Public Relations"
-			blurb="The LSU TigerRacing team sincerely thanks all of our generous sponsors. We could not build our electric vehicles, maintain our combustion cars, and thrive as one of LSU's premiere engineering organizations without the help of our sponsors.
-			
-			If you are interested in becoming a TigerRacing sponsor, please look at our sponsorship packet linked below and contact our team at 
-			
-			Your support makes a real difference to our team."
+			blurb="Our public relations system builds the team's brand and community connections, where strategic marketing and creative fundraising initiatives expand our reach and strengthen support for our program.
+            
+As a public relations team member, you'll create engaging content that showcases our technical achievements across social media platforms, organize fundraising events that generate revenue beyond traditional sponsorships, and develop campaigns that attract talented new members and enthusiastic supporters."
         	image={Landing} 
 		/>
 

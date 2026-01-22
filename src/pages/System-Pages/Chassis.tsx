@@ -10,11 +10,9 @@ const Chassis = () => {
  <div className="w-full background">
         <LandingComponent 
         name="Chassis"
-        blurb="The LSU TigerRacing team sincerely thanks all of our generous sponsors. We could not build our electric vehicles, maintain our combustion cars, and thrive as one of LSU's premiere engineering organizations without the help of our sponsors.
+        blurb="Our chassis system forms the mechanical foundation of our race car, where frame design, suspension geometry, and aerodynamic surfaces combine to create a platform that translates driver inputs into fast, predictable lap times.
         
-        If you are interested in becoming a TigerRacing sponsor, please look at our sponsorship packet linked below and contact our team at 
-        
-        Your support makes a real difference to our team."
+As a chassis team member, you'll weld tubular space frames that balance rigidity with weight savings, tune suspension systems that keep tires glued to the pavement through high-speed corners, and fabricate composite aerodynamic components that generate hundreds of pounds of downforce."
         image={Landing} />
         <TableOfContents
             sections={[
