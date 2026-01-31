@@ -91,17 +91,19 @@ const Home = () => {
 			<div className="text-8xl text-center !mt-[8vh]">
 				<h2 className="text-[#FFD500]">Powering TigerRacing</h2>
 			</div>
-			<div className='home-sponsor-bar'>
-				<div className='sponsor-logo'><img src={BASF}/></div>
-				<div className='sponsor-logo'><img src={Exxon}/></div>
-				<div className='sponsor-logo'><img src={Haas}/></div>
-				<div className='sponsor-logo'><img src={Hoosier}/></div>
-				<div className='sponsor-logo'><img src={Kenesto}/></div>
-				<div className='sponsor-logo'><img src={LSUEngineering}/></div>
-				<div className='sponsor-logo'><img src={Siemens}/></div>
-				<div className='sponsor-logo'><img src={Solidworks}/></div>
+			<div className='home-sponsor-bar-container'>
+				<div className='home-sponsor-bar'>
+					<div className='sponsor-logo'><img src={BASF}/></div>
+					<div className='sponsor-logo'><img src={Exxon}/></div>
+					<div className='sponsor-logo'><img src={Haas}/></div>
+					<div className='sponsor-logo'><img src={Hoosier}/></div>
+					<div className='sponsor-logo'><img src={Kenesto}/></div>
+					<div className='sponsor-logo'><img src={LSUEngineering}/></div>
+					<div className='sponsor-logo'><img src={Siemens}/></div>
+					<div className='sponsor-logo'><img src={Solidworks}/></div>
+				</div>
 			</div>
-			
+
 			<div className="purple-line mb-[5rem]"/>
 
 			<section className="home-redirect-section">

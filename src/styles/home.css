@@ -16,6 +16,12 @@
     z-index: 2;
 }
 
+.home-sponsor-bar-container {
+    width: 100%;
+
+    overflow: hidden;
+}
+
 .home-sponsor-bar {
     width: fit-content;
     height: fit-content;
