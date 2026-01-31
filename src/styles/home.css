@@ -16,6 +16,30 @@
     z-index: 2;
 }
 
+.home-sponsor-bar {
+    width: fit-content;
+    height: fit-content;
+
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+    overflow: hidden;
+    padding-block: 1rem;
+}
+
+.home-sponsor-bar > *{
+    width: 20vw;
+    height: 15vh;
+    /* background: #000; */
+}
+
+.home-sponsor-bar > * > * {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
 .home-redirect-section {
     width: 92.5%;
     height: fit-content;
@@ -28,6 +52,7 @@
 
     margin-inline: auto;
     padding-block: 5rem;
+    padding-bottom: 7rem;
 }
 
 .home-redirect {
@@ -47,4 +72,12 @@
     .redirect {
         flex-direction: column;
     }
+}
+
+.home-carousel {
+    display: flex
+}
+
+.home-carousel > * {
+    flex: 1
 }
