@@ -107,13 +107,25 @@ const SubsystemComponent = ( props: { index: any; title: any; description: any; 
                     <p className="seperator-bottom-sm whitespace-pre-line">{description}</p>
                 
                     {layout == 1 && (
-                        <CollageEqual images={images} />
+                        <Collage3Equal images={images} />
                     )}
                     {layout == 2 && (
-                        <CollageHeroSide images={images} />
+                        <Collage3Side images={images} />
                     )}
                     {layout == 3 && (
-                        <CollageHeroBottom images={images} />
+                        <Collage3Bottom images={images} />
+                    )}
+                    {layout == 4 && (
+                        <Collage2Right images={images} />
+                    )}
+                    {layout == 5 && (
+                        <Collage2Center images={images} />
+                    )}
+                    {layout == 6 && (
+                        <Collage2Left images={images} />
+                    )} 
+                    {layout == 7 && (
+                        <CollageSingle images={images} />
                     )}
                 </div>
 
@@ -123,7 +135,7 @@ const SubsystemComponent = ( props: { index: any; title: any; description: any; 
   );
 };
 
-const CollageEqual = ( props: { images: any }) => {
+const Collage3Equal = ( props: { images: any }) => {
     const { images } = props;
     return (
         <div className="collage-equal">
@@ -140,7 +152,7 @@ const CollageEqual = ( props: { images: any }) => {
     )
 }
 
-const CollageHeroSide = ( props: { images: any }) => {
+const Collage3Side = ( props: { images: any }) => {
     const { images } = props;
     return (
         <div className="collage-hero-side">
@@ -159,7 +171,7 @@ const CollageHeroSide = ( props: { images: any }) => {
     )
 }
 
-const CollageHeroBottom = ( props: { images: any }) => {
+const Collage3Bottom = ( props: { images: any }) => {
     const { images } = props;
     return (
         <div className="collage-hero-bottom">
@@ -178,6 +190,59 @@ const CollageHeroBottom = ( props: { images: any }) => {
     )
 }
 
+const Collage2Right = ( props: { images: any }) => {
+    const { images } = props;
+    return (
+        <div className="collage-2-right">
+            <img
+                src={images[0]}
+            />
+            <img
+                src={images[1]}
+            />
+        </div>       
+    )
+}
+
+const Collage2Center = ( props: { images: any }) => {
+    const { images } = props;
+    return (
+        <div className="collage-2-center">
+            <img
+                src={images[0]}
+            />
+            <img
+                src={images[1]}
+            />
+        </div>       
+    )
+}
+
+
+const Collage2Left = ( props: { images: any }) => {
+    const { images } = props;
+    return (
+        <div className="collage-2-left">
+            <img
+                src={images[0]}
+            />
+            <img
+                src={images[1]}
+            />
+        </div>       
+    )
+}
+
+const CollageSingle = ( props: { images: any }) => {
+    const { images } = props;
+    return (
+        <div className="collage-single">
+            <img
+                src={images[0]}
+            />
+        </div>       
+    )
+}
 
 
 export { LandingComponent, SubsystemComponent, TableOfContents };
