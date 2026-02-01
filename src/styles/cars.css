@@ -1,0 +1,45 @@
+.car-grid {
+    width: 92.5%;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+	gap: 2rem;
+
+    margin-inline: auto;
+}
+
+.car-box {
+    width: 100%;
+    height: 60vh;
+    overflow: hidden;
+    position: relative;
+
+}
+
+.car-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  
+} 
+
+.car-overlay {
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+	right: 0;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.7) 0%,
+        rgba(0, 0, 0, 0) 30%,
+        transparent 100%
+    );
+}
