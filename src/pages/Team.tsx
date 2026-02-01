@@ -127,7 +127,7 @@ const Team = () => {
                     name="Gareth Oram"
                 />
                 <Portrait
-                    to="https://www.linkedin.com/in/tristan-thai-13288a2b4/"
+                    to="https://www.linkedin.com/in/tristan-thai/"
                     email="tthai5@lsu.edu"
                     image={AdminImages.Chassis}
                     title="Chassis Lead"
@@ -208,11 +208,11 @@ const Team = () => {
         <h2>Powertrain Leads</h2>
             <div className="team-portrait-container">
                 <Portrait
-                    to="https://www.linkedin.com/in/vinh-le-grad2026/"
-                    email="vle31@lsu.edu"
+                    to="https://www.linkedin.com/in/emiliano-owsley-8660752ba/"
+                    email="Emiliano.Owsley@lsu.edu"
                     image={PowertrainImages.Electronics}
                     title="Electronics"
-                    name="Vinh Le"
+                    name="Emiliano Owsley"
                 />
                 <Portrait
                     to="https://www.linkedin.com/in/gareth-oram-02470a22b/"
