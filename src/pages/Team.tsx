@@ -37,7 +37,7 @@ const Team = () => {
                 delay: 0.1,
                 duration: 0.5,
                 ease: "power1.out",
-            })
+            }, "-=0.2")
     }, { scope: landingRef })
 
     return (
@@ -282,20 +282,20 @@ const Redirect = ( props: { to: any; image: any; title: any; description: any; }
         description
     } = props;
     return (
-        <Link 
-            to={to}
+        <div
             className="team-redirect"
         >
             <h3>{title}</h3>
-            <div className="team-redirect-img-container">
-                <img
-                    src={image}
-                    alt={title}
-                />
-            </div>
-
+            <Link to={to}>
+                <div className="team-redirect-img-container">
+                    <img
+                        src={image}
+                        alt={title}
+                    />
+                </div>
+            </Link>
             <p>{description}</p>
-        </Link>
+        </div>
     )
 }
 
