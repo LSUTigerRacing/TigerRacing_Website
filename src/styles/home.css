@@ -100,8 +100,19 @@
     flex: 1
 }
 
-.home-competition-column {
+.home-competition-section {
+    width: 95%;
+    height: 60vh;
 
+    margin-inline: auto;
+    margin-block: 7.5rem;
+
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.25rem;
+}
+
+.home-competition-column {
     display: flex;
     flex-direction: column;
 

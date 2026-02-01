@@ -46,7 +46,7 @@ const Home = () => {
 			scrollTrigger: {
 				trigger: ".home-redirect-section",
 				start: "top center",
-				markers: true
+				// markers: true
 			}
 		})
         const logos = gsap.utils.toArray<HTMLElement>('.sponsor-logo');
@@ -59,6 +59,18 @@ const Home = () => {
 			invalidateOnRefresh: true,
 			paddingRight: 45
 		});
+
+		gsap.from("#home-competition-image", {
+			clipPath: "inset(0 0 100% 0)",
+			duration: 0.8,
+			ease: "power1.out",
+			stagger: 0.3,
+			scrollTrigger: {
+				trigger: ".home-competition-section",
+				start: "top center",
+				// markers: true
+			}
+		})
 	})
 
 	return (
@@ -156,10 +168,11 @@ const Home = () => {
 					</div>
 				</div>
 
-				<section className='w-[95%] h-[60vh] grid grid-cols-3 gap-5 my-30 mx-auto'>
+				<section className='home-competition-section'>
 					<img
 						src={Tilt}
 						className='w-full h-full object-cover'
+						id='home-competition-image'
 					/>
 					<div className='home-competition-column'>
 						<span>
@@ -172,6 +185,7 @@ const Home = () => {
 						<img
 							src={Judge}
 							className='w-full object-cover'
+							id='home-competition-image'
 						/>
 					</div>
 					<div className='home-competition-column'>
@@ -184,6 +198,7 @@ const Home = () => {
 						</span>
 						<img
 							src={Run}
+							id='home-competition-image'
 						/>
 					</div>
 
