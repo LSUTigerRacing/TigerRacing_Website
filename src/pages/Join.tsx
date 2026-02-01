@@ -6,6 +6,7 @@ import { ScrollTrigger } from 'gsap/all';
 
 import Collage_1 from "../assets/images/Join/Collage_1.png";
 import Collage_2 from "../assets/images/Join/Collage_2.png";
+import Collage_3 from "../assets/images/Join/Collage_3.png";
 
 import Right_Arrow from "../assets/images/Join/join-right-arrow.png"
 
@@ -75,19 +76,19 @@ const Join = () => {
         <section className="join-blurb-section">
             <div className="join-blurb-content">
                 <h2 className="seperator-bottom-sm">Why Join?</h2>
-                <p>We welcome LSU students of all majors and experience levels who are motivated and willing to donate themselves to building something incredible. <br/><br/>
-                    We provide undergraduates with opportunities for technical and management experience on a large engineering project. <br/><br/>
+                <p>We welcome LSU students of all majors and experience levels who share our passion for pushing the boundaries of electric vehicle technology. Whether you're a freshman with zero experience or a senior looking to apply your knowledge, there's a place for you on our team.
+<br/><br/>
+                FSAE offers hands-on experience you simply can't get in the classroom. You'll gain practical skills in areas like PCB design, composite manufacturing, and race car dynamics that aren't part of LSU's standard curriculum but are highly valued in the automotive and motorsports industries. From CAD modeling and finite element analysis to battery management systems and motor controller programming, you'll work with the same tools and technologies used by leading companies like Tesla, Rivian, and Formula 1 teams.
+<br/><br/>
 
-                    As part of NUS FSAE, you will acquire technical skills in engineering design, design optimization, design for manufacturing and assembly, testing and validation, race car tuning, competitive driving, and many more skills
-                    You will learn Computer Aided Design (CAD), Printed Circuit Board (PCB), coding and various simulation softare used by industries worldwide. 
-
-                     <br/><br/>You will also experience fabricating parts of various complexity using conventional tools to Computer Numerical Control (CNC) machines, laying of carbon composite materials, PCB manufacturing, etc. ​Addtionally, there are supplementary roles like sponsorships, publicity, media, events, welfare and more.Most importantly, you will pick up lifelong intangibles like teamwork, communication and management skills
+                Our alumni have gone on to positions at top engineering firms, and recruiters actively seek out FSAE members for their proven ability to deliver real results under pressure. The community here is special. Late nights in the shop, the thrill of competition, and the pride of seeing something you built with your own hands perform on the track create bonds that last well beyond graduation.
+<br/><br/>
                 </p>
             </div>
             <div className="join-blurb-collage">
                 <div className="flex-1 flex flex-col gap-5">
                     <img
-                        src={Collage_2}
+                        src={Collage_3}
                         className="collage-item object-cover flex-1" // collage-item is a class used for only gsap anims
                     />
                     <img
@@ -115,22 +116,22 @@ const Join = () => {
                 <SystemBox
                     to="/join/powertrain"
                     title="Powertrain"
-                    description="Our chassis system forms the foundation of our race car, covering frame design, suspension, brakes, aero, and ergonomics. If you're interested in mechanical systems, structural design, or the fundamental engineering that makes cars run, Chassis is where you belong."
+                    description="Our powertrain system handles everything electrical, from battery packs and motor controllers to custom PCBs and wiring harnesses. If you're drawn to high-voltage systems, power electronics, or bringing electric vehicles to life, Powertrain is your home."
                 />
                 <SystemBox
                     to="/join/business"
                     title="Business"
-                    description="Our chassis system forms the foundation of our race car, covering frame design, suspension, brakes, aero, and ergonomics. If you're interested in mechanical systems, structural design, or the fundamental engineering that makes cars run, Chassis is where you belong."
+                    description="Our business system manages the financial strategy and sponsor relationships that fund our racing program. If you're interested in budgeting, procurement, partnership development, or the business side of engineering teams, Business is your place."
                 />
                 <SystemBox
                     to="/join/software"
                     title="Software"
-                    description="Our chassis system forms the foundation of our race car, covering frame design, suspension, brakes, aero, and ergonomics. If you're interested in mechanical systems, structural design, or the fundamental engineering that makes cars run, Chassis is where you belong."
+                    description="Our software system develops the code that runs our car and powers our operations, from embedded firmware to data analysis tools. If you're passionate about programming, real-time systems, or turning data into performance gains, Software is your team."
                 />
                 <SystemBox
                     to="/join/public-relations"
                     title="Public Relations"
-                    description="Our chassis system forms the foundation of our race car, covering frame design, suspension, brakes, aero, and ergonomics. If you're interested in mechanical systems, structural design, or the fundamental engineering that makes cars run, Chassis is where you belong."
+                    description="Our public relations system builds our brand and community through marketing campaigns and fundraising initiatives. If you enjoy content creation, event planning, social media strategy, or connecting people to our mission, Public Relations is for you"
                 />
 
             </div>
