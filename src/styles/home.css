@@ -63,15 +63,27 @@
 
 .home-redirect {
     flex: 1;
-
     clip-path: inset(0 0 0 0);
 }
 
-.home-redirect img {
-    width: fit-content;
+.home-redirect-img-container {
+    width: 100%;
     height: 60vh;
-    
+
+    overflow: hidden;
+
+    transition: all 0.3s ease;
+}
+
+.home-redirect-img-container img {
     object-fit: cover;
+
+    transition: all 0.3s ease;
+}
+
+.home-redirect-img-container:hover img {
+    transform: scale(1.05);
+    transition: all 0.3s ease;
 }
 
 @media screen and (max-width: 850px) {
@@ -86,4 +98,12 @@
 
 .home-carousel > * {
     flex: 1
+}
+
+.home-competition-column {
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
 }

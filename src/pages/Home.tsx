@@ -3,6 +3,8 @@ import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/all';
 import { horizontalLoop } from '../helpers/horizontalLoop';
 
+import { Link } from 'react-router-dom';
+
 import Landing from "../assets/images/Home/Landing.png";
 import Hero from "../assets/images/Home/Hero.png";
 
@@ -11,9 +13,9 @@ import Join from "../assets/images/Home/Join.png";
 import Sponsor from "../assets/images/Home/Sponsor.png";
 
 // Carousel
-import EVCar from "../assets/images/Home/Carousel/2025.jpg"
-import ClubCar from "../assets/images/Home/Carousel/2013.png"
-import FirstCar from "../assets/images/Home/Carousel/1983.png"
+import Tilt from "../assets/images/Home/Carousel/Tilt.png"
+import Judge from "../assets/images/Home/Carousel/Judge.png"
+import Run from "../assets/images/Home/Carousel/Run.png"
 
 // Sponsors
 import BASF from "../assets/images/Home/Sponsor-Icons/BASF.png"
@@ -117,13 +119,13 @@ const Home = () => {
 					to="/join"
 					image={Join}
 					title="Join Us"
-					description="We started as a curriculum-integrated program. Now, we grow as our own independent team. Learn more about our history behind TigerRacing.."
+					description="Be part of something bigger. Whether you're designing battery systems or managing the build schedule, there's a place for you on our team."
 				/>
 				<Redirect
 					to="/cars"
 					image={Sponsor}
 					title="Sponsor Us"
-					description="We started as a curriculum-integrated program. Now, we grow as our own independent team. Learn more about our history behind TigerRacing."
+					description="Help us push the boundaries of electric vehicle technology. Your support fuels innovation and gives students real-world engineering experience."
 				/>
 			</section>
 			<div className="flex-center relative w-screen h-[92vh] overflow-hidden">
@@ -156,28 +158,32 @@ const Home = () => {
 
 				<section className='w-[95%] h-[60vh] grid grid-cols-3 gap-5 my-30 mx-auto'>
 					<img
-						src={EVCar}
+						src={Tilt}
 						className='w-full h-full object-cover'
 					/>
-					<div>
-						<h3>alskdjfklsadfjls</h3>
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec neque urna, fermentum vitae orci eu, dignissim facilisis turpis. Sed viverra, est id fermentum eleifend, justo arcu mollis massa, a porttitor massa dui vitae lorem. 
-						</p>
+					<div className='home-competition-column'>
+						<span>
+							<h3>Where Theory Meets Reality</h3>
+							<br/>
+							<p>
+								Every year, we compete at Formula SAE Electric events against top engineering programs from around the world. The competition tests every aspect of our car through dynamic events like acceleration, autocross, and endurance, plus static events where we defend our design choices to industry judges.
+							</p>
+						</span>
 						<img
-							src={ClubCar}
+							src={Judge}
 							className='w-full object-cover'
-
 						/>
 					</div>
-					<div>
-						<h3>⠀</h3> {/* ascii blank char for formatting */}
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec neque urna, fermentum vitae orci eu, dignissim facilisis turpis. Sed viverra, est id fermentum eleifend, justo arcu mollis massa, a porttitor massa dui vitae lorem. 
-						</p>
-
+					<div className='home-competition-column'>
+						<span>
+							<h3>⠀</h3> {/* ascii blank char for formatting */}
+							<br/>
+							<p>
+								These competitions push us to our limits. Track time reveals what works and what needs improvement. Judge feedback challenges our assumptions. Every event teaches us something new about engineering, teamwork, and what it takes to build a winning vehicle.
+							</p>
+						</span>
 						<img
-							src={FirstCar}
+							src={Run}
 						/>
 					</div>
 
@@ -188,7 +194,7 @@ const Home = () => {
 			</div>
 			</section>
 			
-
+			
 
 
 		</div>
@@ -207,10 +213,14 @@ const Redirect = ( props: { to: any; image: any; title: any; description: any; }
     return (
         <div className="home-redirect">
             <h3>{title}</h3>
-            <img
-                src={image}
-                alt={title}
-            />
+			<Link to={to}>
+				<div className="home-redirect-img-container">
+					<img
+						src={image}
+						alt={title}
+					/>
+				</div>
+			</Link>
             <p>{description}</p>
         </div>
     )
