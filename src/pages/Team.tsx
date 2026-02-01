@@ -9,8 +9,8 @@ import { AdminImages, ChassisImages, PowertrainImages, SoftwareImages } from "..
 import SystemChassis from "../assets/images/Team/SystemChassis.png";
 import SystemPowertrain from "../assets/images/Team/SystemPowertrain.png";
 import SystemBusiness from "../assets/images/Team/SystemBusiness.png";
-import SystemPublicRelations from "../assets/images/General/filler.png";
-import SystemSoftware from "../assets/images/General/filler.png";
+import SystemPublicRelations from "../assets/images/Team/SystemPublicRelations.png";
+import SystemSoftware from "../assets/images/Team/SystemSoftware.png";
 
 import Linkedin from "../assets/images/General/icons/linkedin.png"
 import Mail from "../assets/images/General/icons/mail.png"
