@@ -27,6 +27,14 @@ import AppDev from "./Software/AppDev.png"
 import Embedded from "./Software/Embedded.png"
 import DAQ from "./Software/DAQ.png"
 
+// Old Team Photos
+import Team2023 from "./OldTeamPhotos/2023.jpeg"
+import Team2022 from "./OldTeamPhotos/2022.jpg"
+import Team2021 from "./OldTeamPhotos/2021.jpg"
+import Team2019 from "./OldTeamPhotos/2019.jpg"
+import Team2018 from "./OldTeamPhotos/2018.jpg"
+import Team2017 from "./OldTeamPhotos/2017.jpg"
+import Team2016 from "./OldTeamPhotos/2016.jpg"
 export const AdminImages = {
   President,
   VicePresident,
@@ -59,3 +67,13 @@ export const SoftwareImages = {
     Embedded,
     DAQ
 };
+
+export const OldTeamImages = {
+    y2023: Team2023,
+    y2022: Team2022,
+    y2021: Team2021,
+    y2019: Team2019,
+    y2018: Team2018,
+    y2017: Team2017,
+    y2016: Team2016
+}

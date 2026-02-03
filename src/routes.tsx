@@ -8,6 +8,7 @@ const Team = lazy(() => import('./pages/Team'))
 const Join = lazy(() => import('./pages/Join'))
 const Sponsor = lazy(() => import('./pages/Sponsor'))
 const Cars = lazy(() => import('./pages/Cars'))
+const CarPage = lazy(() => import('./pages/CarPage'))
 
 const Chassis = lazy(() => import('./pages/System-Pages/Chassis'))
 const Powertrain = lazy(() => import('./pages/System-Pages/Powertrain'))
@@ -26,6 +27,8 @@ export const AppRoutes = () => {
                         <Route path="/" element={<Home />} />
                         <Route path="/team" element={<Team />} />
                         <Route path="/cars" element={<Cars />}/> 
+                        <Route path="/cars/:year" element={<CarPage />}/> 
+
                         <Route path="/sponsor" element={<Sponsor />} />
                         <Route path="/join" element={<Join />}/> 
 

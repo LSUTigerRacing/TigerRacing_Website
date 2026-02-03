@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { EVImages, ICImages, PreClubImages } from "../assets/images/Cars";
 
 const Cars = () => {
@@ -151,7 +152,7 @@ const CarBox = ( props: { name: any, year: any, type: any, image: any } ) => {
     } = props;
     
     return ( 
-        <div className="car-box">
+        <Link to={`/cars/${year}`} className="car-box">
 			<img src={image} alt={`${year} car`} />
 			<div className="car-overlay">
 				<div className="w-[92.5%] mx-auto mb-3 flex justify-between">
@@ -164,6 +165,6 @@ const CarBox = ( props: { name: any, year: any, type: any, image: any } ) => {
 				</div>
 
 			</div>
-        </div>
+        </Link>
     )
   }
