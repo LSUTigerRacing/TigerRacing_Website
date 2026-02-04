@@ -1,14 +1,46 @@
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
+import { ScrollTrigger } from 'gsap/all';
+
 import Landing from "../assets/images/Sponsor/Landing.png";
 import WhyPartner from "../assets/images/Sponsor/WhyPartner.png";
 
+gsap.registerPlugin(useGSAP);
+gsap.registerPlugin(ScrollTrigger);
+
 const Sponsor = () => {
-  return (
+    useGSAP(() => {
+        gsap.from("#landing-title", {
+            opacity:0,
+            y: -20,
+            ease: "power1.out",
+            duration: 0.8
+        })
+        gsap.from("#landing-blurb", {
+            opacity:0,
+            y: 20,
+            ease: "power1.out",
+            duration: 0.6,
+            delay: 0.4
+        })
+        gsap.from("#landing-img", {
+            clipPath: "inset(100% 0 0 0)",
+			ease: "power1.out",
+            duration: 0.7,
+            delay: 0.7
+        })
+	})
+
+    return (
     <div className="w-full background">
         <section className="white-landing">
             <div className="white-landing-content">
-                <h2>Keep our engines roaring.*</h2>
-                <h4>*and our batteries whirring.</h4>
-                <p>
+                <div id="landing-title">
+                    <h2>Keep our engines roaring.*</h2>
+                    <h4>*and our batteries whirring.</h4>
+                </div>
+
+                <p id="landing-blurb">
                     The LSU TigerRacing team sincerely thanks all of our generous sponsors. We could not build our electric vehicles, maintain our combustion cars, and thrive as one of LSU's premiere engineering organizations without the help of our sponsors. 
                     <br/> <br/> 
                     If you are interested in becoming a TigerRacing sponsor, please look at our sponsorship packet linked below and contact our team at 
@@ -22,6 +54,7 @@ const Sponsor = () => {
             </div>
             <img
                 src={Landing}
+                id="landing-img"
             />
         </section>
 
@@ -55,7 +88,7 @@ const Sponsor = () => {
                 <div className="purple-line"/>
                 <div className="flex gap-20">
                     <div>
-                        <h2>xx%</h2>
+                        <h2>74.6%</h2>
                         <p>of alumni in major-relevant careers</p>
                     </div>
                     <div>
