@@ -41,7 +41,7 @@ const LandingComponent = ( props: { name: any; blurb: any; image: any } ) => {
 
     return (
         <section className="white-landing">
-            <div className="white-landing-content">
+            <div className="white-landing-content relative">
                 <h2 id="landing-title">Meet {name}.</h2>
                 <p className="whitespace-pre-line" id="landing-blurb">
                     {blurb}
@@ -50,10 +50,12 @@ const LandingComponent = ( props: { name: any; blurb: any; image: any } ) => {
                 <div className="w-fit bg-[var(--standard-yellow)] px-6 py-3 mt-6 cursor-pointer hover:brightness-90 transition-all rounded-[10vw]">
                     <h3>Interest Form</h3>
                 </div>
-                    {/* <img className="w-[1rem] h-[1rem]" src={DownArrow}/> */}
-
-                <div className="mt-30 h-[1.6rem] flex items-center">
-                    <h3>Explore {name}</h3>
+  
+                <div className="absolute bottom-0 w-fit h-fit flex items-center gap-4">
+                    <div className="w-fit">
+                        <h3 className="whitespace-nowrap text-[1.8rem]">Explore {name}</h3>
+                    </div>
+                    <img className="w-[3rem] arrow-icon" src={DownArrow}/>
                 </div>
             </div>
             <img

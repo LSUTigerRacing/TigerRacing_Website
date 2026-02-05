@@ -35,6 +35,7 @@
 
 .white-landing-content {
     width: 55%;
+    height: 95%;
 }
 
 .white-landing-content h2 {
@@ -46,7 +47,7 @@
     margin-top: 3rem;
 }
 
-.white-landing img {
+.white-landing #landing-img {
     width: 40%;
     height: 100%;
     object-fit: cover;
@@ -70,7 +71,7 @@
         margin-block: 1rem;
     }
 
-    .white-landing img {
+    .white-landing #landing-img {
         width: 100%;
         height: 55%;
     }
@@ -78,7 +79,7 @@
 
 @media (max-width: 600px) {
 
-    .white-landing img {
+    .white-landing #landing-img {
         width: 100%;
         height: 50%;
     }
