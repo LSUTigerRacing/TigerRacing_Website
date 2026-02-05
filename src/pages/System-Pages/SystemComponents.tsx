@@ -53,7 +53,7 @@ const LandingComponent = ( props: { name: any; blurb: any; image: any } ) => {
   
                 <div className="absolute bottom-0 w-fit h-fit flex items-center gap-4">
                     <div className="w-fit">
-                        <h3 className="whitespace-nowrap text-[1.8rem]">Explore {name}</h3>
+                        <h3 className="whitespace-nowrap text-[1.rem]">Explore {name}</h3>
                     </div>
                     <img className="w-[3rem] arrow-icon" src={DownArrow}/>
                 </div>

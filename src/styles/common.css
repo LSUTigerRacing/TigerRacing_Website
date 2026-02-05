@@ -116,3 +116,19 @@
     text-align: center;
 }
 
+.mobile-vis {
+    display: none;
+}
+
+.default-vis {
+    display: inherit;
+}
+
+@media (max-width: 800px) {
+    .mobile-vis {
+        display: inherit;
+    }
+    .default-vis {
+        display: none;
+    }
+}

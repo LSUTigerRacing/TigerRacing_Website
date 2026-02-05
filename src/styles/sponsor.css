@@ -1,20 +1,3 @@
-.sponsor-mobile-vis {
-    display: none;
-}
-
-.sponsor-vis {
-    display: inherit;
-}
-
-@media (max-width: 800px) {
-    .sponsor-mobile-vis {
-        display: inherit;
-    }
-    .sponsor-vis {
-        display: none;
-    }
-}
-
 .sponsor-why-partner {
     width: 90%;
     height: 80vh;

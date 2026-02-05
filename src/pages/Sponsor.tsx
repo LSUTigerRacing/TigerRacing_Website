@@ -48,7 +48,7 @@ const Sponsor = () => {
                     Your support makes a real difference to our team.
                 </p>
 
-                <div className="sponsor-vis yellow-button white-landing-button">
+                <div className="default-vis yellow-button white-landing-button">
                     <h3>Sponsorship Packet</h3>
                 </div>
             </div>
@@ -56,7 +56,7 @@ const Sponsor = () => {
                 src={Landing}
                 id="landing-img"
             />
-            <div className="sponsor-mobile-vis yellow-button white-landing-button">
+            <div className="mobile-vis yellow-button white-landing-button">
                 <h3>Sponsorship Packet</h3>
             </div>
 
