@@ -47,7 +47,7 @@ const LandingComponent = ( props: { name: any; blurb: any; image: any } ) => {
                     {blurb}
                 </p>
 
-                <div className="default-vis w-fit bg-[var(--standard-yellow)] px-6 py-3 mt-6 cursor-pointer hover:brightness-90 transition-all rounded-[10vw]">
+                <div className="yellow-button mt-6">
                     <h3>Interest Form</h3>
                 </div>
   
@@ -63,7 +63,7 @@ const LandingComponent = ( props: { name: any; blurb: any; image: any } ) => {
                 id="landing-img"
             />
             <div className="mobile-flex-vis w-full items-center justify-between gap-6 mt-4 relative">
-                <div className="w-fit bg-[var(--standard-yellow)] px-6 py-3 cursor-pointer rounded-[10vw]">
+                <div className="yellow-button">
                     <h3>Interest Form</h3>
                 </div>
                     <div className="w-fit h-fit py-3 flex items-center gap-4">
