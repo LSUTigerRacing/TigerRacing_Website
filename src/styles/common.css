@@ -120,15 +120,23 @@
     display: none;
 }
 
+.mobile-flex-vis {
+    display: none;
+}
+
 .default-vis {
-    display: inherit;
+
 }
 
 @media (max-width: 800px) {
-    .mobile-vis {
-        display: inherit;
-    }
     .default-vis {
         display: none;
     }
+    .mobile-vis {
+        display: block;
+    }
+    .mobile-flex-vis {
+        display: flex;
+    }
+
 }

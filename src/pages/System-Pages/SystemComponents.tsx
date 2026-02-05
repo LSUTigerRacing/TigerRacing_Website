@@ -47,11 +47,11 @@ const LandingComponent = ( props: { name: any; blurb: any; image: any } ) => {
                     {blurb}
                 </p>
 
-                <div className="w-fit bg-[var(--standard-yellow)] px-6 py-3 mt-6 cursor-pointer hover:brightness-90 transition-all rounded-[10vw]">
+                <div className="default-vis w-fit bg-[var(--standard-yellow)] px-6 py-3 mt-6 cursor-pointer hover:brightness-90 transition-all rounded-[10vw]">
                     <h3>Interest Form</h3>
                 </div>
   
-                <div className="absolute bottom-0 w-fit h-fit flex items-center gap-4">
+                <div className="absolute bottom-0 w-fit h-fit flex items-center gap-4 default-vis ">
                     <div className="w-fit">
                         <h3 className="whitespace-nowrap text-[1.rem]">Explore {name}</h3>
                     </div>
@@ -62,6 +62,18 @@ const LandingComponent = ( props: { name: any; blurb: any; image: any } ) => {
                 src={image}
                 id="landing-img"
             />
+            <div className="mobile-flex-vis w-full items-center justify-between gap-6 mt-4 relative">
+                <div className="w-fit bg-[var(--standard-yellow)] px-6 py-3 cursor-pointer rounded-[10vw]">
+                    <h3>Interest Form</h3>
+                </div>
+                    <div className="w-fit h-fit py-3 flex items-center gap-4">
+                        <div className="w-fit">
+                            <h3 className="whitespace-nowrap text-[1.rem]">Explore {name}</h3>
+                        </div>
+                        <img className="w-[3rem] arrow-icon" src={DownArrow}/>
+                    </div>
+            </div>
+
         </section>
   );
 };
