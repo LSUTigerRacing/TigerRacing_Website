@@ -55,8 +55,7 @@
 @media (max-width: 800px) {
     .white-landing {
         flex-direction: column;
-
-        padding-block: 5rem;
+        /* padding-block: 5rem; */
     }
 
     .white-landing-content {
@@ -64,20 +63,27 @@
     }
 
     .white-landing-content h2 {
-        margin-top: 3rem;
-        /* margin-bottom: 1rem; */
-    }
-
-    .white-landing-content p {
         margin-top: 1rem;
     }
 
+    .white-landing-content p {
+        margin-block: 1rem;
+    }
 
     .white-landing img {
         width: 100%;
-        height: 40%;
+        height: 55%;
     }
 }
+
+@media (max-width: 600px) {
+
+    .white-landing img {
+        width: 100%;
+        height: 50%;
+    }
+}
+
 
 .purple-landing {
     width: 100%;

@@ -48,7 +48,7 @@ const Sponsor = () => {
                     Your support makes a real difference to our team.
                 </p>
 
-                <div className="yellow-button white-landing-button">
+                <div className="sponsor-vis yellow-button white-landing-button">
                     <h3>Sponsorship Packet</h3>
                 </div>
             </div>
@@ -56,10 +56,14 @@ const Sponsor = () => {
                 src={Landing}
                 id="landing-img"
             />
+            <div className="sponsor-mobile-vis yellow-button white-landing-button">
+                <h3>Sponsorship Packet</h3>
+            </div>
+
         </section>
 
-        <section className="w-[90%] h-[80vh] flex flex-row justify-between mt-45 mx-auto" >
-            <div className="w-[45%]">
+        <section className="sponsor-why-partner" >
+            <div>
                 <h2 className="mb-5">Why partner with us?</h2>
                 <p>
                     External sponsors account for 95% of our team’s annual budget. Contributions towards our team allow us to continue representing LSU on an international stage, as well as giving back to our local community. 
@@ -69,13 +73,13 @@ const Sponsor = () => {
                     TigerRacing is a registered 501(c)(3) non-profit organization. Any and all donations are considered tax-deductible.
                 </p>
             </div>
-            <div className="w-[45%] flex flex-col justify-between">
-                <div className="h-[40%]">
-                    <h1 className="text-[8rem]!">12+</h1>
+            <div className="sponsor-stats flex flex-col justify-between">
+                <div className="sponsor-why-partner-big-stat">
+                    <h1>12+</h1>
                     <h3>Years of Performance</h3>
                 </div>
                 <div className="purple-line"/>
-                <div className="flex gap-20">
+                <div className="sponsor-why-partner-stats">
                     <div>
                         <h2>5500+</h2>
                         <p>Followers across social medias</p>
@@ -86,7 +90,7 @@ const Sponsor = () => {
                     </div>
                 </div>
                 <div className="purple-line"/>
-                <div className="flex gap-20">
+                <div className="sponsor-why-partner-stats">
                     <div>
                         <h2>74.6%</h2>
                         <p>of alumni in major-relevant careers</p>
@@ -101,8 +105,8 @@ const Sponsor = () => {
         </section>
 
         <section className="sponsor-tier-section">
-            <h2>Sponsorship Tiers</h2>
-            <div className="sponsor-tier-container">
+            <h2 className='mb-5'>Sponsorship Tiers</h2>
+            <div className="sponsor-tier-section-container">
                 <Tier
                     image={Landing}
                     title="Platinum Tier"
@@ -151,15 +155,15 @@ const Tier = ( props: { image: any; title: any; description: any; extra: any; } 
         extra
     } = props;
     return (
-        <div className="flex-1 bg-[var(--tinted-white)] text-black m-4 p-6 shadow-lg hover:shadow-xl transition-shadow">
+        <div className="sponsor-tier-component">
             <img
                 src={image}
                 alt={title}
                 className="w-fit h-[30vh] object-cover mb-[2%]"
             />
-            <h3 className="mb-[2%]">{title}</h3>
-            <p className="mb-[2%] whitespace-pre-line">{description}</p>
-            <h4>{extra}</h4>
+            <h3 className="ml-[3%] mb-[2%]">{title}</h3>
+            <p className="ml-[3%] mb-[2%] whitespace-pre-line">{description}</p>
+            <h4 className='ml-[3%] '>{extra}</h4>
         </div>
     )
 }
