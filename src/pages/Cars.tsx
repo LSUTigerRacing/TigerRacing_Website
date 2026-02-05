@@ -1,30 +1,74 @@
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
+import { ScrollTrigger } from 'gsap/all';
+
 import { Link } from "react-router-dom";
 import { EVImages, ICImages, PreClubImages } from "../assets/images/Cars";
 
+import DownArrow from "../assets/images/General/down-arrow.png"
+
+gsap.registerPlugin(useGSAP);
+gsap.registerPlugin(ScrollTrigger);
+
+
 const Cars = () => {
+
+	useGSAP(() => {
+		gsap.from("#landing-title", {
+			opacity:0,
+			y: -20,
+			ease: "power1.out",
+			duration: 0.8
+		})
+		gsap.from("#landing-blurb", {
+			opacity:0,
+			y: 20,
+			ease: "power1.out",
+			duration: 0.6,
+			delay: 0.4
+		})
+		gsap.from("#landing-img", {
+			clipPath: "inset(100% 0 0 0)",
+			ease: "power1.out",
+			duration: 0.7,
+			delay: 0.7
+		})
+	})
+
   return (
     <div className="w-full background">
 		 <section className="white-landing">
-					<div className="white-landing-content">
-						<div id="landing-title">
-							<h2>Our legacy on wheels.</h2>
-						</div>
-		
-						<p id="landing-blurb">
-							From concept to competition, every TigerRacing vehicle represents countless hours of student innovation, engineering excellence, and hands-on learning. Our cars showcase our evolution as a team, from our early combustion designs to our venture into electric vehicles that compete on tracks across the country. Each car tells a story of problem-solving, collaboration, and the relentless pursuit of performance. 
-							<br/><br/>
-							Explore our legacy of racing machines and see how LSU engineering students transform classroom knowledge into championship-caliber race cars.
-						</p>
-		                <div className="mt-30 h-[1.6rem] flex items-center">
-							<h3>Explore our past.</h3>
-						</div>
+			<div className="white-landing-content relative">
+				<div id="landing-title">
+					<h2>Our legacy on wheels.</h2>
+				</div>
 
+				<p id="landing-blurb">
+					From concept to competition, every TigerRacing vehicle represents countless hours of student innovation, engineering excellence, and hands-on learning. Our cars showcase our evolution as a team, from our early combustion designs to our venture into electric vehicles that compete on tracks across the country. Each car tells a story of problem-solving, collaboration, and the relentless pursuit of performance. 
+					<br/><br/>
+					Explore our legacy of racing machines and see how LSU engineering students transform classroom knowledge into championship-caliber race cars.
+				</p>
+
+				<div className="absolute bottom-0 w-fit h-fit flex items-center gap-4 default-vis ">
+					<div className="w-fit">
+						<h3 className="whitespace-nowrap text-[1.rem]">Explore Our Past</h3>
 					</div>
-					<img
-						src={EVImages.y2025}
-						id="landing-img"
-					/>
-				</section>
+					<img className="w-[3rem] arrow-icon" src={DownArrow}/>
+				</div>
+			</div>
+			<img
+				src={EVImages.y2025}
+				id="landing-img"
+			/>
+			<div className="mobile-flex-vis w-full items-center justify-between gap-6 mt-4 relative">
+					<div className="w-fit h-fit py-3 flex items-center gap-4">
+						<div className="w-fit">
+							<h3 className="whitespace-nowrap text-[1.rem]">Explore Our Past</h3>
+						</div>
+					<img className="w-[3rem] arrow-icon" src={DownArrow}/>
+				</div>
+			</div>
+		</section>
 
 		<div className="flex justify-center items-center py-10 gap-2">
 			<div className="purple-line flex-4"/>

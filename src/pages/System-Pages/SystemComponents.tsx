@@ -67,11 +67,11 @@ const LandingComponent = ( props: { name: any; blurb: any; image: any } ) => {
                     <h3>Interest Form</h3>
                 </div>
                     <div className="w-fit h-fit py-3 flex items-center gap-4">
-                        <div className="w-fit">
-                            <h3 className="whitespace-nowrap text-[1.rem]">Explore {name}</h3>
-                        </div>
-                        <img className="w-[3rem] arrow-icon" src={DownArrow}/>
+                    <div className="w-fit">
+                        <h3 className="whitespace-nowrap text-[1.rem]">Explore {name}</h3>
                     </div>
+                    <img className="w-[3rem] arrow-icon" src={DownArrow}/>
+                </div>
             </div>
 
         </section>
