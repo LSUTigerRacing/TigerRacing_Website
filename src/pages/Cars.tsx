@@ -4,6 +4,28 @@ import { EVImages, ICImages, PreClubImages } from "../assets/images/Cars";
 const Cars = () => {
   return (
     <div className="w-full background">
+		 <section className="white-landing">
+					<div className="white-landing-content">
+						<div id="landing-title">
+							<h2>Our legacy on wheels.</h2>
+						</div>
+		
+						<p id="landing-blurb">
+							From concept to competition, every TigerRacing vehicle represents countless hours of student innovation, engineering excellence, and hands-on learning. Our cars showcase our evolution as a team, from our early combustion designs to our venture into electric vehicles that compete on tracks across the country. Each car tells a story of problem-solving, collaboration, and the relentless pursuit of performance. 
+							<br/><br/>
+							Explore our legacy of racing machines and see how LSU engineering students transform classroom knowledge into championship-caliber race cars.
+						</p>
+		                <div className="mt-30 h-[1.6rem] flex items-center">
+							<h3>Explore our past.</h3>
+						</div>
+
+					</div>
+					<img
+						src={EVImages.y2025}
+						id="landing-img"
+					/>
+				</section>
+
 		<div className="flex justify-center items-center py-10 gap-2">
 			<div className="purple-line flex-4"/>
 			<h3 className="text-[var(--purple-line)]!">Electric Vehicles</h3>
