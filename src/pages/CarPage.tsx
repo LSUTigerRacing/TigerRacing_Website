@@ -1,5 +1,12 @@
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
+import { ScrollTrigger } from 'gsap/all';
+
 import { Navigate, useParams } from "react-router-dom"
 import { carsData } from "./carData"
+
+gsap.registerPlugin(useGSAP);
+gsap.registerPlugin(ScrollTrigger);
 
 const CarPage = () => {
     const { year } = useParams<{ year: string }>();
@@ -9,17 +16,33 @@ const CarPage = () => {
 		return <Navigate to="/cars" replace />;
 	}
 
+
+	useGSAP(() => {
+		gsap.from("#landing-text", {
+			opacity:0,
+			y: -40,
+			ease: "power1.out",
+			duration: 0.4
+		})
+		gsap.from("#stats", {
+			clipPath: "inset(100% 0 0 0)",
+			ease: "power1.out",
+			duration: 0.5,
+			delay: 0.2
+		})
+	})
+
 	return (
 		<div className="w-full background bg-white!">
 			<div className="car-single-landing">
 				<img src={carData.landingPhoto || carData.carPhoto} alt={`${year} car`} />
 				<div className="car-overlay">
 					<div className="w-[92.5%] mx-auto flex justify-between items-end ">
-						<span className="mb-16">
+						<span className="mb-16" id="landing-text">
 							<p className="text-[1.4rem]!">{carData.name}</p>
 							<h2 className="leading-12">{year}</h2>
 						</span>
-						<div className="min-w-[22.5%] w-fit h-[50%] bg-black/50 mb-16 p-6 mr-8">
+						<div className="min-w-[22.5%] w-fit h-[50%] bg-black/50 mb-16 p-6 mr-8" id="stats">
 							<h2 className="mb-4">Stats</h2>
 							{carData.specs?.map((content, idx) => (
 								<p className="mb-1">{content}</p>
