@@ -3,7 +3,7 @@ import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/all';
 
 import { Link } from "react-router-dom";
-import { EVImages, ICImages, PreClubImages } from "../assets/images/Cars";
+import { EVImages, ICImages, PreClubImages, LandingICImages } from "../assets/images/Cars";
 
 import DownArrow from "../assets/images/General/down-arrow.png"
 
@@ -38,7 +38,7 @@ const Cars = () => {
   return (
     <div className="w-full background">
 		 <section className="white-landing">
-			<div className="white-landing-content relative">
+			<div className="white-landing-content w-[50%]! relative">
 				<div id="landing-title">
 					<h2>Our legacy on wheels.</h2>
 				</div>
@@ -57,7 +57,8 @@ const Cars = () => {
 				</div>
 			</div>
 			<img
-				src={EVImages.y2025}
+				src={LandingICImages.Landing2015}
+				className='w-[45%]!'
 				id="landing-img"
 			/>
 			<div className="mobile-flex-vis w-full items-center justify-between gap-6 mt-4 relative">
