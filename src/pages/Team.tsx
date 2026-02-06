@@ -11,6 +11,7 @@ import SystemPowertrain from "../assets/images/Team/SystemPowertrain.png";
 import SystemBusiness from "../assets/images/Team/SystemBusiness.png";
 import SystemPublicRelations from "../assets/images/Team/SystemPublicRelations.png";
 import SystemSoftware from "../assets/images/Team/SystemSoftware.png";
+import DownArrow from "../assets/images/General/BIG-DOWN-ARROW.png"
 
 import Linkedin from "../assets/images/General/icons/linkedin.png"
 import Mail from "../assets/images/General/icons/mail.png"
@@ -43,14 +44,14 @@ const Team = () => {
     return (
     <div className="w-full background">
         <section className="team-landing" ref={landingRef}>
-            <div id="team-landing-text" className="text-center">
-                <h1 className="team-landing-phrase">Meet the hands behind the wheel.</h1>
-                <p>
+            <div className="text-center" id="team-landing-text">
+                <h1 className="max-w-[75vw] mx-auto">Meet the hands behind the wheel.</h1>
+                <p className="my-3">
                     TigerRacing is split into five different systems similar to a real engineering business operation.<br/>
                     Click on the icons to learn more!
                 </p>
             </div>
-            <section className="team-redirect-container">
+            <section className="team-redirect-container mt-1 mb-5">
                 <Redirect
                     to="/join/chassis"
                     image={SystemChassis}
@@ -82,13 +83,19 @@ const Team = () => {
                     description="Builds internal web tools and embedded devices to improve team productivity."
                 />
             </section>
-            <span className="text-center">
+            <div className="w-[30%] flex flex-col gap-3 mx-auto items-center">
                 <h2>Meet the 2026 Team</h2>
-            </span>
+                <img
+                    src={DownArrow}
+                    className="w-[40%]"
+                />
+            </div>
         </section>
+        <div className="purple-line"/>
 
         {/* admin */}
         <section className="team-portrait-section">
+
         <h2>Admin</h2>
             <div className="team-portrait-container">
                 <Portrait
