@@ -38,7 +38,7 @@ const Cars = () => {
   return (
     <div className="w-full background">
 		 <section className="white-landing">
-			<div className="white-landing-content w-[50%]! relative">
+			<div className="white-landing-content w-[50%]! max-[800px]:w-full! relative">
 				<div id="landing-title">
 					<h2>Our legacy on wheels.</h2>
 				</div>
@@ -49,7 +49,7 @@ const Cars = () => {
 					Explore our legacy of racing machines and see how LSU engineering students transform classroom knowledge into championship-caliber race cars.
 				</p>
 
-				<div className="absolute bottom-0 w-fit h-fit flex items-center gap-4 default-vis ">
+				<div className="absolute bottom-0 w-fit h-fit flex items-center gap-4 default-vis">
 					<div className="w-fit">
 						<h3 className="whitespace-nowrap text-[1.rem]">Explore Our Past</h3>
 					</div>
@@ -58,7 +58,7 @@ const Cars = () => {
 			</div>
 			<img
 				src={LandingICImages.Landing2015}
-				className='w-[45%]!'
+				className='w-[45%]! max-[800px]:w-full!'
 				id="landing-img"
 			/>
 			<div className="mobile-flex-vis w-full items-center justify-between gap-6 mt-4 relative">

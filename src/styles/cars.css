@@ -1,28 +1,3 @@
-.car-grid {
-    width: 92.5%;
-
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-
-	gap: 2rem;
-
-    margin-inline: auto;
-}
-
-.car-box {
-    width: 100%;
-    height: 60vh;
-    overflow: hidden;
-    position: relative;
-
-}
-
-.car-box img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;  
-} 
-
 .car-overlay {
     width: 100%;
     height: 100%;
@@ -43,3 +18,34 @@
         transparent 100%
     );
 }
+
+.car-grid {
+    width: 92.5%;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+	gap: 2rem;
+
+    margin-inline: auto;
+}
+
+@media (max-width: 800px) {
+    .car-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+.car-box {
+    width: 100%;
+    height: 60vh;
+    overflow: hidden;
+    position: relative;
+
+}
+
+.car-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  
+} 
