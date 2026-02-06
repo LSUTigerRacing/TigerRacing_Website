@@ -201,17 +201,35 @@ const Home = () => {
 							id='home-competition-image'
 						/>
 					</div>
-
 				</section>
 
-			<div className='w-[95%] h-[80%] mx-auto bg-[--tinted-white] overflow-hidden'>
-				asdfas
+			<div className='w-[95%] h-[50vh] flex mx-auto gap-16 my-14 pt-10'>
+				<Link 
+					to="/sponsor"
+					className='bg-[var(--standard-yellow)] flex-6 flex items-center'
+				>
+					<div className='w-[calc(100%-80px)] h-[calc(100%-80px)] m-auto flex flex-col justify-between'>
+						<span>
+							<h3>Want to keep our wheels spinning?</h3>
+							<p>Let's Talk!</p>
+						</span>
+						<h2>Sponsor Us</h2>
+					</div>
+				</Link>
+				<Link 
+					to="/join"
+					className='bg-[var(--standard-purple)] text-white flex-4 flex items-center'
+				>
+					<div className='w-[calc(100%-80px)] h-[calc(100%-80px)] m-auto flex flex-col justify-between'>
+						<span>
+							<h3>No backseat engineers here.</h3>
+							<p>Grab the wheel!</p>
+						</span>
+						<h2>Join Us</h2>
+					</div>
+				</Link>
 			</div>
 			</section>
-			
-			
-
-
 		</div>
   	);
 };
