@@ -1,4 +1,5 @@
 // Old Team Photos
+import Team2025 from "./2025.jpg"
 import Team2023 from "./2023.jpeg"
 import Team2022 from "./2022.jpg"
 import Team2021 from "./2021.jpg"
@@ -9,6 +10,7 @@ import Team2016 from ".//2016.jpg"
 import Team2009 from "./2009.JPG"
 
 export const OldTeamImages = {
+    y2025: Team2025,
     y2023: Team2023,
     y2022: Team2022,
     y2021: Team2021,

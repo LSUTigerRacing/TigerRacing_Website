@@ -26,6 +26,22 @@ export const carsData: Record<string, CarData> = {
         name: "Evonne",
         carPhoto: EVImages.y2025,
         specs: ["Power: 100 HP", "Motor: EMRAX 228 MV Axial Flux", "Motor Controller: DTI 500HV", "Max Voltage: 352V", "Max Current: 210A", "Tires: Hoosier LCO", "Wheels: 10 Keizer", "Data: AIM EVO5"],
+        performance: [
+            ["Results: Michigan", "Overall: 79th/80 (Tied)", "Endurance: DNA", "Acceleration: DNA", "Autocross: DNA", "Skidpad: DNA", "Design: 75th", "Business: 80th", "Cost: 71st"]
+        ],   
+        teamPhoto: OldTeamImages.y2025,
+        teamLeads: [
+            { role: "Team Captain", name: "David Kitching", image: null },
+            { role: "President", name: "Andrew Nguyen", image: null },
+            { role: "Vice President", name: "Sammy Ziegler", image: null },
+            { role: "Treasurer", name: "Jack Quander", image: null },
+            { role: "Chassis Lead", name: "Gareth Oram", image: null },
+            { role: "Powertrain Lead", name: "Jadon Yeboah", image: null },
+            { role: "Public Relations Manager", name: "Gregory Gilmore", image: null }                    
+        ],
+        teamMembers: [
+            "Vinh Le", "Sammy Ziegler", "Mackenzie McLeod", "Thomas Au", "Mizuki Teruyama", "Tristan Thai", "Gavin Morris", "Evan Kerr", "Brady Vidrine", "Jadon Yeboah", "Andrew Nguyen", "Quentin Saba", "David Kitching", "Daniel Whitley", "Gareth Oram", "Ricky Liang", "Gregory Gilmore", "Luka Brekalo", "James Sirois", "Matthew Robert"
+        ],
         layout: 2
     },
     "2023": {
@@ -33,6 +49,9 @@ export const carsData: Record<string, CarData> = {
         name: "Eve",
         carPhoto: EVImages.y2023,
         specs: [],
+        performance: [
+            ["Results: Michigan", "Overall: 50th/61", "Endurance: DNA", "Acceleration: DNA", "Autocross: DNA", "Skidpad: DNA", "Design: 54th (Tied)", "Business: 66th", "Cost: 17th"]
+        ],
         teamLeads: [
             { role: "Team Captain", name: "Holden David", image: null },
             { role: "President", name: "Evan Kerr", image: null },
