@@ -16,7 +16,6 @@ const CarPage = () => {
 		return <Navigate to="/cars" replace />;
 	}
 
-
 	useGSAP(() => {
 		gsap.from("#landing-text", {
 			opacity:0,
@@ -70,13 +69,30 @@ const CarPage = () => {
 			</div>
 
 			<img className={`${carData.teamPhoto? "" : "hidden"} w-full h-screen object-cover`} src={carData.teamPhoto}/>
-			<div className={`${carData.teamLeads? "" : "hidden"} w-fit mx-auto my-8 grid grid-cols-2  justify-between`}>
+			<div className={`${(carData.layout === 3) ? "hidden" : ""} ${carData.teamLeads? "" : "hidden"} w-fit mx-auto my-8 grid grid-cols-2 justify-between`}>
 				{carData.teamLeads?.map((member, idx) => (
 					<div key={idx}>
 						<h3 className="text-black text-[1.3rem] px-5">{member.role}: {member.name}</h3>
 					</div>
 				))}
 			</div>
+			<div className={`${(carData.layout === 3) ? "" : "hidden"} w-[92.5%] mx-auto my-8 text-black text-center`}>
+				<h2>The Team</h2>
+				<div className={`${(carData.layout === 3) ? "" : "hidden"} ${carData.teamLeads? "" : "hidden"} grid ${year === "2014" ? "grid-cols-4 gap-16": "grid-cols-3 gap-4"} my-8`}>
+					{carData.teamLeads?.map((member, idx) => (
+						<div key={idx} className='w-full h-fit'>
+							<img
+								src={member.image}
+								className="w-full h-full object-cover"
+							/>
+							<h3 className="text-black text-[1.3rem] text-center">{member.name}{member.role ? `,` : ""} {member.role}</h3>
+						</div>
+					))}
+				</div>
+			</div>
+
+			
+
 			<div className={`${carData.teamMembers ? "" : "hidden"} w-[80%] mx-auto mb-16 grid grid-cols-3 justify-between`}>
 				{carData.teamMembers?.map((member, idx) => (
 					<div className="w-full text-center " key={idx}>

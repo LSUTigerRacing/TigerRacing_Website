@@ -1,5 +1,5 @@
 import { EVImages, ICImages, PreClubImages, LandingEVImages, LandingICImages } from "../assets/images/Cars";
-import { OldTeamImages } from "../assets/images/Team";
+import { OldTeamImages, Team2014, Team2015 } from "../assets/images/Team/OldTeamPhotos";
 
 interface TeamLead {
     role: string;
@@ -15,8 +15,9 @@ interface CarData {
     specs?: string[];
     performance?: string[][];
     teamPhoto?: string;
-    teamLeads?: TeamLead[];
-    teamMembers?: string[]
+    teamLeads?: TeamLead[]; // for layout 3, use teamleads to show pictures of everyone
+    teamMembers?: string[];
+    layout? : number; // 1 is for lead portraits, 2 is for names only, 3 is for everyone has portraits
 }
 
 export const carsData: Record<string, CarData> = {
@@ -25,6 +26,7 @@ export const carsData: Record<string, CarData> = {
         name: "Evonne",
         carPhoto: EVImages.y2025,
         specs: ["Power: 100 HP", "Motor: EMRAX 228 MV Axial Flux", "Motor Controller: DTI 500HV", "Max Voltage: 352V", "Max Current: 210A", "Tires: Hoosier LCO", "Wheels: 10 Keizer", "Data: AIM EVO5"],
+        layout: 2
     },
     "2023": {
         year: "2023",
@@ -42,7 +44,8 @@ export const carsData: Record<string, CarData> = {
         ],
         teamMembers: [
             "Amer Algalban", "Mia Arizmendi", "Bryce Boada", "Faniw Boone", "Josh Brooks", "Victoria Byrd", "Timmy Capdeboscq", "Kevin Cruz", "Holden David", "Justin Fields"
-        ]
+        ],
+        layout: 2
     },
     "2022": {
         year: "2022",
@@ -64,10 +67,10 @@ export const carsData: Record<string, CarData> = {
             { role: "Powertrain Lead", name: "Justin Fields / Thomas Rutter", image: null },
             { role: "Public Relations Manager", name: "Mia Arizmendi", image: null }                    
         ],
-        
         teamMembers: [
             "Amer Algalban", "Mia Arizmendi", "Bryce Boada", "Faniw Boone", "Josh Brooks", "Victoria Byrd", "Timmy Capdeboscq", "Kevin Cruz", "Holden David", "Justin Fields", "Cade Giambrone", "Mikhalib Green", "Jacob Holt", "Evan Kerr", "David Kitching", "Jace Knott", "Paxton Longwell", "Nicholas Ormond", "Colin Roberts", "Thomas Rutter", "Waddih Sowma", "Louis Thurmon", "Jack Quander", "Cedric Witkowski"
-        ]
+        ],
+        layout: 2
     },
     "2020-2021": {
         year: "2020-2021",
@@ -91,7 +94,8 @@ export const carsData: Record<string, CarData> = {
         ],
         teamMembers: [
             "Amer Algalban", "Arturo Altamirano", "Mia Arizmendi", "Lauren bergeron", "Faniw Boone", "Josh Brooks", "Douglas Byrd", "Victoria Byrd", "Rafael Campos", "Kevin Cruz", "Holden David", "Jenny Deicaza", "Anna Deshotels", "Matt Ducrest", "Justin Fields", "David Kitching", "Paxton Longwell", "Nicholas Ormond", "Mason Pesson", "Trey Petitjean", "Colin Roberts", "Thomas Rutter", "Robert Sciambra", "Waddih Sowma", "Dylan Stephens", "Cedric Witkowski"
-        ]
+        ],
+        layout: 2
     },
     "2019": {
         year: "2019",
@@ -114,7 +118,8 @@ export const carsData: Record<string, CarData> = {
         ],
         teamMembers: [
             "Connor Laiche", "Ryan Miller", "Zac Fontenot", "Joshua Fisher", "Collin Jenkins", "Dylan Stephens", "Beltran Urbina", "Jay Pertuit", "Gavin Sheng", "Robert Fields", "Juan Aponte", "Eddie Veal", "Curtis Zuckerman", "Sebastian Valero", "Benjamin Jahnke", "Harrison Longwell", "Branson Leonard", "Jonathon Sebold", "Jacob Veillon", "Alyssa Hermesch", "Josh Brooks", "Spencer Hollander", "Kelvin Nguyen", "Tyler Blank", "Waddih Sowma", "Jacob Pardue", "Trey Petitjean", "Douglas Byrd", "​Tyler Brasseaux", "Ryan Deshotel", "Randy Wells", "Brett Rens", "Van Le", "Aaron Zambiasi", "Matthew Schinsheck", "Eric Murell", "Finn McCarthy", "Holden David"
-        ]
+        ],
+        layout: 2
     },
     "2018": {
         year: "2018",
@@ -140,7 +145,8 @@ export const carsData: Record<string, CarData> = {
         ],
         teamMembers: [
             "Jared Aguillard", "Nasser Alhosin", "Elisabeth Andries", "Oyowoli Atakere", "Ernie Babin", "Lance Beddingfield", "Tyler Blank", "Gage Boullion", "Tyler Brasseaux", "Spencer Brewer", "Josh Brooks", "John Bryan", "Anthony Centanni", "Ryan Deshotels", "Christopher Dewey", "Christopher Foster", "Clare Hamilton", "Alyssa Hermesch", "Ben Jahnke", "Connor Laiche", "Van Le", "Forrest Lee", "Branson Leonard", "Dylan Macon", "Geza Maruschak", "Shrey Mishra", "Eric Murrell", "Kevin Murrell", "Robert Niwa", "Jay Pertuit", "Trey Petitjean", "Calvin Pham", "Kyle Pizzuto", "Timothy Poche", "Stephen Satterlee", "Charles Schaub", "Jonathan Sebold", "Waddih Sowma", "Jack Thibodeaux", "Steven Thrift", "Shane Toomey", "Sebastian Valero", "Eddie Veal"
-        ]
+        ],
+        layout: 2
     },
     "2017": {
         year: "2017",
@@ -166,7 +172,8 @@ export const carsData: Record<string, CarData> = {
         ],
         teamMembers: [
             "Jared Aguillard", "Nasser Alhosani", "Elisabeth Andries", "Ernie Babin", "Benny Boudreaux", "Tyler Brasseaux", "John Bryan", "Kevin Castrinos", "​Ryan Deshotels", "Christopher Dewey", "Alyssa Hermesch", "Kyle Lambert", "Van Le", "Forrest Lee", "Branson Leonard", "Dylan Macon", "Logan Miller", "Eric Murrell", "Kevin Murrell", "Josh Perkins", "Jay Pertuit", "Trey Petitjean", "Tim Poche", "Jonathan Sebold", "Greg Talmage", "Sebastian Valero", "Eddie Veal", "Jacob Veillon"
-        ]
+        ],
+        layout: 2
     },
     "2016": {
         year: "2016",
@@ -190,7 +197,8 @@ export const carsData: Record<string, CarData> = {
         ],
         teamMembers: [
             "Ernie Babin", "Benny Boudreaux", "Tyler Brasseaux", "John Bryan", "Saif Bukhari", "Joey Fawad", "Tommy Harrington", "Alyssa Hermesch", "Kyle Lambert", "Van Le", "Forrest Lee", "Branson Leonard", "Brett Lewis", "​Logan Miller", "Leslie Morgan", "Matthew Moses", "Kevin Murrell", "​Don Rogers", "Eric Rohli", "Alex Rome", "Josh Perkins", "​Jay Pertuit", "Sebastian Valero", "Eddie Veal", "​Alex Wray"
-        ]
+        ],
+        layout: 2
     },
     "2015": {
         year: "2015",
@@ -204,18 +212,34 @@ export const carsData: Record<string, CarData> = {
             ["Results: Michigan", "Overall: 22nd/119", "Endurance: 19th", "Fuel Efficiency: 26th", "Autocross: 33rd", "Skidpad: 21st", "Acceleration: 27th", "Design: 68th", "Business: 57th", "Cost: 62nd", "Points: 572.5/1000"],
             ["Results: Lincoln", "Overall: 9th/80", "Endurance: 9th", "Fuel Efficiency: 15th", "Autocross: 24th", "Skidpad: 18th", "Acceleration: 29th", "Design: 26th", "Business: 24th", "Cost: 29th", "Points: 660.7/1000"]
         ],
-        teamLeads: [
-            { role: "Team Captain", name: "Joe Hollier", image: null },
-            { role: "President", name: "Alex Rome", image: null },
-            { role: "Vice President", name: "Jacob Danos", image: null },
-            { role: "Treasurer", name: "Eric Rohli", image: null },
-            { role: "Powertrain Lead", name: "Joe Kenney", image: null },
-            { role: "Chassis Lead", name: "Connor Albercht", image: null },
-            { role: "Administrative", name: "Van Le", image: null },
+        teamLeads: [ // this is ordered the same way as the old website; dont touch
+            { role: "Team Captain", name: "Joe Hollier", image: Team2015.JoeHollier},
+            { role: "Powertrain Lead", name: "Joe Kenney", image: Team2015.JoeKenney },
+            { role: "President", name: "Alex Rome", image: Team2015.AlexRome },
+            { role: "Chassis Lead", name: "Connor Albercht", image: Team2015.ConnorAlbrecht },
+            { role: "Treasurer", name: "Eric Rohli", image: Team2015.EricRohli },
+            { role: "Vice President", name: "Jacob Danos", image: Team2015.JacobDanos },
+            { role: "Brakes Lead", name: "Kody Deslatte", image: Team2015.KodyDeslatte },
+            { role: "Electronics Lead", name: "Tommy Harrington", image: Team2015.TommyHarrington },
+            { role: "Kinematics Lead", name: "Saif Bukhari", image: Team2015.SaifBukhari },
+            { role: "Body and Aerodynamics Lead", name: "Kyle Lambert", image: Team2015.KyleLambert },
+            { role: "Brake Team", name: "Eric Murrell", image: Team2015.EricMurrell },
+            { role: "Exhaust Lead", name: "Kevin Murrell", image: Team2015.KevinMurrell },
+            { role: "Public Relations", name: "Leslie Morgan", image: Team2015.LeslieMorgan },
+            { role: "", name: "Forrest Lee", image: Team2015.ForrestLee },
+            { role: "Engine Lead", name: "Van Le", image: Team2015.VanLe },
+            { role: "Manufacturing", name: "Ernie Babin", image: Team2015.ErnieBabin },
+            { role: "", name: "Kelsey Rodriguez", image: Team2015.KelseyRodriguez },
+            { role: "", name: "Preston Cothren", image: Team2015.PrestonCothren },
+            { role: "Oil", name: "John Bryan", image: Team2015.JohnBryan },
+            { role: "", name: "Jay Pertuit", image: Team2015.JayPertuit },
+            { role: "Oil", name: "Zack Farque", image: Team2015.ZackFarque },
+            { role: "", name: "Cedric Boudreaux", image: Team2015.CedricBoudreaux },
+            { role: "", name: "Brandon Campo", image: Team2015.BrandonCampo },
+            { role: "", name: "Pawan Sharma", image: Team2015.PawanSharma },
+            { role: "", name: "Jude Canady", image: Team2015.JudeCanady },            
         ],
-        teamMembers: [
-            "Amer Algalban", "Mia Arizmendi", "Bryce Boada", "Faniw Boone", "Josh Brooks", "Victoria Byrd", "Timmy Capdeboscq", "Kevin Cruz", "Holden David", "Justin Fields", "Cade Giambrone", "Mikhalib Green", "Jacob Holt", "Evan Kerr", "David Kitching", "Jace Knott", "Paxton Longwell", "Nicholas Ormond", "Colin Roberts", "Thomas Rutter", "Waddih Sowma", "Louis Thurmon", "Jack Quander", "Cedric Witkowski"
-        ]
+        layout: 3
     },
     "2014": {
         year: "2014",
@@ -229,18 +253,36 @@ export const carsData: Record<string, CarData> = {
             ["Results: Michigan", "Overall: 40th/120", "Endurance: 35th", "Fuel Efficiency: 37th", "Skidpad: 44th", "Autocross: 51st", "Acceleration: 42nd", "Design: 38th", "Business: 22nd", "Cost: 72nd", "Points: 409.7/1000"],
             ["Results: Lincoln", "Overall: 42nd/80", "Endurance: DNF (6/14 Laps)", "Skidpad: 21st", "Autocross: 38th", "Acceleration: 19th", "Design: 47th", "Business: 36th", "Cost: 43rd", "Points: 351/1000"]
         ],
-        teamLeads: [
-            { role: "Team Captain", name: "John Bryan", image: null },
-            { role: "President", name: "Alyssa Hermesch", image: null },
-            { role: "Vice President", name: "Eddie Veal", image: null },
-            { role: "Treasurer", name: "Elisabeth Andries", image: null },
-            { role: "Powertrain Lead", name: "Jay Pertuit", image: null },
-            { role: "Chassis Lead", name: "Kevin Murrell", image: null },
-            { role: "Administrative", name: "Van Le", image: null },
+        teamLeads: [ // this is ordered the same way as the old website; dont touch
+            { role: "", name: "Graham Lewis", image: Team2014.GrahamLewis },
+            { role: "", name: "Simon Shirazi", image: Team2014.SimonShirazi },
+            { role: "", name: "Matthew Richards", image: Team2014.MatthewRichards },
+            { role: "", name: "Frank Duvic", image: Team2014.FrankDuvic },
+            { role: "", name: "Austin Hall", image: Team2014.AustinHall },
+            { role: "", name: "Matt Mabile", image: Team2014.MattMabile },
+            { role: "", name: "Luke Dodge", image: Team2014.LukeDodge },
+            { role: "", name: "Steven Rougeau", image: Team2014.StevenRougeau },
+            { role: "", name: "Will Koederitz", image: Team2014.WillKoederitz },
+            { role: "", name: "Joe Hollier", image: Team2014.JoeHollier },
+            { role: "", name: "Alex Rome", image: Team2014.AlexRome },
+            { role: "", name: "Ryan Kinler", image: Team2014.RyanKinler },
+            { role: "", name: "Connor Albrecht", image: Team2014.ConnorAlbrecht },
+            { role: "", name: "Tonny Harrington", image: Team2014.TommyHarrington },
+            { role: "", name: "Kody Deslatte", image: Team2014.KodyDeslatte },
+            { role: "", name: "Joe Kenney", image: Team2014.JoeKenney },
+            { role: "", name: "Saif Bukhari", image: Team2014.SaifBukhari },
+            { role: "", name: "Travis Bourg", image: Team2014.TravisBourg },
+            { role: "", name: "Joey Fawad", image: Team2014.JoeyFawad },
+            { role: "", name: "Kevin Murrell", image: Team2014.KevinMurrell },
+            { role: "", name: "Rebecca Fitzgerald", image: Team2014.RebeccaFitzgerald },
+            { role: "", name: "Eric Murrell", image: Team2014.EricMurrell },
+            { role: "", name: "Forrest Lee", image: Team2014.ForrestLee },
+            { role: "", name: "Eric Rohli", image: Team2014.EricRohli },
+            { role: "", name: "Blake Gaspard", image: Team2014.BlakeGaspard },
+            { role: "", name: "John Darbone", image: Team2014.JohnDarbone },
+            { role: "", name: "Travis Odom", image: Team2014.TravisOdom },
         ],
-        teamMembers: [
-            "Amer Algalban", "Mia Arizmendi", "Bryce Boada", "Faniw Boone", "Josh Brooks", "Victoria Byrd", "Timmy Capdeboscq", "Kevin Cruz", "Holden David", "Justin Fields", "Cade Giambrone", "Mikhalib Green", "Jacob Holt", "Evan Kerr", "David Kitching", "Jace Knott", "Paxton Longwell", "Nicholas Ormond", "Colin Roberts", "Thomas Rutter", "Waddih Sowma", "Louis Thurmon", "Jack Quander", "Cedric Witkowski"
-        ]
+        layout: 3
     },
     "2013": {
         year: "2013",
@@ -264,7 +306,6 @@ export const carsData: Record<string, CarData> = {
         performance: [
             ["Results: Michigan", "Overall: 104th/120", "Endurance: DNF", "Autocross: 55th", "Skidpad: DNF", "Acceleration: DNF", "Design: 102nd", "Business: 103rd", "Cost: 103rd", "Points: 35.7/1000"]
         ]
-
     },
     "2011": {
         year: "2011",
