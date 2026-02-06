@@ -1,28 +1,30 @@
 // EV
-import Evonne from "./2025.png"
+import Evonne from "./Small/2025.png"
+import Eve from "./Small/2023.jpeg"
 
 // IC
-import Justin from "./2022.png"
-import Chloe from "./2021.png"
-import Julia from "./2019.png"
-import Anna from "./2018.png"
-import Sierra from "./2017.png"
-import Kyra from "./2016.png"
-import Chelsea from "./2015.png"
-import Emily from "./2014.png"
-import CarlyRae from "./2013.png"
+import Justin from "./Small/2022.png"
+import Chloe from "./Small/2021.png"
+import Julia from "./Small/2019.png"
+import Anna from "./Small/2018.png"
+import Sierra from "./Small/2017.png"
+import Kyra from "./Small/2016.png"
+import Chelsea from "./Small/2015.png"
+import Emily from "./Small/2014.png"
+import CarlyRae from "./Small/2013.png"
 
 // PreClub
-import TwelveCar from "./2012.png"
-import ElevenCar from "./2011.png"
-import NineCar from "./2009.png"
-import SevenEightCar from "./2007-2008.png"
-import SixCar from "./2006.png"
-import NineThreeCar from "./1993.png"
-import FirstCar from "./1983.png"
+import TwelveCar from "./Small/2012.png"
+import ElevenCar from "./Small/2011.png"
+import NineCar from "./Small/2009.png"
+import SevenEightCar from "./Small/2007-2008.png"
+import SixCar from "./Small/2006.png"
+import NineThreeCar from "./Small/1993.png"
+import FirstCar from "./Small/1983.png"
 
 export const EVImages = {
-    y2025: Evonne
+    y2025: Evonne,
+    y2023: Eve,
 };
 
 export const ICImages = {
