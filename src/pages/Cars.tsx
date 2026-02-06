@@ -79,7 +79,7 @@ const Cars = () => {
 		<section className="car-grid">
 			<CarBox
 				name="Evonne"
-				year="2025"
+				year="2024-2025"
 				type="EV"
 				image={EVImages.y2025}
 			/>
@@ -100,7 +100,7 @@ const Cars = () => {
 			/>
 			<CarBox
 				name="Chloe"
-				year="2021"
+				year="2020-2021"
 				type="IC"
 				image={ICImages.y2021}
 			/>

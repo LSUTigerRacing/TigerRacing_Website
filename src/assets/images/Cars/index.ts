@@ -22,6 +22,18 @@ import SixCar from "./Small/2006.png"
 import NineThreeCar from "./Small/1993.png"
 import FirstCar from "./Small/1983.png"
 
+// Landing EV
+
+
+// Landing IC
+import LandingIC2019 from "./Landing/2019.JPG"
+import LandingIC2018 from "./Landing/2018.png"
+import LandingIC2017 from "./Landing/2017.jpeg"
+import LandingIC2016 from "./Landing/2016.JPG"
+import LandingIC2015 from "./Landing/2015.JPG"
+import LandingIC2014 from "./Landing/2014.png"
+import LandingIC2013 from "./Landing/2013.JPG"
+
 export const EVImages = {
     y2025: Evonne,
     y2023: Eve,
@@ -48,3 +60,17 @@ export const PreClubImages = {
     y1993: NineThreeCar,
     y1983: FirstCar
 };
+
+export const LandingEVImages = {
+
+}
+
+export const LandingICImages = {
+    Landing2019: LandingIC2019,
+    Landing2018: LandingIC2018,
+    Landing2017: LandingIC2017,
+    Landing2016: LandingIC2016,
+    Landing2015: LandingIC2015,
+    Landing2014: LandingIC2014,
+    Landing2013: LandingIC2013,
+}
