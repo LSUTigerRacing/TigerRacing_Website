@@ -5,6 +5,8 @@ import { ScrollTrigger } from 'gsap/all';
 import Landing from "../assets/images/Sponsor/Landing.png";
 import WhyPartner from "../assets/images/Sponsor/WhyPartner.png";
 
+import { ICImages } from "../assets/images/Cars/"
+
 gsap.registerPlugin(useGSAP);
 gsap.registerPlugin(ScrollTrigger);
 
@@ -108,7 +110,7 @@ const Sponsor = () => {
             <h2 className='mb-5'>Sponsorship Tiers</h2>
             <div className="sponsor-tier-section-container">
                 <Tier
-                    image={Landing}
+                    image={ICImages.y2022}
                     title="Platinum Tier"
                     description="Logo on T-Shirt 
                     Resume Booklet
@@ -116,7 +118,7 @@ const Sponsor = () => {
                     extra="+ everything in Gold"
                 />
                 <Tier
-                    image={Landing}
+                    image={ICImages.y2021}
                     title="Gold Tier"
                     description="Polo Shirt
                     Social Media Post
@@ -124,7 +126,7 @@ const Sponsor = () => {
                     extra="+ everything in Silver"
                 />
                 <Tier
-                    image={Landing}
+                    image={ICImages.y2016}
                     title="Silver Tier"
                     description="Framed Photo
                     Logo on Website
@@ -133,7 +135,7 @@ const Sponsor = () => {
                     extra="+ everything in Bronze"
                 />
                 <Tier
-                    image={Landing}
+                    image={ICImages.y2013}
                     title="Bronze Tier"
                     description="Machine Shop Tour
                     T-Shirt"
