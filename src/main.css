@@ -246,6 +246,10 @@ html {
         overflow: hidden;
     }
 
+    .white-landing-img-container img {
+        object-fit: cover;
+    }
+
 }
 
 @media (max-width: 600px) {

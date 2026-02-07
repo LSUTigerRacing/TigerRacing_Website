@@ -56,11 +56,12 @@ const Cars = () => {
 					<img className="w-[3rem] arrow-icon" src={DownArrow}/>
 				</div>
 			</div>
-			<img
-				src={LandingICImages.Landing2015}
-				className='w-[45%]! max-[800px]:w-full!'
-				id="landing-img"
-			/>
+			<div className="white-landing-img-container">
+				<img
+					src={LandingICImages.Landing2015}
+					id="landing-img"
+				/>
+			</div>
 			<div className="mobile-flex-vis w-full items-center justify-between gap-6 mt-4 relative">
 					<div className="w-fit h-fit py-3 flex items-center gap-4">
 						<div className="w-fit">
