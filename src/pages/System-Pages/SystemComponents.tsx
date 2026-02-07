@@ -41,27 +41,30 @@ const LandingComponent = ( props: { name: any; blurb: any; image: any } ) => {
 
     return (
         <section className="white-landing">
-            <div className="white-landing-content relative">
+            <div className="white-landing-content relative ">
                 <h2 id="landing-title">Meet {name}.</h2>
                 <p className="whitespace-pre-line" id="landing-blurb">
                     {blurb}
                 </p>
 
-                <div className="yellow-button mt-6">
+                <div className="default-vis yellow-button mt-6">
                     <h3>Interest Form</h3>
                 </div>
   
-                <div className="absolute bottom-0 w-fit h-fit flex items-center gap-4 default-vis ">
+                <div className="absolute bottom-0 w-fit h-fit flex items-center gap-4 default-vis">
                     <div className="w-fit">
                         <h3 className="whitespace-nowrap text-[1.rem]">Explore {name}</h3>
                     </div>
                     <img className="w-[3rem] arrow-icon" src={DownArrow}/>
                 </div>
             </div>
-            <img
-                src={image}
-                id="landing-img"
-            />
+            <div className="white-landing-img-container">
+                <img
+                    src={image}
+                    id="landing-img"
+                />
+            </div>
+
             <div className="mobile-flex-vis w-full items-center justify-between gap-6 mt-4 relative">
                 <div className="yellow-button">
                     <h3>Interest Form</h3>

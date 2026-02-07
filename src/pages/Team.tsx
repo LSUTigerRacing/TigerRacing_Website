@@ -45,7 +45,7 @@ const Team = () => {
     <div className="w-full background">
         <section className="team-landing" ref={landingRef}>
             <div className="text-center" id="team-landing-text">
-                <h1 className="max-w-[75vw] mx-auto">Meet the hands behind the wheel.</h1>
+                <h1 className="max-w-[85vw] mx-auto">Meet the hands behind the wheel.</h1>
                 <p className="my-3">
                     TigerRacing is split into five different systems similar to a real engineering business operation.<br/>
                     Click on the icons to learn more!
@@ -83,11 +83,11 @@ const Team = () => {
                     description="Builds internal web tools and embedded devices to improve team productivity."
                 />
             </section>
-            <div className="w-[30%] flex flex-col gap-3 mx-auto items-center">
+            <div className="w-fit flex flex-col gap-3 mx-auto items-center">
                 <h2>Meet the 2026 Team</h2>
                 <img
                     src={DownArrow}
-                    className="w-[40%]"
+                    className="w-[10%]"
                 />
             </div>
         </section>

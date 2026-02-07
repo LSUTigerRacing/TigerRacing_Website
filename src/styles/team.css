@@ -6,7 +6,7 @@
 
 .team-redirect-img-container {
     width: 100%;
-    height: 40vh;
+    height: 32.5vh;
     overflow: hidden;
     
     margin-block: 0.25rem;
@@ -49,7 +49,6 @@
     .team-redirect-container {
             grid-template-columns: repeat(3, minmax(0, 1fr));    
     }
-
 
     .team-redirect-img-container {
         height: 30vh;
