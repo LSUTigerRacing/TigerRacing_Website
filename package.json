@@ -11,7 +11,7 @@
     "eject": "react-scripts eject",
     "dev": "run-p watch-css vite",
     "vite": "vite",
-    "build": "vite build",
+    "build": "tsc && vite build",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx --config ./config/.eslintrc.js src",
     "preview": "vite preview",
     "concat-css": "concat-cli -f ./src/styles/*.css -o ./src/main.css",
