@@ -1,5 +1,3 @@
-import Landing from "../../assets/images/System-Pages/Chassis/Landing.png";
-import TempPicture from "../../assets/images/System-Pages/Powertrain/PCB.png";
 import { PublicRelationsImages } from "../../assets/images/System-Pages";
 
 import { LandingComponent, SubsystemComponent, TableOfContents } from "./SystemComponents";

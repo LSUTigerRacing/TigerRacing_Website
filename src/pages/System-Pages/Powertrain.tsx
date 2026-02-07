@@ -1,6 +1,8 @@
 import Landing from "../../assets/images/System-Pages/Powertrain/Landing.jpg";
 import TempPicture from "../../assets/images/System-Pages/Powertrain/PCB.png";
 
+import { PowertrainImages } from "../../assets/images/System-Pages";
+
 import { LandingComponent, SubsystemComponent, TableOfContents } from "./SystemComponents";
 
 const Powertrain = () => {
@@ -24,8 +26,8 @@ const Powertrain = () => {
             index="01"
             title="Electronics"
             description="Every sensor, controller, and system on our race car needs custom electronics to function reliably. Our electronics team takes PCB projects through the complete development cycle, from schematic capture and component selection to board layout, fabrication ordering, and assembly. Members develop skills in circuit design software, surface-mount soldering techniques, board bring-up procedures, and debugging methodologies that reveal why circuits behave the way they do. The challenge lies in making boards that are compact, reliable, and manufacturable while meeting strict performance requirements, all within the constraints of student budgets and manufacturing timelines."
-            images={[TempPicture, TempPicture, TempPicture]} 
-            layout={2}
+            images={[PowertrainImages.Electronics.PCB, PowertrainImages.Electronics.Soldering]} 
+            layout={4}
         />
         <SubsystemComponent
             index="02"
@@ -38,8 +40,8 @@ const Powertrain = () => {
             index="03"
             title="Low Voltage"
             description="Behind every successful on-track performance is a web of carefully designed wiring that most people never see. Our GLV team designs and implements all the wiring harnesses and low-voltage systems that support vehicle operation, from the critical shutdown circuit to sensor power distribution. Members create comprehensive wiring diagrams, select appropriate wire gauges and connectors, and develop routing strategies that minimize weight while ensuring reliability and serviceability. The work provides essential experience with electrical system architecture, signal integrity, connector crimping and assembly techniques, and the systematic troubleshooting methodologies that separate functional cars from garage ornaments."
-            images={[TempPicture, TempPicture, TempPicture]} 
-            layout={2}
+            images={[PowertrainImages.LowVoltage.Wiring, PowertrainImages.LowVoltage.VCU]}
+            layout={5}
         />
         <SubsystemComponent
             index="04"

@@ -1,10 +1,28 @@
 // Chassis
 import ChassisLanding from "./Chassis/Landing.png"
+
+import CarryingFrame from "./Chassis/Frame/CarryingFrame.png"
+import Frame from "./Chassis/Frame/Frame.png"
+import Sanding from "./Chassis/Frame/Sanding.png"
+
+import Caliper from "./Chassis/Brakes/brakes.png"
+
+import Airshock from "./Chassis/Suspension/Airshock.png"
+import WorkingOnAirshock from "./Chassis/Suspension/WorkingOnShock.png"
+
+import HoldingWing from "./Chassis/Aerodynamics/HoldingWing.png"
+import Backwing from "./Chassis/Aerodynamics/backwing.png"
+
 // Powertrain
 import PowertrainLanding from "./Powertrain/Landing.jpg"
 import PCB from "./Powertrain/Electronics/PCB.png"
-import Soldering from "./Powertrain/Electronics/PCB.png"
+import Soldering from "./Powertrain/Electronics/GuysWorking.jpg"
+import VCU from "./Powertrain/LowVoltage/VCU.png"
+import Wiring from "./Powertrain/LowVoltage/Wires.png"
+
 // Business
+import Financial from "./Business/Financial.png"
+import BASF from "./Business/BASFCheck.png"
 
 // Public Relations
 import PublicRelationsLanding from "./PublicRelations/mckenzie.JPG"
@@ -12,12 +30,26 @@ import Recording from "./PublicRelations/big-camera.JPG"
 import Camera from "./PublicRelations/mckenzie.JPG"
 import Concessions from "./PublicRelations/Concessions.png"
 import Merch from "./PublicRelations/Merch.JPG"
+
 // Software
 
 export const ChassisImages = {
     Landing: ChassisLanding,
     Frame: {
-
+        Frame,
+        CarryingFrame,
+        Sanding
+    },
+    Brakes: {
+        Caliper
+    },
+    Suspension: { 
+        Airshock,
+        WorkingOnAirshock
+    },
+    Aerodynamics: {
+        HoldingWing,
+        Backwing
     }
 };
 
@@ -26,12 +58,28 @@ export const PowertrainImages = {
     Electronics: {
         PCB,
         Soldering,
-        
+    },
+
+    Battery: {
+
+    },
+    TractiveSystem: {
+
+    },
+    LowVoltage: {
+        VCU,
+        Wiring,
     }
-};
+}
 
 export const BusinessImages = {
-
+    Landing: Financial,
+    Finance: {
+        Financial
+    },
+    SponsorRelations: {
+        BASF
+    }
 };
 
 export const PublicRelationsImages = {
