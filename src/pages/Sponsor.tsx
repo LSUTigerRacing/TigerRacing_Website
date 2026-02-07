@@ -50,7 +50,7 @@ const Sponsor = () => {
                     Your support makes a real difference to our team.
                 </p>
 
-                <div className="default-vis yellow-button white-landing-button mt-6">
+                <div className="default-vis yellow-button white-landing-button p-8! mt-6">
                     <h3>Sponsorship Packet</h3>
                 </div>
             </div>

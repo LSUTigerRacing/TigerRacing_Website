@@ -30,6 +30,7 @@
 
     h1 {
         font-size: 4.75rem;
+        line-height: 1.1;
     }
     h2 {
         font-size: 3.14rem;
@@ -76,6 +77,8 @@ html {
 .background {
     background-color: var(--standard-purple);
     color: var(--tinted-white);
+
+    /* overflow: hidden; */
 }
 
 .flex-center {
