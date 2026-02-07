@@ -7,7 +7,7 @@ import Team2019 from "./2019.jpg"
 import Team2018 from "./2018.jpg"
 import Team2017 from "./2017.jpg"
 import Team2016 from ".//2016.jpg"
-import Team2009 from "./2009.JPG"
+import Team2009 from "./2009.jpg"
 
 export const OldTeamImages = {
     y2025: Team2025,

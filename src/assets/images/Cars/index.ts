@@ -26,13 +26,13 @@ import FirstCar from "./Small/1983.png"
 
 
 // Landing IC
-import LandingIC2019 from "./Landing/2019.JPG"
+import LandingIC2019 from "./Landing/2019.jpg"
 import LandingIC2018 from "./Landing/2018.png"
 import LandingIC2017 from "./Landing/2017.jpeg"
-import LandingIC2016 from "./Landing/2016.JPG"
-import LandingIC2015 from "./Landing/2015.JPG"
+import LandingIC2016 from "./Landing/2016.jpg"
+import LandingIC2015 from "./Landing/2015.jpg"
 import LandingIC2014 from "./Landing/2014.png"
-import LandingIC2013 from "./Landing/2013.JPG"
+import LandingIC2013 from "./Landing/2013.jpg"
 
 export const EVImages = {
     y2025: Evonne,

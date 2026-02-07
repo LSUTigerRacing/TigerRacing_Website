@@ -25,11 +25,11 @@ import Financial from "./Business/Financial.png"
 import BASF from "./Business/BASFCheck.png"
 
 // Public Relations
-import PublicRelationsLanding from "./PublicRelations/mckenzie.JPG"
-import Recording from "./PublicRelations/big-camera.JPG"
-import Camera from "./PublicRelations/mckenzie.JPG"
+import PublicRelationsLanding from "./PublicRelations/mckenzie.jpg"
+import Recording from "./PublicRelations/big-camera.jpg"
+import Camera from "./PublicRelations/mckenzie.jpg"
 import Concessions from "./PublicRelations/Concessions.png"
-import Merch from "./PublicRelations/Merch.JPG"
+import Merch from "./PublicRelations/Merch.jpg"
 
 // Software
 
