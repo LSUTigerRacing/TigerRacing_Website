@@ -28,6 +28,12 @@
     }
 }
 
+@media (max-width: 475px) {
+    .navbar {
+        top: 3%;
+    }
+}
+
 .navbar-container {
     width: 97%;
     height: 90%;
