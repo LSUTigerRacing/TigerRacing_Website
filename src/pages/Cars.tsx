@@ -85,6 +85,12 @@ const Cars = () => {
 				type="EV"
 				image={EVImages.y2025}
 			/>
+			<CarBox
+				name="Eve"
+				year="2023"
+				type="EV"
+				image={EVImages.y2023}
+			/>
 		</section>
 
 		<div className="flex justify-center items-center py-10 gap-2">

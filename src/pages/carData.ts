@@ -25,7 +25,7 @@ export const carsData: Record<string, CarData> = {
         year: "2024-2025",
         name: "Evonne",
         carPhoto: EVImages.y2025,
-        specs: ["Power: 100 HP", "Motor: EMRAX 228 MV Axial Flux", "Motor Controller: DTI 500HV", "Max Voltage: 352V", "Max Current: 210A", "Tires: Hoosier LCO", "Wheels: 10 Keizer", "Data: AIM EVO5"],
+        specs: ["Power: 100 HP", "Motor: EMRAX 228 MV Axial Flux", "Motor Controller: DTI 500HV", "Max Voltage: 352V", "Max Current: 210A", "Tires: Hoosier R2O", "Wheels: 10 Keizer", "Data: AIM EVO5"],
         performance: [
             ["Results: Michigan", "Overall: 79th/80 (Tied)", "Endurance: DNA", "Acceleration: DNA", "Autocross: DNA", "Skidpad: DNA", "Design: 75th", "Business: 80th", "Cost: 71st"]
         ],   
@@ -48,10 +48,11 @@ export const carsData: Record<string, CarData> = {
         year: "2023",
         name: "Eve",
         carPhoto: EVImages.y2023,
-        specs: [],
+        specs: ["Power: 100 HP", "Motor: EMRAX 228 MV Axial Flux", "Motor Controller: DTI 500HV", "Max Voltage: 352V", "Max Current: 210A", "Tires: Hoosier R2O", "Wheels: 10 Keizer", "Data: AIM EVO5"],
         performance: [
             ["Results: Michigan", "Overall: 50th/61", "Endurance: DNA", "Acceleration: DNA", "Autocross: DNA", "Skidpad: DNA", "Design: 54th (Tied)", "Business: 66th", "Cost: 17th"]
         ],
+        teamPhoto: OldTeamImages.y2023,
         teamLeads: [
             { role: "Team Captain", name: "Holden David", image: null },
             { role: "President", name: "Evan Kerr", image: null },

@@ -1,6 +1,6 @@
 // EV
 import Evonne from "./Small/2025.png"
-import Eve from "./Small/2023.jpeg"
+import Eve from "./Small/2023.png"
 
 // IC
 import Justin from "./Small/2022.png"
