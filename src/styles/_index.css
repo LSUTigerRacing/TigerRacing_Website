@@ -45,6 +45,27 @@
     p {
         font-size: 1rem;
     }
+
+    @media (max-width: 475px) {
+        h1 {
+            font-size: 4.75rem;
+            line-height: 1.1;
+        }
+        h2 {
+            font-size: 3.75rem;
+            line-height: 1.2;
+        }
+        h3 {
+            font-size: 2rem;
+        }
+        h4 {
+            font-size: 1rem;
+        }
+        p {
+            font-size: 1.2rem;
+        }
+    }
+
 }
 
 html {
@@ -63,7 +84,7 @@ html {
     }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 475px) {
     html {
         font-size: 10px;
     }
@@ -78,7 +99,7 @@ html {
     background-color: var(--standard-purple);
     color: var(--tinted-white);
 
-    /* overflow: hidden; */
+    overflow: hidden;
 }
 
 .flex-center {

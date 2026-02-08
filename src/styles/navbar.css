@@ -22,6 +22,12 @@
     }
 }
 
+@media (max-width: 750px) {
+    .navbar {
+        width: 400px;
+    }
+}
+
 .navbar-container {
     width: 97%;
     height: 90%;
@@ -60,10 +66,6 @@
 }
 
 @media (max-width: 750px) {
-    .navbar {
-        width: 400px;
-    }
-    
     .navbar-container{
         width: 94%;
     }

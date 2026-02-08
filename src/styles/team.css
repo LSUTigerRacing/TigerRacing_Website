@@ -47,7 +47,7 @@
 
 @media (max-width: 1024px) {
     .team-redirect-container {
-            grid-template-columns: repeat(3, minmax(0, 1fr));    
+        grid-template-columns: repeat(3, minmax(0, 1fr));    
     }
 
     .team-redirect-img-container {

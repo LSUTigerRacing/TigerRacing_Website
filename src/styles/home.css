@@ -16,6 +16,24 @@
     z-index: 2;
 }
 
+@media (max-width: 1024px) {
+    .home-landing-tagline {
+        width: 600px;
+    }
+}
+
+@media (max-width: 750px) {
+    .home-landing-tagline {
+        width: 400px;
+    }
+}
+
+@media (max-width: 475px) {
+    .home-landing-tagline {
+        padding-bottom: 5rem;
+    }
+}
+
 .home-sponsor-bar-container {
     width: 100%;
 
@@ -37,7 +55,13 @@
 .home-sponsor-bar > *{
     width: 20vw;
     height: 15vh;
-    /* background: #000; */
+}
+
+@media (max-width: 475px) {
+    .home-sponsor-bar > *{
+        width: 40vw;
+        height: 15vh;
+    }
 }
 
 .home-sponsor-bar > * > * {
@@ -50,8 +74,8 @@
     width: 92.5%;
     height: fit-content;
     
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));    
     justify-content: space-between;
 
     gap: 3%;
@@ -59,6 +83,20 @@
     margin-inline: auto;
     padding-block: 5rem;
     padding-bottom: 7rem;
+}
+
+@media (max-width: 800px) {
+    .home-redirect-section {
+        grid-template-columns: repeat(2, minmax(0, 1fr));    
+    }
+}
+
+@media (max-width: 475px) {
+    .home-redirect-section {
+        grid-template-columns: repeat(1, minmax(0, 1fr));  
+        padding-bottom: 10rem;
+  
+    }
 }
 
 .home-redirect {
@@ -76,6 +114,13 @@
     transition: all 0.3s ease;
 }
 
+@media (max-width: 475px) {
+    .home-redirect-img-container {
+        height: 40vh;
+        margin-block: 0.25rem;
+    }
+}
+
 .home-redirect-img-container img {
     width: 100%;
     height: 100%;
@@ -89,18 +134,26 @@
     transition: all 0.3s ease;
 }
 
-@media screen and (max-width: 850px) {
+@media (max-width: 850px) {
     .redirect {
         flex-direction: column;
     }
 }
 
-.home-carousel {
-    display: flex
+.home-white-section-hero {
+    height: 92vh;
 }
 
-.home-carousel > * {
-    flex: 1
+@media (max-width: 800px) {
+    .home-white-section-hero {
+        height: 70vh;
+    }
+}
+
+@media (max-width: 475px) {
+    .home-white-section-hero {
+        height: 60vh;
+    }
 }
 
 .home-competition-section {
@@ -115,9 +168,42 @@
     gap: 1.25rem;
 }
 
+@media (max-width: 600px) {
+    .home-competition-section {
+        height: fit-content;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .home-competition-big-image {
+        grid-column: span 2;
+    }
+}
+
 .home-competition-column {
     display: flex;
     flex-direction: column;
 
     justify-content: space-between;
+}
+
+.home-end-section {
+    width: 95%;
+    height: 50vh;
+    
+    display: flex;
+    gap: 4rem;
+
+    margin-block: 3.5rem;
+    margin-inline: auto;
+
+    padding-top: 2.5rem;
+}
+
+@media (max-width: 600px) {
+    .home-end-section {
+        height: 60vh;
+        gap: 2rem;
+
+        flex-direction: column;
+    }
 }

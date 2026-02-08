@@ -98,7 +98,7 @@ const Home = () => {
 				</div>
 			</div>
 
-			<div className="w-[40%] text-center mx-auto">
+			<div className="w-[40%] max-[800px]:w-[50%] max-[475px]:w-[80%] text-center mx-auto">
 				<p>TigerRacing FSAE is LSU's student-led Formula SAE Electric team. We design, build, and race a fully electric formula-style race car from the ground up, competing against universities worldwide while gaining real-world engineering experience.</p>
 			</div>
 
@@ -140,7 +140,7 @@ const Home = () => {
 					description="Help us push the boundaries of electric vehicle technology. Your support fuels innovation and gives students real-world engineering experience."
 				/>
 			</section>
-			<div className="flex-center relative w-screen h-[92vh] overflow-hidden">
+			<div className="flex-center relative w-screen overflow-hidden home-white-section-hero">
 				{/* Background Image */}
 				<img
 					src={Hero}
@@ -171,7 +171,7 @@ const Home = () => {
 				<section className='home-competition-section'>
 					<img
 						src={Tilt}
-						className='w-full h-full object-cover'
+						className='w-full h-full object-cover home-competition-big-image'
 						id='home-competition-image'
 					/>
 					<div className='home-competition-column'>
@@ -190,7 +190,9 @@ const Home = () => {
 					</div>
 					<div className='home-competition-column'>
 						<span>
-							<h3>⠀</h3> {/* ascii blank char for formatting */}
+							<h3 className='whitespace-break-spaces'>
+								⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+								⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</h3> {/* ascii blank char for formatting */}
 							<br/>
 							<p>
 								These competitions push us to our limits. Track time reveals what works and what needs improvement. Judge feedback challenges our assumptions. Every event teaches us something new about engineering, teamwork, and what it takes to build a winning vehicle.
@@ -203,7 +205,7 @@ const Home = () => {
 					</div>
 				</section>
 
-			<div className='w-[95%] h-[50vh] flex mx-auto gap-16 my-14 pt-10'>
+			<div className='home-end-section'>
 				<Link 
 					to="/sponsor"
 					className='bg-[var(--standard-yellow)] flex-6 flex items-center'
