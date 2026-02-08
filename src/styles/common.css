@@ -33,6 +33,16 @@
     background-color: white;
 }
 
+@media (max-width: 475px) {
+    .white-landing {
+        padding-inline: 5vw;
+        /* padding-top: 9rem; */
+
+        border-bottom-right-radius: 32px;
+        border-bottom-left-radius: 32px;
+    }
+}
+
 .white-landing-content {
     width: 55%;
     height: 95%;
