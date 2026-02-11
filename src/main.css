@@ -9,6 +9,16 @@
     --standard-yellow: #FFD500;
     --tinted-white: #F5F0F6;
     --purple-line: #6300A6;
+
+    --default-width: 92.5%;
+    --wide-width: 95%;
+}
+
+@media (max-width: 600px) {
+    :root {
+        --default-width: 90%;
+        --wide-width: 92.5%;
+    }
 }
 
 @layer base {
@@ -152,7 +162,7 @@ html {
 }
 
 .car-grid {
-    width: 92.5%;
+    width: var(--default-width);
 
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -443,7 +453,7 @@ html {
 
 .footer-responsive-section {
     flex: 1;
-    width: 92.5%;
+    width: var(--default-width);
 
     display: flex;
     flex-direction: row;
@@ -510,7 +520,7 @@ html {
 
 @media (max-width: 1200px) {
     .footer-responsive-section {
-        width: 92.5%;
+        width: var(--default-width);
         flex-direction: column;
         justify-content: space-between;
 
@@ -532,7 +542,7 @@ html {
 }
 
 .footer-logo-address {
-    width: 92.5%;
+    width: var(--default-width);
 
     display: flex;
     flex-direction: row;
@@ -649,7 +659,7 @@ html {
 }
 
 .home-redirect-section {
-    width: 92.5%;
+    width: var(--default-width);
     height: fit-content;
     
     display: grid;
@@ -735,7 +745,7 @@ html {
 }
 
 .home-competition-section {
-    width: 95%;
+    width: var(--wide-width);
     height: 60vh;
 
     margin-inline: auto;
@@ -765,7 +775,7 @@ html {
 }
 
 .home-end-section {
-    width: 95%;
+    width: var(--wide-width);
     height: 50vh;
     
     display: flex;
@@ -1317,7 +1327,7 @@ html {
     object-fit: cover;
 }
 .team-landing {
-    width: 92.5%;
+    width: var(--default-width);
     padding-block: 16vh;
     margin-inline: auto;
 }
@@ -1386,7 +1396,7 @@ html {
 }
 
 .team-portrait-section {
-    width: 92.5%;
+    width: var(--default-width);
     margin-inline: auto;
     padding-block: 5rem;
 

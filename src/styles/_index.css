@@ -9,6 +9,16 @@
     --standard-yellow: #FFD500;
     --tinted-white: #F5F0F6;
     --purple-line: #6300A6;
+
+    --default-width: 92.5%;
+    --wide-width: 95%;
+}
+
+@media (max-width: 600px) {
+    :root {
+        --default-width: 90%;
+        --wide-width: 92.5%;
+    }
 }
 
 @layer base {

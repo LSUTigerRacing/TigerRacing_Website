@@ -229,7 +229,7 @@ const CarBox = ( props: { name: any, year: any, type: any, image: any } ) => {
         <Link to={`/cars/${year}`} className="car-box">
 			<img src={image} alt={`${year} car`} />
 			<div className="car-overlay">
-				<div className="w-[92.5%] mx-auto mb-3 flex justify-between">
+				<div className="w-[var(--default-width)] mx-auto mb-3 flex justify-between">
 					<span>
 						<p>{name}</p>
 						<h3 className="leading-6">{year}</h3>

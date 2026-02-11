@@ -36,7 +36,7 @@ const CarPage = () => {
 			<div className="car-single-landing">
 				<img src={carData.landingPhoto || carData.carPhoto} alt={`${year} car`} />
 				<div className="car-overlay">
-					<div className="w-[92.5%] mx-auto flex justify-between items-end ">
+					<div className="w-[var(--default-width)] mx-auto flex justify-between items-end ">
 						<span className="mb-16" id="landing-text">
 							<p className="text-[1.4rem]!">{carData.name}</p>
 							<h2 className="leading-12">{year}</h2>
@@ -52,7 +52,7 @@ const CarPage = () => {
 			</div>
 		
 			<div className= {`${carData.performance ? "" : "hidden"} w-full background`}>
-				<div className="w-[92.5%] py-16 mx-auto">
+				<div className="w-[var(--default-width)] py-16 mx-auto">
 					<h2>Performance</h2>
 					<div className="w-full flex gap-8">
 						{carData.performance?.map((statistic, idx) => (
@@ -76,7 +76,7 @@ const CarPage = () => {
 					</div>
 				))}
 			</div>
-			<div className={`${(carData.layout === 3) ? "" : "hidden"} w-[92.5%] mx-auto my-8 text-black text-center`}>
+			<div className={`${(carData.layout === 3) ? "" : "hidden"} w-[var(--default-width)] mx-auto my-8 text-black text-center`}>
 				<h2>The Team</h2>
 				<div className={`${(carData.layout === 3) ? "" : "hidden"} ${carData.teamLeads? "" : "hidden"} grid ${year === "2014" ? "grid-cols-4 gap-16": "grid-cols-3 gap-4"} my-8`}>
 					{carData.teamLeads?.map((member, idx) => (

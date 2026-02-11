@@ -71,7 +71,7 @@
 }
 
 .home-redirect-section {
-    width: 92.5%;
+    width: var(--default-width);
     height: fit-content;
     
     display: grid;
@@ -157,7 +157,7 @@
 }
 
 .home-competition-section {
-    width: 95%;
+    width: var(--wide-width);
     height: 60vh;
 
     margin-inline: auto;
@@ -187,7 +187,7 @@
 }
 
 .home-end-section {
-    width: 95%;
+    width: var(--wide-width);
     height: 50vh;
     
     display: flex;

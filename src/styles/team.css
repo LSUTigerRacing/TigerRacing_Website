@@ -1,5 +1,5 @@
 .team-landing {
-    width: 92.5%;
+    width: var(--default-width);
     padding-block: 16vh;
     margin-inline: auto;
 }
@@ -68,7 +68,7 @@
 }
 
 .team-portrait-section {
-    width: 92.5%;
+    width: var(--default-width);
     margin-inline: auto;
     padding-block: 5rem;
 

@@ -157,8 +157,8 @@ const Home = () => {
 			</div>
 
 			<section className='bg-white text-black w-screen h-fit'>
-				<div className='w-[95%] mx-auto pt-5'>
-					<div className='w-[72%]'>
+				<div className='w-[var(--wide-width)] mx-auto pt-5'>
+					<div className='w-[72%] max-[475px]:w-full'>
 						<h3 className='pb-5'>Starting in 1985 as an ME capstone project, LSU TigerRacing has become a proving ground where theory meets the test of competition. </h3>
 						<p>Here, hands-on experience fuels innovation as we design, build, and race cutting-edge formula vehicles.
 							<br/><br/>
