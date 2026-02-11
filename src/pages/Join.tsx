@@ -20,18 +20,18 @@ const Join = () => {
     useGSAP(() => {
         tl.current = gsap
             .timeline()
-            .from(".join-landing-phrase", {
+            .from("#join-landing-phrase", {
                 opacity: 0,
-                y: -50,
+                y: -25,
                 delay: 0.3,
-                duration: 0.8,
+                duration: 0.6,
                 ease: "power1.out",})
             .from(".yellow-button", {
                 opacity: 0,
-                y: -20,
+                y: -25,
                 duration: 0.6,
                 ease: "power1.out",
-        })
+        }, "<0.35")
     }, {scope: landingRef})
 
     useGSAP(() => {
@@ -60,11 +60,12 @@ const Join = () => {
 			}
 		})
     }, [])
+
   return (
     <div className="w-full background text-black! bg-white!">
-        <section className="purple-landing" ref={landingRef}>
-            <div className="join-landing-phrase">
-                <h2 className="">Join one of LSU’s oldest and largest engineering organizations.</h2>
+        <section className="purple-landing flex-col! justify-normal! gap-8" ref={landingRef}>
+            <div className="max-w-[80%] text-center mx-auto" id="join-landing-phrase">
+                <h2>Join one of LSU’s oldest and largest engineering organizations.</h2>
                 <h3>All Majors Welcome!</h3>
             </div>
 

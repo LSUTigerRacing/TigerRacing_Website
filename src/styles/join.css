@@ -1,29 +1,3 @@
-.join-landing-phrase {
-	width: 850px;
-	margin-inline: auto;
-
-	text-align: center;
-}
-
-.join-landing-phrase > * {
-	width: 850px;
-	margin-inline: auto;
-
-	text-align: center;
-}
-
-@media (max-width: 1024px) {
-	.join-landing-phrase {
-		width: 600px;
-	}
-}
-
-@media (max-width: 750px) {
-	.join-landing-phrase {
-		width: 400px;
-	}
-}
-
 .join-blurb-section {
     width: 90%;
 
