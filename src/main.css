@@ -989,6 +989,14 @@ html {
         display: inherit !important;
     }
 }
+@media (max-width: 475px) {
+    .yellow-button.sponsor-button {
+        width: 100%;
+
+        /* padding-inline: 8rem; */
+    }
+}
+
 .sponsor-why-partner {
     width: 90%;
     height: 80vh;
@@ -1013,7 +1021,6 @@ html {
     font-size: 8rem !important;
 }
 
-
 .sponsor-why-partner-stats {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1023,18 +1030,20 @@ html {
 @media (max-width: 800px) {
     .sponsor-why-partner {
         flex-direction: column;
+        height: fit-content;
     }
 
     .sponsor-why-partner > * {
         width: 100%;
     }
 
-    .sponsor-why-partner > div:first-child {
-        height: fit-content
+    .sponsor-why-partner-blurb{
+        height: fit-content;
+        padding-bottom: 4rem;
     }
 
-    .sponsor-why-partner > div:last-child {
-        height: 52%;
+    .sponsor-stats {
+        height: fit-content;
     }
     
     .sponsor-why-partner-big-stat {
@@ -1042,11 +1051,11 @@ html {
     }
 
     .sponsor-why-partner-big-stat h1 {
-        font-size: 6rem !important;
+        font-size: 8rem !important;
     }
 
     .sponsor-why-partner-stats {
-        margin-block: 0.4rem;
+        margin-block: 0.8rem;
     }
 }
 
@@ -1057,6 +1066,16 @@ html {
 
     .sponsor-why-partner > div:last-child {
         height: 55%;
+    }
+}
+
+@media (max-width: 475px) {
+    .sponsor-why-partner-blurb {
+        padding-bottom: 3rem;
+    }
+
+    .sponsor-why-partner > div:last-child {
+        height: 80%;
     }
 }
 
