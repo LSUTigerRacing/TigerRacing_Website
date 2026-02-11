@@ -86,34 +86,34 @@ export const Navbar = () => {
                         <button 
                             onClick={toggleMenu}
                             className='navmenu-vis navbar-purple-button'>
-                            <h4>{menuOpen ? 'Close' : 'Menu'}</h4>
+                            <h4 className='max-[750px]:text-[1.2rem]'>{menuOpen ? 'Close' : 'Menu'}</h4>
                         </button>
                     </div>
                 </div>
             </div>
         
-            <div id="navmenu" className={`navmenu-vis ${menuOpen ? "opacity-100" : "opacity-0" } fixed h-[22vh] w-[400px] bg-[#E6E1E7] left-[50%] -translate-x-1/2 rounded-b-[36px] top-[7.5%] z-9`}>
-                <div className={`w-[90%] h-full flex flex-col justify-between mx-auto pt-10 pb-8`}>
-                    <div className={`${menuOpen ? "" : "hidden" } `}>
+            <div id="navmenu" className={`navmenu-vis ${menuOpen ? "opacity-100" : "opacity-0" } fixed h-fit w-[400px] bg-[#E6E1E7] left-[50%] -translate-x-1/2 rounded-b-[36px] top-[7.5%] z-9`}>
+                <div className={`w-[90%] h-fit flex flex-col justify-between mx-auto pt-10 pb-8`}>
+                    <div className={`${menuOpen ? "" : "hidden" } pt-2 pb-8`}>
                         <Link 
                             to="/team"
                         >
-                            <h4 className='text-[1rem]!'>Team</h4>
+                            <h3 className='text-[1.2rem]!'>Team</h3>
                         </Link>
                         <Link 
                             to="/cars"
                         >
-                            <h4 className='text-[1rem]!'>Cars</h4>
+                            <h3 className='text-[1.2rem]!'>Cars</h3>
                         </Link>
                         <Link 
                             to="/join"
                         >
-                            <h4 className='text-[1rem]!'>Join Us</h4>
+                            <h4 className='text-[1.2rem]!'>Join Us</h4>
                         </Link>
                         <Link 
                             to="/sponsor"
                         >
-                            <h4 className='text-[1rem]!'>Sponsors</h4>
+                            <h4 className='text-[1.2rem]!'>Sponsors</h4>
                         </Link>
                     </div>
  
