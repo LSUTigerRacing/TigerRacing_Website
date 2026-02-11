@@ -43,7 +43,7 @@ const Join = () => {
 			scrollTrigger: {
 				trigger: ".join-blurb-collage",
 				start: "top center",
-				markers: true
+				// markers: true
 			}
 		})
         
@@ -56,7 +56,7 @@ const Join = () => {
 			scrollTrigger: {
 				trigger: ".systems-container",
 				start: "top center",
-				markers: true
+				// markers: true
 			}
 		})
     }, [])
@@ -64,7 +64,7 @@ const Join = () => {
   return (
     <div className="w-full background text-black! bg-white!">
         <section className="purple-landing flex-col! justify-normal! gap-8" ref={landingRef}>
-            <div className="max-w-[80%] text-center mx-auto" id="join-landing-phrase">
+            <div className="max-w-[80%] max-[475px]:max-w-[var(--default-width)] text-center mx-auto" id="join-landing-phrase">
                 <h2>Join one of LSU’s oldest and largest engineering organizations.</h2>
                 <h3>All Majors Welcome!</h3>
             </div>
