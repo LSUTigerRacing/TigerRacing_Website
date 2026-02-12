@@ -94,27 +94,27 @@ export const Navbar = () => {
         
             <div id="navmenu" className={`navmenu-vis ${menuOpen ? "opacity-100" : "opacity-0" } fixed h-fit w-[400px] bg-[#E6E1E7] left-[50%] -translate-x-1/2 rounded-b-[36px] top-[8%] max-[475px]:top-[6%] z-9`}>
                 <div className={`w-[90%] h-fit flex flex-col justify-between mx-auto pt-10 pb-6`}>
-                    <div className={`${menuOpen ? "" : "hidden" } pt-4 pb-4`}>
+                    <div className={`${menuOpen ? "" : "hidden" } pt-8 pb-4`}>
                         <h4 className='text-[#595959]'>Explore</h4>
                         <Link 
                             to="/team"
                         >
-                            <h3 className='text-[1.2rem]!'>Team</h3>
+                            <h3 className='text-[1.2rem]! max-[475px]:text-[1.5rem]!'>Team</h3>
                         </Link>
                         <Link 
                             to="/cars"
                         >
-                            <h3 className='text-[1.2rem]!'>Cars</h3>
+                            <h3 className='text-[1.2rem]! max-[475px]:text-[1.5rem]!'>Cars</h3>
                         </Link>
                         <Link 
                             to="/join"
                         >
-                            <h3 className='text-[1.2rem]!'>Join Us</h3>
+                            <h3 className='text-[1.2rem]! max-[475px]:text-[1.5rem]!'>Join Us</h3>
                         </Link>
                         <Link 
                             to="/sponsor"
                         >
-                            <h3 className='text-[1.2rem]!'>Sponsors</h3>
+                            <h3 className='text-[1.2rem]! max-[475px]:text-[1.5rem]!'>Sponsors</h3>
                         </Link>
                     </div>
 
@@ -124,29 +124,29 @@ export const Navbar = () => {
                             href="https://www.instagram.com/formulalsu/" 
                             target="_blank"
                         >
-                            <h3 className='text-[1.2rem]!'>Instagram</h3>
+                            <h3 className='text-[1.2rem]! max-[475px]:text-[1.5rem]!'>Instagram</h3>
                         </a>
                         <a
                             href="https://www.linkedin.com/company/lsu-tiger-racing-formula-sae/posts/?feedView=all" 
                             target="_blank"
                         >
-                            <h3 className='text-[1.2rem]!'>Linkedin</h3>
+                            <h3 className='text-[1.2rem]! max-[475px]:text-[1.5rem]!'>Linkedin</h3>
                         </a>
                         <a 
                             href="https://www.facebook.com/FormulaLSU" 
                             target="_blank"
                             
                         >
-                            <h3 className='text-[1.2rem]!'>Facebook</h3>
+                            <h3 className='text-[1.2rem]! max-[475px]:text-[1.5rem]!'>Facebook</h3>
                         </a>
                     </div>
  
                     <div className={`${menuOpen ? "" : "hidden" } flex justify-between`}>
-                        <div className="navmenu-vis text-(--standard-purple) border-1 border-[var(--standard-purple)] rounded-4xl px-4 py-2">
-                            <h4 className='text-[1.1rem]! max-[475px]:text-[1.3rem]!'>Login</h4>
+                        <div className="navmenu-vis text-(--standard-purple) border-1 border-[var(--standard-purple)] rounded-4xl px-6 py-2">
+                            <h4 className='text-[1.1rem]! max-[475px]:text-[1.4rem]!'>Login</h4>
                         </div>
                         <div className="navmenu-vis navbar-purple-button">
-                            <h4 className='text-[1.1rem]! max-[475px]:text-[1.3rem]!'>Contact Us</h4>
+                            <h4 className='text-[1.1rem]! max-[475px]:text-[1.4rem]!'>Contact Us</h4>
                         </div>
                     </div>
                 </div>

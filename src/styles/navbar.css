@@ -102,6 +102,12 @@
     cursor: pointer;
 }
 
+@media (max-width: 475px) {
+    .navbar-purple-button {
+        padding-inline: 1.5rem;
+    }
+}
+
 .navmenu-vis {
     display: none !important; 
 }
