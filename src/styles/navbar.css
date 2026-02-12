@@ -89,7 +89,7 @@
 .navbar-purple-button {
     color: white;
     background-color: var(--standard-purple);
-    border-radius: 2rem;
+    border-radius: 80px;
 
     display: flex;
 
@@ -97,7 +97,7 @@
     align-items: center;
 
     padding-inline: 1rem;
-    padding-block: 0.5rem;
+    padding-block: 0.4rem;
 
     cursor: pointer;
 }
